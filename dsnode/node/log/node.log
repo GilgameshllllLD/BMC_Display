@@ -1,0 +1,807 @@
+[DSNode.DataCollector] INFO  2016-01-08 01:21:35 - Collector Database does not exist, creating
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:35 - Starting Instrumentation
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:35 - Starting Scheduler
+[DSNode.Scheduler] INFO  2016-01-08 01:21:35 - Scheduler started.
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:35 - DSNode Starting
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:35 - Host Name: DS-T7500-04
+[DSNode.Configuration] INFO  2016-01-08 01:21:35 - Configuring from: http://bmc.downstreamsandbox.com/dsnode/config?host=DS-T7500-04&hash=f23fa4234Faddfkdomvjderpfdj5C
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:36 - Profile: BMC - Playlist
+[DSNode.Bootstrap] INFO  2016-01-08 01:21:36 - Profile Version: 5
+[DSNode.Scheduler] INFO  2016-01-08 01:21:36 - Installing health jobs to scheduler
+[DSNode.QueueClient] INFO  2016-01-08 01:21:36 - Starting queue consumer on encryped transport
+[DSNode.QueueClient] INFO  2016-01-08 01:21:36 - Starting Queue Consumer
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to fi.playlist.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to fi.media.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.elementtype.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.engagement.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.playlist.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.playlistelement.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.playlisttype.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.room.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to db.templatevideo.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to sy.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to ap.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Creating route to tts.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-08 01:21:37 - Message consumption started...
+[DSNode.QueueClient] INFO  2016-01-08 01:21:38 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:21:38 - Route: sy.DS-T7500-04.node.rebuild.response
+[DSNode.Controller] DEBUG 2016-01-08 01:21:38 - Sys Msg - response
+[DSNode.SystemControl] INFO  2016-01-08 01:21:38 - Rebuilding Node...
+[DSNode.Notification] DEBUG 2016-01-08 01:21:38 - Sending UDP message: {"type": "rebuild-status", "status": "rebuilding"}
+[DSNode.SystemControl] INFO  2016-01-08 01:21:38 - Starting Rebuild
+[DSNode.Database] INFO  2016-01-08 01:21:38 - Database does not exist.
+[DSNode.Data] DEBUG 2016-01-08 01:21:38 - Schema created
+[DSNode.Data] INFO  2016-01-08 01:21:38 - Downloading resources...
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Data] DEBUG 2016-01-08 01:22:34 - Schema created
+[DSNode.Notification] DEBUG 2016-01-08 01:22:35 - Sending UDP message: {"type": "rebuild-status", "status": "complete"}
+[DSNode.QueueClient] INFO  2016-01-08 01:22:35 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:22:59 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:22:59 - Route: fi.playlist.thumbs.delete
+[DSNode.Controller] DEBUG 2016-01-08 01:22:59 - Fi Msg - delete
+[DSNode.Notification] DEBUG 2016-01-08 01:22:59 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-08 01:22:59 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:22:59 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:22:59 - Route: fi.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-08 01:22:59 - Fi Msg - delete
+[DSNode.Notification] DEBUG 2016-01-08 01:22:59 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-08 01:22:59 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:23:00 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:23:00 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-08 01:23:00 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:23:00 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:23:00 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:27:21 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:27:21 - Route: db.templatevideo.update
+[DSNode.Controller] DEBUG 2016-01-08 01:27:21 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:27:21 - Sending UDP message: {"type": "table-notification", "table": "templatevideo", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:27:22 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:31:37 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:31:37 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-08 01:31:37 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-08 01:31:37 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-08 01:31:37 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:31:37 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:31:37 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-08 01:31:37 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-08 01:31:38 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-08 01:31:38 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:31:38 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:31:38 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-08 01:31:38 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:31:38 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:31:38 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:31:38 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:31:38 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-08 01:31:38 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:31:38 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:31:39 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:37:21 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:37:21 - Route: db.templatevideo.insert
+[DSNode.Controller] DEBUG 2016-01-08 01:37:21 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-08 01:37:21 - Sending UDP message: {"type": "table-notification", "table": "templatevideo", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-08 01:37:22 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:37:35 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:37:35 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-08 01:37:36 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:37:36 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:37:36 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:37:45 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:37:45 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-08 01:37:45 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:37:45 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:37:45 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:59:29 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:59:29 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-08 01:59:29 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-08 01:59:29 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-08 01:59:30 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-08 01:59:30 - Message Received
+[DSNode.Controller] INFO  2016-01-08 01:59:30 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-08 01:59:30 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-08 01:59:30 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-08 01:59:30 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 06:01:53 - Message Received
+[DSNode.Controller] INFO  2016-01-09 06:01:53 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-09 06:01:53 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 06:01:53 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 06:01:53 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:03:58 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:03:58 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:03:58 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:03:58 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:03:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:03:59 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:03:59 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:03:59 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:03:59 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:03:59 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:10:40 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:10:40 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:10:40 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:10:40 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:10:40 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:11:00 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:11:00 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-09 07:11:00 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-09 07:11:00 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-09 07:11:00 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:11:00 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:11:00 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-09 07:11:00 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-09 07:11:00 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-09 07:11:01 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:11:05 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:11:05 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-09 07:11:06 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-09 07:11:06 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-09 07:11:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:11:06 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:11:06 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:11:06 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:11:06 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:11:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:11:06 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:11:06 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:11:06 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:11:06 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:11:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:13:57 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:13:57 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:13:57 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:13:57 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:13:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:14:09 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:14:09 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:14:09 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:14:09 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:14:09 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:14:23 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:14:23 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:14:23 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:14:23 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:14:23 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:30:21 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:30:21 - Route: db.engagement.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:30:22 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:30:22 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:30:22 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:31:06 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:31:06 - Route: db.engagement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:31:06 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:31:06 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:31:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:31:30 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:31:30 - Route: db.engagement.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:31:31 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:31:31 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:31:31 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:31:36 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:31:36 - Route: db.engagement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:31:36 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:31:36 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:31:37 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:33:41 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:33:41 - Route: db.engagement.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:33:42 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:33:42 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:33:42 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:33:50 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:33:50 - Route: db.engagement.insert
+[DSNode.Controller] DEBUG 2016-01-09 07:33:50 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-09 07:33:50 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-09 07:33:50 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:33:59 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:33:59 - Route: db.engagement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:33:59 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:33:59 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:33:59 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:33:59 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:33:59 - Route: db.engagement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:33:59 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:34:00 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:34:00 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:35:57 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:35:57 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-09 07:35:57 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-09 07:35:57 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-09 07:35:57 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:35:57 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:35:57 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:35:58 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:35:58 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:35:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:35:58 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:35:58 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:35:58 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:35:58 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:35:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:36:02 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:36:02 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-09 07:36:02 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-09 07:36:02 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-09 07:36:02 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:36:02 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:36:02 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:36:02 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:36:02 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:36:02 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-09 07:36:02 - Message Received
+[DSNode.Controller] INFO  2016-01-09 07:36:02 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-09 07:36:03 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-09 07:36:03 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-09 07:36:03 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:32:56 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:32:56 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:32:56 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:32:56 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:32:56 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:32:58 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:32:58 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:32:58 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:32:58 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:32:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:01 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:01 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:01 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:01 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:01 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:04 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:04 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:04 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:04 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:04 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:06 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:06 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:06 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:06 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:08 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:08 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:09 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:10 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:10 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:10 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:10 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:10 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:33:17 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:33:17 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:33:17 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:33:17 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:33:18 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:34:57 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:34:57 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:34:57 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:34:57 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:34:57 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:34:58 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:34:58 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-11 07:34:58 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-11 07:34:58 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-11 07:34:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:34:58 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:34:58 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-11 07:34:58 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-11 07:34:58 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-11 07:34:58 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:35:04 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:35:04 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 07:35:04 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 07:35:04 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 07:35:04 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:35:11 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:35:11 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 07:35:11 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 07:35:11 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 07:35:11 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:35:11 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:35:11 - Route: db.playlistelement.delete
+[DSNode.Controller] DEBUG 2016-01-11 07:35:11 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-11 07:35:11 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-11 07:35:12 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 07:35:12 - Message Received
+[DSNode.Controller] INFO  2016-01-11 07:35:12 - Route: db.playlist.delete
+[DSNode.Controller] DEBUG 2016-01-11 07:35:12 - Db Msg - delete
+[DSNode.Notification] DEBUG 2016-01-11 07:35:12 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "delete"}
+[DSNode.QueueClient] INFO  2016-01-11 07:35:12 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:20:13 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:20:13 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:20:14 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:20:14 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:20:14 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:20:14 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:20:14 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:20:14 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:20:14 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:20:14 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:20:14 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:20:14 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 10:20:14 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 10:20:15 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 10:20:15 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:20:15 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:20:15 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:20:15 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:20:15 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:20:15 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:20:15 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:20:15 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 10:20:15 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 10:20:15 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 10:20:16 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:21:40 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:21:40 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 10:21:40 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 10:21:40 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 10:21:40 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:22:52 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:22:52 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:22:52 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:22:52 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:22:52 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:22:52 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:22:52 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:22:52 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:22:52 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:22:53 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:22:53 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:22:53 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 10:22:53 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 10:22:53 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 10:22:53 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:22:53 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:22:53 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 10:22:53 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 10:22:53 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 10:22:53 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 10:22:54 - Message Received
+[DSNode.Controller] INFO  2016-01-11 10:22:54 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 10:22:54 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 10:22:54 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 10:22:54 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 02:11:39 - Message Received
+[DSNode.Controller] INFO  2016-01-11 02:11:39 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 02:11:39 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 02:11:39 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 02:11:39 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 02:12:47 - Message Received
+[DSNode.Controller] INFO  2016-01-11 02:12:47 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 02:12:47 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 02:12:47 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 02:12:48 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:09:06 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:09:06 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:09:06 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:09:06 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:09:06 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:47:24 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:47:24 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:47:24 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:47:24 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:47:24 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:47:24 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:47:24 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:47:24 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:47:25 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:47:25 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:47:25 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:47:25 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 03:47:25 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:47:25 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:47:25 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:47:25 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:47:25 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:47:25 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:47:26 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:47:26 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:47:26 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:47:26 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:47:26 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:47:26 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:47:26 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:49:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:49:08 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:49:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:49:08 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:49:08 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:19 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:19 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:50:19 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:50:20 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:20 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:20 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:20 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:50:20 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:50:20 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:20 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:20 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:20 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 03:50:20 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:50:20 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:21 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:21 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:21 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:50:21 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:50:21 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:21 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:21 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:21 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:50:21 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:50:21 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:21 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:24 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:24 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:50:24 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:50:24 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:24 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:24 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:24 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:50:24 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:50:24 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:25 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:50:25 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:50:25 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:50:25 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:50:25 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:50:25 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:51:18 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:51:18 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:51:18 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:51:18 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:51:18 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:51:39 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:51:39 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-11 03:51:39 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:51:39 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:51:39 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:34 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:34 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:52:34 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:52:34 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:34 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:34 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:34 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:52:34 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:52:35 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:35 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:35 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:35 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 03:52:35 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:52:35 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:35 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:35 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:35 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:52:35 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:52:35 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:36 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:36 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:36 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:52:36 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:52:36 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:36 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:44 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:44 - Route: db.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:52:44 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:52:45 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:45 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:52:54 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:52:54 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-11 03:52:54 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:52:54 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:52:54 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:16 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:16 - Route: fi.playlist.thumbs.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:53:16 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:53:16 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:16 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:16 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:16 - Route: fi.playlist.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:53:16 - Fi Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:53:16 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:16 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:16 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:16 - Route: fi.playlist.thumbs.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:17 - Fi Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:17 - Sending UDP message: {"type": "table-notification", "table": "resources", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:17 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:17 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:17 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 03:53:17 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 03:53:17 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:17 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:17 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:17 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:17 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:17 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:17 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:33 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:33 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:33 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:33 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:33 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:35 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:35 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:35 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:35 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:35 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:37 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:37 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:37 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:37 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:37 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:38 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:38 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:38 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:38 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:39 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:40 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:40 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:40 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:40 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:40 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:41 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:41 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:41 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:41 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:41 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:43 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:43 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:43 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:43 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:43 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:45 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:45 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:45 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:45 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:45 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:53:54 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:53:54 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:53:54 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:53:54 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:53:54 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:54:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:54:08 - Route: db.engagement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:54:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:54:08 - Sending UDP message: {"type": "table-notification", "table": "engagement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:54:08 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:57:51 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:57:51 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 03:57:51 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:57:52 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:57:52 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:58:07 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:58:07 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-11 03:58:07 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:58:07 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:58:07 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:58:15 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:58:15 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-11 03:58:15 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:58:15 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:58:15 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 03:58:15 - Message Received
+[DSNode.Controller] INFO  2016-01-11 03:58:15 - Route: db.playlist.update
+[DSNode.Controller] DEBUG 2016-01-11 03:58:16 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 03:58:16 - Sending UDP message: {"type": "table-notification", "table": "playlist", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 03:58:16 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:28 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:28 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 04:37:29 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 04:37:29 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:29 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:29 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:29 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:30 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:31 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:31 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:34 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:34 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:34 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:36 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:36 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:36 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:36 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:36 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:37 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:37 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:37 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:37 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:38 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:38 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:39 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:39 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:39 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:39 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:39 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:40 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:40 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:40 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:40 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:41 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:41 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:41 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:41 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:41 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:42 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:42 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:43 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:43 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:43 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:44 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:44 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:37:44 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:37:44 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:37:44 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:37:45 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:37:45 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:01 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:01 - Route: db.playlistelement.insert
+[DSNode.Controller] DEBUG 2016-01-11 04:39:01 - Db Msg - insert
+[DSNode.Notification] DEBUG 2016-01-11 04:39:01 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "insert"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:01 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:01 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:01 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:02 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:02 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:02 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:08 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:08 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:08 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:08 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:08 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:08 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:08 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:08 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:08 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:08 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:09 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:09 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:09 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:09 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:09 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:09 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:09 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:09 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:10 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:10 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:10 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:10 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:10 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:10 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:10 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:10 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:10 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:10 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:10 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:10 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:11 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:39:11 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:39:11 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:39:11 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:39:11 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:39:11 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:40:33 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:40:33 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:40:33 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:40:34 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:40:34 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-11 04:40:50 - Message Received
+[DSNode.Controller] INFO  2016-01-11 04:40:50 - Route: db.playlistelement.update
+[DSNode.Controller] DEBUG 2016-01-11 04:40:50 - Db Msg - update
+[DSNode.Notification] DEBUG 2016-01-11 04:40:50 - Sending UDP message: {"type": "table-notification", "table": "playlistelement", "operation": "update"}
+[DSNode.QueueClient] INFO  2016-01-11 04:40:51 - Message acknowledged
+[DSNode.QueueClient] INFO  2016-01-12 03:45:09 - Message Received
+[DSNode.QueueClient] DEBUG 2016-01-12 03:45:09 - Queue connection closed. Object reference not set to an instance of an object.
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:09 - DSNode Stopping
+[DSNode.Scheduler] INFO  2016-01-12 03:45:09 - Removing health jobs from scheduler
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:11 - DSNode Stopping
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:15 - Starting Instrumentation
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:15 - Starting Scheduler
+[DSNode.Scheduler] INFO  2016-01-12 03:45:15 - Scheduler started.
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:15 - DSNode Starting
+[DSNode.Bootstrap] INFO  2016-01-12 03:45:15 - Host Name: DS-T7500-04
+[DSNode.Configuration] INFO  2016-01-12 03:45:15 - Configuring from: http://bmc.downstreamsandbox.com/dsnode/config?host=DS-T7500-04&hash=f23fa4234Faddfkdomvjderpfdj5C
+[DSNode.Common] WARN  2016-01-12 03:45:47 - The underlying connection was closed: The connection was closed unexpectedly. Request: 
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:17 - Profile: BMC - Playlist
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:17 - Profile Version: 5
+[DSNode.Scheduler] INFO  2016-01-12 03:46:17 - Installing health jobs to scheduler
+[DSNode.QueueClient] INFO  2016-01-12 03:46:17 - Starting queue consumer on encryped transport
+[DSNode.QueueClient] INFO  2016-01-12 03:46:17 - Starting Queue Consumer
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:30 - Host is unreachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:30 - None of the specified endpoints were reachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:30 - Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:30 - DSNode Stopping
+[DSNode.Scheduler] INFO  2016-01-12 03:46:30 - Removing health jobs from scheduler
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:32 - DSNode Stopping
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:35 - Starting Instrumentation
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:35 - Starting Scheduler
+[DSNode.Scheduler] INFO  2016-01-12 03:46:35 - Scheduler started.
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:35 - DSNode Starting
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:35 - Host Name: DS-T7500-04
+[DSNode.Configuration] INFO  2016-01-12 03:46:35 - Configuring from: http://bmc.downstreamsandbox.com/dsnode/config?host=DS-T7500-04&hash=f23fa4234Faddfkdomvjderpfdj5C
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:36 - Profile: BMC - Playlist
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:36 - Profile Version: 5
+[DSNode.Scheduler] INFO  2016-01-12 03:46:36 - Installing health jobs to scheduler
+[DSNode.QueueClient] INFO  2016-01-12 03:46:36 - Starting queue consumer on encryped transport
+[DSNode.QueueClient] INFO  2016-01-12 03:46:36 - Starting Queue Consumer
+[DSNode.Common] WARN  2016-01-12 03:46:42 - The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. Request: 
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:57 - Host is unreachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:57 - None of the specified endpoints were reachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:46:57 - Connection failed
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:57 - DSNode Stopping
+[DSNode.Scheduler] INFO  2016-01-12 03:46:57 - Removing health jobs from scheduler
+[DSNode.Bootstrap] INFO  2016-01-12 03:46:59 - DSNode Stopping
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:02 - Starting Instrumentation
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:03 - Starting Scheduler
+[DSNode.Scheduler] INFO  2016-01-12 03:47:03 - Scheduler started.
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:03 - DSNode Starting
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:03 - Host Name: DS-T7500-04
+[DSNode.Configuration] INFO  2016-01-12 03:47:03 - Configuring from: http://bmc.downstreamsandbox.com/dsnode/config?host=DS-T7500-04&hash=f23fa4234Faddfkdomvjderpfdj5C
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:12 - Profile: BMC - Playlist
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:12 - Profile Version: 5
+[DSNode.Scheduler] INFO  2016-01-12 03:47:12 - Installing health jobs to scheduler
+[DSNode.QueueClient] INFO  2016-01-12 03:47:13 - Starting queue consumer on encryped transport
+[DSNode.QueueClient] INFO  2016-01-12 03:47:13 - Starting Queue Consumer
+[DSNode.QueueClient] FATAL 2016-01-12 03:47:18 - Host is unreachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:47:18 - None of the specified endpoints were reachable
+[DSNode.QueueClient] FATAL 2016-01-12 03:47:18 - Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:18 - DSNode Stopping
+[DSNode.Scheduler] INFO  2016-01-12 03:47:18 - Removing health jobs from scheduler
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:20 - DSNode Stopping
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:23 - Starting Instrumentation
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:23 - Starting Scheduler
+[DSNode.Scheduler] INFO  2016-01-12 03:47:23 - Scheduler started.
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:23 - DSNode Starting
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:23 - Host Name: DS-T7500-04
+[DSNode.Configuration] INFO  2016-01-12 03:47:23 - Configuring from: http://bmc.downstreamsandbox.com/dsnode/config?host=DS-T7500-04&hash=f23fa4234Faddfkdomvjderpfdj5C
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:48 - Profile: BMC - Playlist
+[DSNode.Bootstrap] INFO  2016-01-12 03:47:48 - Profile Version: 5
+[DSNode.Scheduler] INFO  2016-01-12 03:47:48 - Installing health jobs to scheduler
+[DSNode.QueueClient] INFO  2016-01-12 03:47:48 - Starting queue consumer on encryped transport
+[DSNode.QueueClient] INFO  2016-01-12 03:47:48 - Starting Queue Consumer
+[DSNode.QueueClient] INFO  2016-01-12 03:47:55 - Creating route to fi.playlist.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:55 - Creating route to fi.media.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:55 - Creating route to db.elementtype.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:55 - Creating route to db.engagement.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to db.playlist.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to db.playlistelement.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to db.playlisttype.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to db.room.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to db.templatevideo.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to sy.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to ap.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:56 - Creating route to tts.DS-T7500-04.#
+[DSNode.QueueClient] INFO  2016-01-12 03:47:57 - Message consumption started...
+[DSNode.QueueClient] INFO  2016-01-12 03:47:57 - Message Received
+[DSNode.Controller] INFO  2016-01-12 03:47:57 - Route: sy.DS-T7500-04.node.rebuild.response
+[DSNode.Controller] DEBUG 2016-01-12 03:47:58 - Sys Msg - response
+[DSNode.SystemControl] INFO  2016-01-12 03:47:58 - Rebuilding Node...
+[DSNode.Notification] DEBUG 2016-01-12 03:47:58 - Sending UDP message: {"type": "rebuild-status", "status": "rebuilding"}
+[DSNode.SystemControl] INFO  2016-01-12 03:47:58 - Starting Rebuild
+[DSNode.Data] DEBUG 2016-01-12 03:47:58 - Schema created
+[DSNode.Data] INFO  2016-01-12 03:47:58 - Downloading resources...
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Data] DEBUG 2016-01-12 03:47:59 - Schema created
+[DSNode.Notification] DEBUG 2016-01-12 03:47:59 - Sending UDP message: {"type": "rebuild-status", "status": "complete"}
+[DSNode.QueueClient] INFO  2016-01-12 03:47:59 - Message acknowledged

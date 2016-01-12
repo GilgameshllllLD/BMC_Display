@@ -1,0 +1,917 @@
+[sql] DEBUG 2016-01-08 01:21:38 - Connection opened
+[sql] DEBUG 2016-01-08 01:21:38 - Connection opened for rebuild
+[sql] DEBUG 2016-01-08 01:21:38 - CREATE TABLE mem.Resources (resourcesid INTEGER PRIMARY KEY AUTOINCREMENT,resourcestype TEXT,resourcesduration NUMERIC,resourceswidth INTEGER,resourcesheight INTEGER,resourcesfilename TEXT,resourcesthumbid INTEGER,resourcespath TEXT,resourceshash TEXT,resourcesparentid INTEGER,resourcesparentindex INTEGER,created_at DATETIME,updated_at DATETIME);
+[sql] DEBUG 2016-01-08 01:21:38 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:21:38 - INSERT INTO mem.ds_sqlite_sequence VALUES('Resources', '228');
+[sql] DEBUG 2016-01-08 01:21:38 - INSERT INTO mem.Resources VALUES('99','i','0.00000','500','500','thumb_34_568d634693bb8.png','0','media/pdf/thumbs/','66dc89f0cbabeac787bb60dc25428a03','66','34','2016-01-06 12:59:23','2016-01-06 12:59:23');
+INSERT INTO mem.Resources VALUES('98','i','0.00000','500','500','thumb_33_568d634693bb8.png','0','media/pdf/thumbs/','59722aeb528126ebeeecb3b0a53510f9','66','33','2016-01-06 12:59:16','2016-01-06 12:59:16');
+INSERT INTO mem.Resources VALUES('95','i','0.00000','500','500','thumb_30_568d634693bb8.png','0','media/pdf/thumbs/','69d4a28df866b314e0890af1b41d7367','66','30','2016-01-06 12:58:57','2016-01-06 12:58:57');
+INSERT INTO mem.Resources VALUES('97','i','0.00000','500','500','thumb_32_568d634693bb8.png','0','media/pdf/thumbs/','9e9ee2a9bae6bd07b9eefc9534c8cf7d','66','32','2016-01-06 12:59:10','2016-01-06 12:59:10');
+INSERT INTO mem.Resources VALUES('96','i','0.00000','500','500','thumb_31_568d634693bb8.png','0','media/pdf/thumbs/','a957d48f70763b1b74147ede315033f3','66','31','2016-01-06 12:59:03','2016-01-06 12:59:03');
+INSERT INTO mem.Resources VALUES('91','i','0.00000','500','500','thumb_26_568d634693bb8.png','0','media/pdf/thumbs/','7c16ba9f3235705d2e8ef3477c9c573b','66','26','2016-01-06 12:58:34','2016-01-06 12:58:34');
+INSERT INTO mem.Resources VALUES('92','i','0.00000','500','500','thumb_27_568d634693bb8.png','0','media/pdf/thumbs/','3799c5db08d1bb54d7c724f7593a18ee','66','27','2016-01-06 12:58:39','2016-01-06 12:58:39');
+INSERT INTO mem.Resources VALUES('93','i','0.00000','500','500','thumb_28_568d634693bb8.png','0','media/pdf/thumbs/','c7eff2b622d29bf3b254363e563cee68','66','28','2016-01-06 12:58:45','2016-01-06 12:58:45');
+INSERT INTO mem.Resources VALUES('94','i','0.00000','500','500','thumb_29_568d634693bb8.png','0','media/pdf/thumbs/','423466e9baf339b62538dc650e33e330','66','29','2016-01-06 12:58:51','2016-01-06 12:58:51');
+INSERT INTO mem.Resources VALUES('86','i','0.00000','500','500','thumb_21_568d634693bb8.png','0','media/pdf/thumbs/','2d66fdca56b98ef0deb9ada1063059e6','66','21','2016-01-06 12:58:03','2016-01-06 12:58:03');
+INSERT INTO mem.Resources VALUES('87','i','0.00000','500','500','thumb_22_568d634693bb8.png','0','media/pdf/thumbs/','b42eca10cb58562f52e36f1a63552c1f','66','22','2016-01-06 12:58:10','2016-01-06 12:58:10');
+INSERT INTO mem.Resources VALUES('88','i','0.00000','500','500','thumb_23_568d634693bb8.png','0','media/pdf/thumbs/','7fd25b42b70d370dfca04b4f9e5e5179','66','23','2016-01-06 12:58:16','2016-01-06 12:58:16');
+INSERT INTO mem.Resources VALUES('89','i','0.00000','500','500','thumb_24_568d634693bb8.png','0','media/pdf/thumbs/','9adb1def533fdf9fb8ed0f45ef2bcd55','66','24','2016-01-06 12:58:22','2016-01-06 12:58:22');
+INSERT INTO mem.Resources VALUES('90','i','0.00000','500','500','thumb_25_568d634693bb8.png','0','media/pdf/thumbs/','ba3a1c3271b6136aa6ebae5650f61f9f','66','25','2016-01-06 12:58:29','2016-01-06 12:58:29');
+INSERT INTO mem.Resources VALUES('83','i','0.00000','500','500','thumb_18_568d634693bb8.png','0','media/pdf/thumbs/','a30a737e9bf6453a5c04bbc954a4ac00','66','18','2016-01-06 12:57:44','2016-01-06 12:57:44');
+INSERT INTO mem.Resources VALUES('84','i','0.00000','500','500','thumb_19_568d634693bb8.png','0','media/pdf/thumbs/','5c3728b53c520b5d8d669abd9b7dddcd','66','19','2016-01-06 12:57:50','2016-01-06 12:57:50');
+INSERT INTO mem.Resources VALUES('85','i','0.00000','500','500','thumb_20_568d634693bb8.png','0','media/pdf/thumbs/','cae13d623995a9896b5bac11ea8dd4f6','66','20','2016-01-06 12:57:57','2016-01-06 12:57:57');
+INSERT INTO mem.Resources VALUES('77','i','0.00000','500','500','thumb_12_568d634693bb8.png','0','media/pdf/thumbs/','aea84eed75511b0fd8756babeb2f0529','66','12','2016-01-06 12:57:09','2016-01-06 12:57:09');
+INSERT INTO mem.Resources VALUES('78','i','0.00000','500','500','thumb_13_568d634693bb8.png','0','media/pdf/thumbs/','8a63f9ce3307e45ccf54743cee531d56','66','13','2016-01-06 12:57:15','2016-01-06 12:57:15');
+INSERT INTO mem.Resources VALUES('79','i','0.00000','500','500','thumb_14_568d634693bb8.png','0','media/pdf/thumbs/','cc49fb4cdfca4763a2bb97b77f8ad1fa','66','14','2016-01-06 12:57:21','2016-01-06 12:57:21');
+INSERT INTO mem.Resources VALUES('80','i','0.00000','500','500','thumb_15_568d634693bb8.png','0','media/pdf/thumbs/','354e2e7eaf696ce1537f23dd6d337fc8','66','15','2016-01-06 12:57:26','2016-01-06 12:57:26');
+INSERT INTO mem.Resources VALUES('81','i','0.00000','500','500','thumb_16_568d634693bb8.png','0','media/pdf/thumbs/','30c903f26e5dac6bcaec2eeac3d15651','66','16','2016-01-06 12:57:32','2016-01-06 12:57:32');
+INSERT INTO mem.Resources VALUES('82','i','0.00000','500','500','thumb_17_568d634693bb8.png','0','media/pdf/thumbs/','c94d3e1cfd3759ca19266f63a819bbb8','66','17','2016-01-06 12:57:39','2016-01-06 12:57:39');
+INSERT INTO mem.Resources VALUES('73','i','0.00000','500','500','thumb_8_568d634693bb8.png','0','media/pdf/thumbs/','8b6b272fe12176c3e97ba4b316afc087','66','8','2016-01-06 12:56:50','2016-01-06 12:56:50');
+INSERT INTO mem.Resources VALUES('74','i','0.00000','500','500','thumb_9_568d634693bb8.png','0','media/pdf/thumbs/','442316162dde41a9d1f06add8a583eb8','66','9','2016-01-06 12:56:55','2016-01-06 12:56:55');
+INSERT INTO mem.Resources VALUES('75','i','0.00000','500','500','thumb_10_568d634693bb8.png','0','media/pdf/thumbs/','235db229b1573519f5d9cb1d0f64857b','66','10','2016-01-06 12:56:58','2016-01-06 12:56:58');
+INSERT INTO mem.Resources VALUES('76','i','0.00000','500','500','thumb_11_568d634693bb8.png','0','media/pdf/thumbs/','b278fc4095ecf3ddffefc534d226fcae','66','11','2016-01-06 12:57:04','2016-01-06 12:57:04');
+INSERT INTO mem.Resources VALUES('71','i','0.00000','500','500','thumb_6_568d634693bb8.png','0','media/pdf/thumbs/','bb9fe5cfdff3c17138df99ebe9dada63','66','6','2016-01-06 12:56:38','2016-01-06 12:56:38');
+INSERT INTO mem.Resources VALUES('72','i','0.00000','500','500','thumb_7_568d634693bb8.png','0','media/pdf/thumbs/','e6d663f38fa24325e4f2fea46744bb35','66','7','2016-01-06 12:56:42','2016-01-06 12:56:42');
+INSERT INTO mem.Resources VALUES('68','i','0.00000','500','500','thumb_3_568d634693bb8.png','0','media/pdf/thumbs/','83475f020533418762c60b156d9e82ef','66','3','2016-01-06 12:56:23','2016-01-06 12:56:23');
+INSERT INTO mem.Resources VALUES('69','i','0.00000','500','500','thumb_4_568d634693bb8.png','0','media/pdf/thumbs/','ecd6862e66f7eabbe7955a85c73fc8c2','66','4','2016-01-06 12:56:28','2016-01-06 12:56:28');
+INSERT INTO mem.Resources VALUES('70','i','0.00000','500','500','thumb_5_568d634693bb8.png','0','media/pdf/thumbs/','80844b22fab973b9e3c648f01553165d','66','5','2016-01-06 12:56:33','2016-01-06 12:56:33');
+INSERT INTO mem.Resources VALUES('62','i','0.00000','500','500','thumb_7_568d623d02d07.png','0','media/pdf/thumbs/','c5aae4c1472fa28103df688c366ddb42','56','7','2016-01-06 12:52:13','2016-01-06 12:52:13');
+INSERT INTO mem.Resources VALUES('63','i','0.00000','500','500','thumb_8_568d623d02d07.png','0','media/pdf/thumbs/','9b907c051fb2417d3bd40c2275ab87a5','56','8','2016-01-06 12:52:16','2016-01-06 12:52:16');
+INSERT INTO mem.Resources VALUES('64','i','0.00000','500','500','thumb_9_568d623d02d07.png','0','media/pdf/thumbs/','d06c47191b967f155f4c66a0bcaf1ab3','56','9','2016-01-06 12:52:19','2016-01-06 12:52:19');
+INSERT INTO mem.Resources VALUES('67','i','0.00000','500','500','thumb_2_568d634693bb8.png','0','media/pdf/thumbs/','7343cfd928f2dea2b15628965979f491','66','2','2016-01-06 12:56:20','2016-01-06 12:56:20');
+INSERT INTO mem.Resources VALUES('61','i','0.00000','500','500','thumb_6_568d623d02d07.png','0','media/pdf/thumbs/','2f00ee29d82051b4e782e74147454532','56','6','2016-01-06 12:52:08','2016-01-06 12:52:08');
+INSERT INTO mem.Resources VALUES('60','i','0.00000','500','500','thumb_5_568d623d02d07.png','0','media/pdf/thumbs/','6b6d50ab1a61dbc15da5d5d80799bfff','56','5','2016-01-06 12:52:02','2016-01-06 12:52:02');
+INSERT INTO mem.Resources VALUES('59','i','0.00000','500','500','thumb_4_568d623d02d07.png','0','media/pdf/thumbs/','d0505b000fead82afcd682852a7e1798','56','4','2016-01-06 12:51:57','2016-01-06 12:51:57');
+INSERT INTO mem.Resources VALUES('66','p','74.00000','1224','792','568d634693bb8.pdf','65','media/pdf/','5dbffdefa0bde2598a404be838124a6f','0','0','2016-01-06 12:56:12','2016-01-06 12:56:12');
+INSERT INTO mem.Resources VALUES('65','i','0.00000','500','500','thumb_1_568d634693bb8.png','0','media/pdf/thumbs/','3d61936263abe72db7cbc437d2ded98d','66','1','2016-01-06 12:56:09','2016-01-06 12:56:12');
+INSERT INTO mem.Resources VALUES('55','i','0.00000','500','500','thumb_568d623d02d07.png','0','media/pdf/thumbs/','9a8687ffae540602ec73c7de4834e474','56','1','2016-01-06 12:51:43','2016-01-06 12:51:46');
+INSERT INTO mem.Resources VALUES('56','p','9.00000','1191','842','568d623d02d07.pdf','55','media/pdf/','e096f86aa1a4f3069cd5a1ad826b9e1d','0','0','2016-01-06 12:51:46','2016-01-06 12:51:46');
+INSERT INTO mem.Resources VALUES('57','i','0.00000','500','500','thumb_2_568d623d02d07.png','0','media/pdf/thumbs/','cb9ceb58f8dc7cf55f80046eafad92ed','56','2','2016-01-06 12:51:49','2016-01-06 12:51:49');
+INSERT INTO mem.Resources VALUES('58','i','0.00000','500','500','thumb_3_568d623d02d07.png','0','media/pdf/thumbs/','50783a8735c1f43307786b36691539c5','56','3','2016-01-06 12:51:54','2016-01-06 12:51:54');
+INSERT INTO mem.Resources VALUES('100','i','0.00000','500','500','thumb_35_568d634693bb8.png','0','media/pdf/thumbs/','f0b50f925792a5e41592baa520b48e60','66','35','2016-01-06 12:59:29','2016-01-06 12:59:29');
+INSERT INTO mem.Resources VALUES('101','i','0.00000','500','500','thumb_36_568d634693bb8.png','0','media/pdf/thumbs/','ee654525ecf3427c06f4383e3e44a9a9','66','36','2016-01-06 12:59:35','2016-01-06 12:59:35');
+INSERT INTO mem.Resources VALUES('102','i','0.00000','500','500','thumb_37_568d634693bb8.png','0','media/pdf/thumbs/','9cccdc5b441d7f6eab9f34827674c761','66','37','2016-01-06 12:59:41','2016-01-06 12:59:41');
+INSERT INTO mem.Resources VALUES('103','i','0.00000','500','500','thumb_38_568d634693bb8.png','0','media/pdf/thumbs/','ca36941a940e4d73f93d83ae580631cd','66','38','2016-01-06 12:59:48','2016-01-06 12:59:48');
+INSERT INTO mem.Resources VALUES('104','i','0.00000','500','500','thumb_39_568d634693bb8.png','0','media/pdf/thumbs/','9a0cfe14ba3118dc90d66ed31ebe54a5','66','39','2016-01-06 12:59:54','2016-01-06 12:59:54');
+INSERT INTO mem.Resources VALUES('105','i','0.00000','500','500','thumb_40_568d634693bb8.png','0','media/pdf/thumbs/','29a30970a4213fba84d84b2fd2d63fb4','66','40','2016-01-06 13:00:00','2016-01-06 13:00:00');
+INSERT INTO mem.Resources VALUES('106','i','0.00000','500','500','thumb_41_568d634693bb8.png','0','media/pdf/thumbs/','af705a80e180b3b883f8f09b0e3024b0','66','41','2016-01-06 13:00:07','2016-01-06 13:00:07');
+INSERT INTO mem.Resources VALUES('107','i','0.00000','500','500','thumb_42_568d634693bb8.png','0','media/pdf/thumbs/','46fa6e29acd0a1aba329daa56dc9d99d','66','42','2016-01-06 13:00:11','2016-01-06 13:00:11');
+INSERT INTO mem.Resources VALUES('108','i','0.00000','500','500','thumb_43_568d634693bb8.png','0','media/pdf/thumbs/','730c54e0940e18f25ba093789e4437eb','66','43','2016-01-06 13:00:16','2016-01-06 13:00:16');
+INSERT INTO mem.Resources VALUES('109','i','0.00000','500','500','thumb_44_568d634693bb8.png','0','media/pdf/thumbs/','070f7657462245de74942422261b38c9','66','44','2016-01-06 13:00:21','2016-01-06 13:00:21');
+INSERT INTO mem.Resources VALUES('110','i','0.00000','500','500','thumb_45_568d634693bb8.png','0','media/pdf/thumbs/','b29a18a32c268e285949018f3c1a94e9','66','45','2016-01-06 13:00:27','2016-01-06 13:00:27');
+INSERT INTO mem.Resources VALUES('111','i','0.00000','500','500','thumb_46_568d634693bb8.png','0','media/pdf/thumbs/','52bbfcd8fbb63a8c2085f7fb354cee26','66','46','2016-01-06 13:00:32','2016-01-06 13:00:32');
+INSERT INTO mem.Resources VALUES('112','i','0.00000','500','500','thumb_47_568d634693bb8.png','0','media/pdf/thumbs/','9e9ee2a9bae6bd07b9eefc9534c8cf7d','66','47','2016-01-06 13:00:38','2016-01-06 13:00:38');
+INSERT INTO mem.Resources VALUES('113','i','0.00000','500','500','thumb_48_568d634693bb8.png','0','media/pdf/thumbs/','29a30970a4213fba84d84b2fd2d63fb4','66','48','2016-01-06 13:00:45','2016-01-06 13:00:45');
+INSERT INTO mem.Resources VALUES('114','i','0.00000','500','500','thumb_49_568d634693bb8.png','0','media/pdf/thumbs/','af705a80e180b3b883f8f09b0e3024b0','66','49','2016-01-06 13:00:51','2016-01-06 13:00:51');
+INSERT INTO mem.Resources VALUES('115','i','0.00000','500','500','thumb_50_568d634693bb8.png','0','media/pdf/thumbs/','07f21b80452756e6e0e879ff8ee92d97','66','50','2016-01-06 13:00:56','2016-01-06 13:00:56');
+INSERT INTO mem.Resources VALUES('116','i','0.00000','500','500','thumb_51_568d634693bb8.png','0','media/pdf/thumbs/','e6a58edb75054f934fa3ffbfb3cac0b7','66','51','2016-01-06 13:01:02','2016-01-06 13:01:02');
+INSERT INTO mem.Resources VALUES('117','i','0.00000','500','500','thumb_52_568d634693bb8.png','0','media/pdf/thumbs/','b42eca10cb58562f52e36f1a63552c1f','66','52','2016-01-06 13:01:08','2016-01-06 13:01:08');
+INSERT INTO mem.Resources VALUES('118','i','0.00000','500','500','thumb_53_568d634693bb8.png','0','media/pdf/thumbs/','912d741b98e48a871824fe3a0a13cbd5','66','53','2016-01-06 13:01:13','2016-01-06 13:01:13');
+INSERT INTO mem.Resources VALUES('119','i','0.00000','500','500','thumb_54_568d634693bb8.png','0','media/pdf/thumbs/','89c7cd28c89ff1ca7c59eb5c1daf7194','66','54','2016-01-06 13:01:20','2016-01-06 13:01:20');
+INSERT INTO mem.Resources VALUES('120','i','0.00000','500','500','thumb_55_568d634693bb8.png','0','media/pdf/thumbs/','66dc89f0cbabeac787bb60dc25428a03','66','55','2016-01-06 13:01:26','2016-01-06 13:01:26');
+INSERT INTO mem.Resources VALUES('121','i','0.00000','500','500','thumb_56_568d634693bb8.png','0','media/pdf/thumbs/','fde31d47ecf5c2e2229dcd45a269d68e','66','56','2016-01-06 13:01:32','2016-01-06 13:01:32');
+INSERT INTO mem.Resources VALUES('122','i','0.00000','500','500','thumb_57_568d634693bb8.png','0','media/pdf/thumbs/','7fd25b42b70d370dfca04b4f9e5e5179','66','57','2016-01-06 13:01:39','2016-01-06 13:01:39');
+INSERT INTO mem.Resources VALUES('123','i','0.00000','500','500','thumb_58_568d634693bb8.png','0','media/pdf/thumbs/','9adb1def533fdf9fb8ed0f45ef2bcd55','66','58','2016-01-06 13:01:46','2016-01-06 13:01:46');
+INSERT INTO mem.Resources VALUES('124','i','0.00000','500','500','thumb_59_568d634693bb8.png','0','media/pdf/thumbs/','ba3a1c3271b6136aa6ebae5650f61f9f','66','59','2016-01-06 13:01:52','2016-01-06 13:01:52');
+INSERT INTO mem.Resources VALUES('125','i','0.00000','500','500','thumb_60_568d634693bb8.png','0','media/pdf/thumbs/','7c16ba9f3235705d2e8ef3477c9c573b','66','60','2016-01-06 13:01:58','2016-01-06 13:01:58');
+INSERT INTO mem.Resources VALUES('126','i','0.00000','500','500','thumb_61_568d634693bb8.png','0','media/pdf/thumbs/','c3caff0d45c343048ce617d648e913e4','66','61','2016-01-06 13:02:03','2016-01-06 13:02:03');
+INSERT INTO mem.Resources VALUES('127','i','0.00000','500','500','thumb_62_568d634693bb8.png','0','media/pdf/thumbs/','f0b50f925792a5e41592baa520b48e60','66','62','2016-01-06 13:02:09','2016-01-06 13:02:09');
+INSERT INTO mem.Resources VALUES('128','i','0.00000','500','500','thumb_63_568d634693bb8.png','0','media/pdf/thumbs/','ee654525ecf3427c06f4383e3e44a9a9','66','63','2016-01-06 13:02:15','2016-01-06 13:02:15');
+INSERT INTO mem.Resources VALUES('129','i','0.00000','500','500','thumb_64_568d634693bb8.png','0','media/pdf/thumbs/','9cccdc5b441d7f6eab9f34827674c761','66','64','2016-01-06 13:02:21','2016-01-06 13:02:21');
+INSERT INTO mem.Resources VALUES('130','i','0.00000','500','500','thumb_65_568d634693bb8.png','0','media/pdf/thumbs/','ca36941a940e4d73f93d83ae580631cd','66','65','2016-01-06 13:02:27','2016-01-06 13:02:27');
+INSERT INTO mem.Resources VALUES('131','i','0.00000','500','500','thumb_66_568d634693bb8.png','0','media/pdf/thumbs/','9a0cfe14ba3118dc90d66ed31ebe54a5','66','66','2016-01-06 13:02:33','2016-01-06 13:02:33');
+INSERT INTO mem.Resources VALUES('132','i','0.00000','500','500','thumb_67_568d634693bb8.png','0','media/pdf/thumbs/','d59980325f82ed2cdfb3d46ea8d09080','66','67','2016-01-06 13:02:36','2016-01-06 13:02:36');
+INSERT INTO mem.Resources VALUES('133','i','0.00000','500','500','thumb_68_568d634693bb8.png','0','media/pdf/thumbs/','8f8f1f8101e753cd975920c58fa9d75e','66','68','2016-01-06 13:02:40','2016-01-06 13:02:40');
+INSERT INTO mem.Resources VALUES('134','i','0.00000','500','500','thumb_69_568d634693bb8.png','0','media/pdf/thumbs/','9eaa678d1b08f27013388e8f13716ab6','66','69','2016-01-06 13:02:43','2016-01-06 13:02:43');
+INSERT INTO mem.Resources VALUES('135','i','0.00000','500','500','thumb_70_568d634693bb8.png','0','media/pdf/thumbs/','ffd66ee86ebc3c36ce1ad6f970ff5141','66','70','2016-01-06 13:02:46','2016-01-06 13:02:46');
+INSERT INTO mem.Resources VALUES('136','i','0.00000','500','500','thumb_71_568d634693bb8.png','0','media/pdf/thumbs/','7a53e9a34b81010f1b50ed7e719d8d58','66','71','2016-01-06 13:02:49','2016-01-06 13:02:49');
+INSERT INTO mem.Resources VALUES('137','i','0.00000','500','500','thumb_72_568d634693bb8.png','0','media/pdf/thumbs/','1da9b421df0c440f97258765fccbe7a6','66','72','2016-01-06 13:02:52','2016-01-06 13:02:52');
+INSERT INTO mem.Resources VALUES('138','i','0.00000','500','500','thumb_73_568d634693bb8.png','0','media/pdf/thumbs/','cd8b4cc73db58cd39e0c05be73d78ce1','66','73','2016-01-06 13:02:55','2016-01-06 13:02:55');
+INSERT INTO mem.Resources VALUES('139','i','0.00000','500','500','thumb_74_568d634693bb8.png','0','media/pdf/thumbs/','c22ff96f0fb62de9ad36c19aff5a393b','66','74','2016-01-06 13:03:03','2016-01-06 13:03:03');
+INSERT INTO mem.Resources VALUES('188','v','18.00000','304','102','568ecdd7182e2.mp4','187','media/video/','ab8a033f7e26083071d61475324ae813','0','0','2016-01-07 14:43:06','2016-01-07 14:43:06');
+INSERT INTO mem.Resources VALUES('177','i','0.00000','400','273','thumb_568da1b20f391.png','0','media/video/thumbs/','34bd9a3432d57e8d468598190cc3c601','178','1','2016-01-06 17:22:29','2016-01-06 17:22:32');
+INSERT INTO mem.Resources VALUES('187','i','0.00000','400','134','thumb_568ecdd7182e2.png','0','media/video/thumbs/','3abbde1e5dcbffb293aba37260ac54fd','188','1','2016-01-07 14:43:04','2016-01-07 14:43:06');
+INSERT INTO mem.Resources VALUES('222','i','0.00000','847','565','569025350d251.png','221','playlist/','81258969bb0d3391916841f1b3bbf51e','0','0','2016-01-08 15:08:05','2016-01-08 15:08:05');
+INSERT INTO mem.Resources VALUES('221','i','0.00000','200','133','thumb_569025350d251.png','0','playlist/thumbs/','e67f0dd03c8b8cd5a84bd15f29699fa1','222','1','2016-01-08 15:08:05','2016-01-08 15:08:05');
+INSERT INTO mem.Resources VALUES('184','v','67.54000','1280','720','568dad355ebb3.mp4','183','media/video/','f63db617222ed1ea2d77110bdb72d0ac','0','0','2016-01-06 18:11:36','2016-01-06 18:11:36');
+INSERT INTO mem.Resources VALUES('183','i','0.00000','400','225','thumb_568dad355ebb3.png','0','media/video/thumbs/','a966b2f7875d6d8805adfaff88a6ae11','184','1','2016-01-06 18:11:35','2016-01-06 18:11:37');
+INSERT INTO mem.Resources VALUES('182','v','24.35000','1920','1080','568dabf870a80.mp4','181','media/video/','73686dcad4db676545b7cc71e59f10a5','0','0','2016-01-06 18:06:31','2016-01-06 18:06:31');
+INSERT INTO mem.Resources VALUES('181','i','0.00000','400','225','thumb_568dabf870a80.png','0','media/video/thumbs/','d7a3a83b2714cffdb673d9d8592cf3e1','182','1','2016-01-06 18:06:24','2016-01-06 18:06:31');
+INSERT INTO mem.Resources VALUES('180','v','4.91000','1280','228','568da5caef1f0.mov','179','media/video/','39224f7e351f2aa273989e176b4513f1','0','0','2016-01-06 17:39:55','2016-01-06 17:39:55');
+INSERT INTO mem.Resources VALUES('179','i','0.00000','400','71','thumb_568da5caef1f0.png','0','media/video/thumbs/','406555d3a9fc25dd47182a7036e3a17f','180','1','2016-01-06 17:39:55','2016-01-06 17:39:55');
+INSERT INTO mem.Resources VALUES('178','v','50.85000','1052','720','568da1b20f391.mov','177','media/video/','77521bee90db40e9fe9354c2a83a3730','0','0','2016-01-06 17:22:32','2016-01-06 17:22:32');
+INSERT INTO mem.Resources VALUES('152','i','0.00000','250','250','thumb_1_568d9097bc37c.png','0','media/pdf/thumbs/','69fbe3a742103860021f76afd302fd6b','153','1','2016-01-06 16:09:33','2016-01-06 16:09:38');
+INSERT INTO mem.Resources VALUES('153','p','24.00000','1191','842','568d9097bc37c.pdf','152','media/pdf/','92cd0e08322205cdb5ff49acb289389a','0','0','2016-01-06 16:09:38','2016-01-06 16:09:38');
+INSERT INTO mem.Resources VALUES('154','i','0.00000','250','250','thumb_2_568d9097bc37c.png','0','media/pdf/thumbs/','0608d2b99633a5d4cab8f729c399f57e','153','2','2016-01-06 16:09:41','2016-01-06 16:09:41');
+INSERT INTO mem.Resources VALUES('155','i','0.00000','250','250','thumb_3_568d9097bc37c.png','0','media/pdf/thumbs/','acb0e368605478d260fdf348d9ad7f83','153','3','2016-01-06 16:09:44','2016-01-06 16:09:44');
+INSERT INTO mem.Resources VALUES('156','i','0.00000','250','250','thumb_4_568d9097bc37c.png','0','media/pdf/thumbs/','bd0b2d0dfc438a3c9e2d84f4c802a7c7','153','4','2016-01-06 16:09:50','2016-01-06 16:09:50');
+INSERT INTO mem.Resources VALUES('157','i','0.00000','250','250','thumb_5_568d9097bc37c.png','0','media/pdf/thumbs/','20a6b8a25a585ccc907b63a834d2adc9','153','5','2016-01-06 16:09:53','2016-01-06 16:09:53');
+INSERT INTO mem.Resources VALUES('158','i','0.00000','250','250','thumb_6_568d9097bc37c.png','0','media/pdf/thumbs/','575bbaff27927645db1e13202992259c','153','6','2016-01-06 16:09:58','2016-01-06 16:09:58');
+INSERT INTO mem.Resources VALUES('159','i','0.00000','250','250','thumb_7_568d9097bc37c.png','0','media/pdf/thumbs/','65f98f5d4758352525bcca20635747ce','153','7','2016-01-06 16:10:01','2016-01-06 16:10:01');
+INSERT INTO mem.Resources VALUES('160','i','0.00000','250','250','thumb_8_568d9097bc37c.png','0','media/pdf/thumbs/','de533c33734b77f985243a66d48ce669','153','8','2016-01-06 16:10:04','2016-01-06 16:10:04');
+INSERT INTO mem.Resources VALUES('161','i','0.00000','250','250','thumb_9_568d9097bc37c.png','0','media/pdf/thumbs/','1b7c679457e346994ca4b7802115b2d6','153','9','2016-01-06 16:10:09','2016-01-06 16:10:09');
+INSERT INTO mem.Resources VALUES('162','i','0.00000','250','250','thumb_10_568d9097bc37c.png','0','media/pdf/thumbs/','2a754ef2fd8c89f9de36d75e05061ff0','153','10','2016-01-06 16:10:14','2016-01-06 16:10:14');
+INSERT INTO mem.Resources VALUES('163','i','0.00000','250','250','thumb_11_568d9097bc37c.png','0','media/pdf/thumbs/','40226c37ae3ee4cee4e8df750b724442','153','11','2016-01-06 16:10:19','2016-01-06 16:10:19');
+INSERT INTO mem.Resources VALUES('164','i','0.00000','250','250','thumb_12_568d9097bc37c.png','0','media/pdf/thumbs/','24a1d878935fcb82830cc7d47d9ab820','153','12','2016-01-06 16:10:24','2016-01-06 16:10:24');
+INSERT INTO mem.Resources VALUES('165','i','0.00000','250','250','thumb_13_568d9097bc37c.png','0','media/pdf/thumbs/','e488f26eb95b307aaf0046e33b353574','153','13','2016-01-06 16:10:29','2016-01-06 16:10:29');
+INSERT INTO mem.Resources VALUES('166','i','0.00000','250','250','thumb_14_568d9097bc37c.png','0','media/pdf/thumbs/','3ea59633954c3159a6c52a05d242642a','153','14','2016-01-06 16:10:35','2016-01-06 16:10:35');
+INSERT INTO mem.Resources VALUES('167','i','0.00000','250','250','thumb_15_568d9097bc37c.png','0','media/pdf/thumbs/','c13839bdbe9f949a68d3efbd4924cf83','153','15','2016-01-06 16:10:40','2016-01-06 16:10:40');
+INSERT INTO mem.Resources VALUES('168','i','0.00000','250','250','thumb_16_568d9097bc37c.png','0','media/pdf/thumbs/','f58f98bd42a1642c1d222fbb0289deb7','153','16','2016-01-06 16:10:45','2016-01-06 16:10:45');
+INSERT INTO mem.Resources VALUES('169','i','0.00000','250','250','thumb_17_568d9097bc37c.png','0','media/pdf/thumbs/','74712014b06b42615fedf17c1d1175fa','153','17','2016-01-06 16:10:51','2016-01-06 16:10:51');
+INSERT INTO mem.Resources VALUES('170','i','0.00000','250','250','thumb_18_568d9097bc37c.png','0','media/pdf/thumbs/','c9ccba93bb56651dfd098b981eb18bab','153','18','2016-01-06 16:10:56','2016-01-06 16:10:56');
+INSERT INTO mem.Resources VALUES('171','i','0.00000','250','250','thumb_19_568d9097bc37c.png','0','media/pdf/thumbs/','f67247ad16abab7270aa0899985fdf79','153','19','2016-01-06 16:11:01','2016-01-06 16:11:01');
+INSERT INTO mem.Resources VALUES('172','i','0.00000','250','250','thumb_20_568d9097bc37c.png','0','media/pdf/thumbs/','b00165fd20f475b22f2896ab435c79e0','153','20','2016-01-06 16:11:04','2016-01-06 16:11:04');
+INSERT INTO mem.Resources VALUES('173','i','0.00000','250','250','thumb_21_568d9097bc37c.png','0','media/pdf/thumbs/','959418ee9509c99523caf3c92f03cbea','153','21','2016-01-06 16:11:07','2016-01-06 16:11:07');
+INSERT INTO mem.Resources VALUES('174','i','0.00000','250','250','thumb_22_568d9097bc37c.png','0','media/pdf/thumbs/','0d4caed5eb8ffd36939ccb6bfcc7637d','153','22','2016-01-06 16:11:12','2016-01-06 16:11:12');
+INSERT INTO mem.Resources VALUES('175','i','0.00000','250','250','thumb_23_568d9097bc37c.png','0','media/pdf/thumbs/','9d2a21575c4364d41c438bc480aec446','153','23','2016-01-06 16:11:18','2016-01-06 16:11:18');
+INSERT INTO mem.Resources VALUES('176','i','0.00000','250','250','thumb_24_568d9097bc37c.png','0','media/pdf/thumbs/','b515708f31084498a81a26da6aa8e055','153','24','2016-01-06 16:11:21','2016-01-06 16:11:21');
+INSERT INTO mem.Resources VALUES('203','i','0.00000','350','263','thumb_568f00ac130be.png','0','media/web/thumbs/','bd56e4628fb48605daff0e8a5896a8e9','204','1','2016-01-07 18:20:07','2016-01-07 18:20:07');
+INSERT INTO mem.Resources VALUES('204','w','0.00000','1024','768','http://www.cnn.com','203','media/web/','','0','0','2016-01-07 18:20:07','2016-01-07 18:20:07');
+INSERT INTO mem.Resources VALUES('217','i','0.00000','200','67','thumb_569005cbcfb2f.png','0','playlist/thumbs/','d29001bcd30a8e2fa662008abff88085','218','1','2016-01-08 12:54:03','2016-01-08 12:54:03');
+INSERT INTO mem.Resources VALUES('218','i','0.00000','304','102','569005cbcfb2f.png','217','playlist/','746004eb1a5a6425fad6c75618dbccff','0','0','2016-01-08 12:54:03','2016-01-08 12:54:03');
+INSERT INTO mem.Resources VALUES('219','i','0.00000','200','112','thumb_569024751c1f4.png','0','playlist/thumbs/','404bac0b58b7bd6d7864cbfc294e33c1','220','1','2016-01-08 15:04:53','2016-01-08 15:04:53');
+INSERT INTO mem.Resources VALUES('220','i','0.00000','1920','1080','569024751c1f4.png','219','playlist/','61b1b1de670c5cf94a0888b56db5b67c','0','0','2016-01-08 15:04:53','2016-01-08 15:04:53');
+INSERT INTO mem.Resources VALUES('223','i','0.00000','200','56','thumb_5690257a994dd.png','0','playlist/thumbs/','65a5c1957e4871c2910c0a7e331443f0','224','1','2016-01-08 15:09:16','2016-01-08 15:09:16');
+INSERT INTO mem.Resources VALUES('224','i','0.00000','8000','2250','5690257a994dd.png','223','playlist/','a0d70941b274a951b25e5166b9e943fa','0','0','2016-01-08 15:09:16','2016-01-08 15:09:16');
+INSERT INTO mem.Resources VALUES('225','i','0.00000','400','134','thumb_56902779d5874.png','0','media/video/thumbs/','6bc87ebc6b88e2c74c8438e1671f6b30','227','1','2016-01-08 15:17:47','2016-01-08 15:17:48');
+INSERT INTO mem.Resources VALUES('226','i','0.00000','400','134','thumb_5690277a03012.png','0','media/video/thumbs/','3abbde1e5dcbffb293aba37260ac54fd','228','1','2016-01-08 15:17:47','2016-01-08 15:17:49');
+INSERT INTO mem.Resources VALUES('227','v','18.00000','304','102','56902779d5874.mp4','225','media/video/','e4d57d215b665a78a70835f21f6d92f1','0','0','2016-01-08 15:17:48','2016-01-08 15:17:48');
+INSERT INTO mem.Resources VALUES('228','v','18.00000','304','102','5690277a03012.mp4','226','media/video/','ab8a033f7e26083071d61475324ae813','0','0','2016-01-08 15:17:49','2016-01-08 15:17:49');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.templatevideo (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,resourceid INTEGER,timecodestartoverlay NUMERIC,timecodeendoverlay NUMERIC,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('templatevideo', '3');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.templatevideo VALUES('3','Template Video 1','184','2.00000000','19.00000000','2016-01-06 19:41:24','2016-01-08 15:05:49','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','10');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.room (roomid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,ambientpresentationid INTEGER,autoplaytime INTEGER,backgroundimageid INTEGER,color TEXT,created_at DATETIME,updated_at DATETIME,backgroundimageid_cropdata TEXT,backgroundimageid_mediaid INTEGER,bookable INTEGER);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('room', '8');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.room VALUES('1','Living IT Theater','0','0','0','#337ab7','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('2','Colorado Boardroom','0','0','0','#5cb85c','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('3','Lavaca Room','0','0','0','#5bc0de','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('4','Brazos Room','0','0','0','#f0ad4e','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('5','Collaboration Room 1','0','0','0','#d9534f','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('6','Collaboration Room 2','0','0','0','#674D90','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('7','Heritage Table 1','0','0','0','rgb(255,0,0)','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','0');
+INSERT INTO mem.room VALUES('8','Heritage Table 2','0','0','0','rgb(255,0,0)','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','0');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.playlisttype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlisttype', '3');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.playlisttype VALUES('1','Welcome');
+INSERT INTO mem.playlisttype VALUES('2','Rio Grande Corridor');
+INSERT INTO mem.playlisttype VALUES('3','Windows to Transformation');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.playlistelement (id INTEGER PRIMARY KEY AUTOINCREMENT,playlistid INTEGER,name TEXT,elementtypeid INTEGER,resourceid INTEGER,textline1 TEXT,textline2 TEXT,textline3 TEXT,templatevideoid INTEGER,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER,sort_order INTEGER);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX mem.playlistelement_resourceid_mediaid_idx ON playlistelement(resourceid_mediaid)
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX mem.playlistelement_playlistid_idx ON playlistelement(playlistid)
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlistelement', '8');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.playlistelement VALUES('1','1','image 1','1','220','','','','0','2016-01-06 21:59:32','2016-01-08 15:04:53','{"x1":"0","y1":"0","x2":"1920","y2":"645","width":"1920","height":"645","dirty":"0","mediaid":"12","mediatype":"i"}','12','0');
+INSERT INTO mem.playlistelement VALUES('2','1','template 1','2','0','Hello world','Downstream','Grumpy Cat','3','2016-01-06 22:42:32','2016-01-08 15:05:17','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.playlistelement VALUES('3','1','do that','2','0',';lj','ljk','ljk','3','2016-01-06 22:44:35','2016-01-07 14:18:39','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','2');
+INSERT INTO mem.playlistelement VALUES('4','5','New one2','2','0','one','two','three','3','2016-01-07 15:59:11','2016-01-08 15:06:19','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','4');
+INSERT INTO mem.playlistelement VALUES('6','2','item 1','1','222','','','','0','2016-01-08 15:08:05','2016-01-08 15:08:05','{"x1":"0","y1":"75","x2":"847","y2":"640","width":"847","height":"565","dirty":"1","mediaid":"11","mediatype":"i"}','11','6');
+INSERT INTO mem.playlistelement VALUES('5','5','sdfg','1','218','','','','0','2016-01-08 12:54:03','2016-01-08 12:54:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"13","mediatype":"i"}','13','5');
+INSERT INTO mem.playlistelement VALUES('7','4','item 1','1','182','','','','0','2016-01-08 15:08:40','2016-01-08 15:08:40','{"x1":"0","y1":"0","x2":"338","y2":"225","width":"338","height":"225","dirty":"1","mediaid":"9","mediatype":"v"}','9','7');
+INSERT INTO mem.playlistelement VALUES('8','3','item 1','1','224','','','','0','2016-01-08 15:09:16','2016-01-08 15:09:16','{"x1":"0","y1":"0","x2":"7982","y2":"2245","width":"7982","height":"2245","dirty":"0","mediaid":"29","mediatype":"i"}','29','8');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.playlist (playlistid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,typeid INTEGER,isdefault INTEGER,created_at DATETIME,updated_at DATETIME);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlist', '5');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.playlist VALUES('1','playlist 1','1','1','2016-01-06 21:57:50','2016-01-08 15:10:51');
+INSERT INTO mem.playlist VALUES('2','rio playlist 1','2','1','2016-01-06 22:27:45','2016-01-08 15:08:14');
+INSERT INTO mem.playlist VALUES('3','windows 1','3','1','2016-01-07 14:27:46','2016-01-08 15:09:04');
+INSERT INTO mem.playlist VALUES('4','rio playlist 2','2','0','2016-01-07 15:48:14','2016-01-08 15:08:26');
+INSERT INTO mem.playlist VALUES('5','playlist 2','1','0','2016-01-07 15:58:50','2016-01-08 15:10:51');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.engagement (engagementid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,roomid INTEGER,startdate DATETIME,enddate DATETIME,welcomeplaylistid INTEGER,riograndeplaylistid INTEGER,transformationplaylistid INTEGER,theaterbackgroundid INTEGER,collabroom1backgroundid INTEGER,collabroom2backgroundid INTEGER,brazosbackgroundid INTEGER,lavacabackgroundid INTEGER,coloradobackgroundid INTEGER,heritagetable1backgroundid INTEGER,heritagetable2backgroundid INTEGER,created_at DATETIME,updated_at DATETIME,theaterbackgroundid_cropdata TEXT,theaterbackgroundid_mediaid INTEGER,collabroom1backgroundid_cropdata TEXT,collabroom1backgroundid_mediaid INTEGER,collabroom2backgroundid_cropdata TEXT,collabroom2backgroundid_mediaid INTEGER,brazosbackgroundid_cropdata TEXT,brazosbackgroundid_mediaid INTEGER,lavacabackgroundid_cropdata TEXT,lavacabackgroundid_mediaid INTEGER,coloradobackgroundid_cropdata TEXT,coloradobackgroundid_mediaid INTEGER,heritagetable1backgroundid_cropdata TEXT,heritagetable1backgroundid_mediaid INTEGER,heritagetable2backgroundid_cropdata TEXT,heritagetable2backgroundid_mediaid INTEGER);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX mem.engagement_roomid_idx ON engagement(roomid)
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('engagement', '6');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.engagement VALUES('1','Test','2','2016-01-06 08:00:00','2016-01-06 14:00:00','1','2','3','0','0','0','0','0','0','0','0','2016-01-07 12:54:48','2016-01-08 15:13:01','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('2','Test engagement 2','5','2016-01-07 10:30:00','2016-01-07 12:00:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:45:46','2016-01-08 12:23:05','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('3','Test engagement 3','6','2016-01-07 12:00:00','2016-01-07 14:30:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:00','2016-01-08 12:23:06','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('4','Test engagement 4','2','2016-01-08 08:00:00','2016-01-08 09:30:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:13','2016-01-07 19:47:56','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('5','Test engagement 5','4','2016-01-06 08:00:00','2016-01-06 15:00:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:24','2016-01-08 14:26:08','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('6','Test engagement 6','1','2016-01-08 09:30:00','2016-01-08 11:30:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:38','2016-01-08 12:23:09','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE mem.elementtype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT);
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.ds_sqlite_sequence VALUES('elementtype', '2');
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO mem.elementtype VALUES('1','MEDIA');
+INSERT INTO mem.elementtype VALUES('2','INTERSTITIAL');
+[sql] DEBUG 2016-01-08 01:22:34 - Saving to disk...
+[sql] DEBUG 2016-01-08 01:22:34 - BEGIN TRANSACTION;
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE Resources (resourcesid INTEGER PRIMARY KEY AUTOINCREMENT,resourcestype TEXT,resourcesduration NUMERIC,resourceswidth INTEGER,resourcesheight INTEGER,resourcesfilename TEXT,resourcesthumbid INTEGER,resourcespath TEXT,resourceshash TEXT,resourcesparentid INTEGER,resourcesparentindex INTEGER,created_at DATETIME,updated_at DATETIME)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO Resources SELECT * FROM mem.Resources;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='Resources';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'Resources';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE ds_sqlite_sequence(name, seq)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO ds_sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='ds_sqlite_sequence';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'ds_sqlite_sequence';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE templatevideo (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,resourceid INTEGER,timecodestartoverlay NUMERIC,timecodeendoverlay NUMERIC,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO templatevideo SELECT * FROM mem.templatevideo;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='templatevideo';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'templatevideo';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE room (roomid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,ambientpresentationid INTEGER,autoplaytime INTEGER,backgroundimageid INTEGER,color TEXT,created_at DATETIME,updated_at DATETIME,backgroundimageid_cropdata TEXT,backgroundimageid_mediaid INTEGER,bookable INTEGER)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO room SELECT * FROM mem.room;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='room';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'room';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE playlisttype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO playlisttype SELECT * FROM mem.playlisttype;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='playlisttype';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlisttype';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE playlistelement (id INTEGER PRIMARY KEY AUTOINCREMENT,playlistid INTEGER,name TEXT,elementtypeid INTEGER,resourceid INTEGER,textline1 TEXT,textline2 TEXT,textline3 TEXT,templatevideoid INTEGER,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER,sort_order INTEGER)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO playlistelement SELECT * FROM mem.playlistelement;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='playlistelement';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlistelement';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE playlist (playlistid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,typeid INTEGER,isdefault INTEGER,created_at DATETIME,updated_at DATETIME)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO playlist SELECT * FROM mem.playlist;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='playlist';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlist';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE engagement (engagementid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,roomid INTEGER,startdate DATETIME,enddate DATETIME,welcomeplaylistid INTEGER,riograndeplaylistid INTEGER,transformationplaylistid INTEGER,theaterbackgroundid INTEGER,collabroom1backgroundid INTEGER,collabroom2backgroundid INTEGER,brazosbackgroundid INTEGER,lavacabackgroundid INTEGER,coloradobackgroundid INTEGER,heritagetable1backgroundid INTEGER,heritagetable2backgroundid INTEGER,created_at DATETIME,updated_at DATETIME,theaterbackgroundid_cropdata TEXT,theaterbackgroundid_mediaid INTEGER,collabroom1backgroundid_cropdata TEXT,collabroom1backgroundid_mediaid INTEGER,collabroom2backgroundid_cropdata TEXT,collabroom2backgroundid_mediaid INTEGER,brazosbackgroundid_cropdata TEXT,brazosbackgroundid_mediaid INTEGER,lavacabackgroundid_cropdata TEXT,lavacabackgroundid_mediaid INTEGER,coloradobackgroundid_cropdata TEXT,coloradobackgroundid_mediaid INTEGER,heritagetable1backgroundid_cropdata TEXT,heritagetable1backgroundid_mediaid INTEGER,heritagetable2backgroundid_cropdata TEXT,heritagetable2backgroundid_mediaid INTEGER)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO engagement SELECT * FROM mem.engagement;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='engagement';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'engagement';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE TABLE elementtype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO elementtype SELECT * FROM mem.elementtype;
+[sql] DEBUG 2016-01-08 01:22:34 - DELETE FROM sqlite_sequence WHERE name='elementtype';
+[sql] DEBUG 2016-01-08 01:22:34 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'elementtype';
+[sql] DEBUG 2016-01-08 01:22:34 - SELECT name, sql FROM mem.sqlite_master WHERE type = 'index';
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX playlistelement_resourceid_mediaid_idx ON playlistelement(resourceid_mediaid)
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX playlistelement_playlistid_idx ON playlistelement(playlistid)
+[sql] DEBUG 2016-01-08 01:22:34 - CREATE INDEX engagement_roomid_idx ON engagement(roomid)
+[sql] DEBUG 2016-01-08 01:22:34 - END TRANSACTION;
+[sql] DEBUG 2016-01-08 01:22:34 - DETACH DATABASE mem;
+[sql] DEBUG 2016-01-08 01:22:34 - VACUUM;
+[sql] DEBUG 2016-01-08 01:22:35 - PRAGMA INTEGRITY_CHECK;
+[sql] DEBUG 2016-01-08 01:22:35 - Rebuild complete.
+[sql] DEBUG 2016-01-08 01:22:35 - Connection closed
+[sql] DEBUG 2016-01-08 01:22:35 - Connection opened
+[sql] DEBUG 2016-01-08 01:22:35 - Connection closed
+[sql] DEBUG 2016-01-08 01:22:59 - Connection opened
+[sql] DEBUG 2016-01-08 01:22:59 - DELETE FROM Resources WHERE resourcesid = '219'
+[sql] DEBUG 2016-01-08 01:22:59 - Connection closed
+[sql] DEBUG 2016-01-08 01:22:59 - Connection opened
+[sql] DEBUG 2016-01-08 01:22:59 - DELETE FROM Resources WHERE resourcesid = '220'
+[sql] DEBUG 2016-01-08 01:22:59 - Connection closed
+[sql] DEBUG 2016-01-08 01:23:00 - Connection opened
+[sql] DEBUG 2016-01-08 01:23:00 - UPDATE playlistelement SET resourceid = '184', resourceid_mediaid = '10', resourceid_cropdata = '{"x1":"0","y1":"0","x2":"400","y2":"135","width":"400","height":"135","dirty":"1","mediaid":"10","mediatype":"v"}', updated_at = '2016-01-08 15:23:46' WHERE id = '1'
+[sql] DEBUG 2016-01-08 01:23:00 - Connection closed
+[sql] DEBUG 2016-01-08 01:27:21 - Connection opened
+[sql] DEBUG 2016-01-08 01:27:21 - UPDATE templatevideo SET resourceid = '227', resourceid_mediaid = '47', timecodestartoverlay = '3', timecodeendoverlay = '13', updated_at = '2016-01-08 15:28:09' WHERE id = '3'
+[sql] DEBUG 2016-01-08 01:27:21 - Connection closed
+[sql] DEBUG 2016-01-08 01:31:37 - Connection opened
+[sql] DEBUG 2016-01-08 01:31:37 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('229','i','0','200','67','thumb_56902ae8e67cc.png','0','playlist/thumbs/','84bf57bcd80b5727008205e8cb358099','0','0','2016-01-08 15:32:24','2016-01-08 15:32:24')
+[sql] DEBUG 2016-01-08 01:31:37 - Connection closed
+[sql] DEBUG 2016-01-08 01:31:38 - Connection opened
+[sql] DEBUG 2016-01-08 01:31:38 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('230','i','0','304','102','56902ae8e67cc.png','229','playlist/','647d26f0d28ce1f270a48522fbd67da0','0','0','2016-01-08 15:32:24','2016-01-08 15:32:24')
+[sql] DEBUG 2016-01-08 01:31:38 - Connection closed
+[sql] DEBUG 2016-01-08 01:31:38 - Connection opened
+[sql] DEBUG 2016-01-08 01:31:38 - UPDATE Resources SET resourcesparentid = '230', resourcesparentindex = '1', updated_at = '2016-01-08 15:32:25' WHERE resourcesid = '229'
+[sql] DEBUG 2016-01-08 01:31:38 - Connection closed
+[sql] DEBUG 2016-01-08 01:31:38 - Connection opened
+[sql] DEBUG 2016-01-08 01:31:38 - UPDATE playlistelement SET resourceid = '230', resourceid_mediaid = '37', resourceid_cropdata = '{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"37","mediatype":"i"}', updated_at = '2016-01-08 15:32:25' WHERE id = '1'
+[sql] DEBUG 2016-01-08 01:31:38 - Connection closed
+[sql] DEBUG 2016-01-08 01:37:21 - Connection opened
+[sql] DEBUG 2016-01-08 01:37:21 - INSERT INTO templatevideo (id,resourceid,timecodestartoverlay,timecodeendoverlay,resourceid_cropdata,resourceid_mediaid,name,created_at,updated_at) VALUES ('4','227','3','14','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','47','welcome video','2016-01-08 15:38:09','2016-01-08 15:38:09')
+[sql] DEBUG 2016-01-08 01:37:21 - Connection closed
+[sql] DEBUG 2016-01-08 01:37:36 - Connection opened
+[sql] DEBUG 2016-01-08 01:37:36 - UPDATE playlistelement SET templatevideoid = '4', updated_at = '2016-01-08 15:38:23' WHERE id = '2'
+[sql] DEBUG 2016-01-08 01:37:36 - Connection closed
+[sql] DEBUG 2016-01-08 01:37:45 - Connection opened
+[sql] DEBUG 2016-01-08 01:37:45 - UPDATE playlistelement SET templatevideoid = '4', updated_at = '2016-01-08 15:38:32' WHERE id = '3'
+[sql] DEBUG 2016-01-08 01:37:45 - Connection closed
+[sql] DEBUG 2016-01-08 01:59:29 - Connection opened
+[sql] DEBUG 2016-01-08 01:59:29 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('9','1','welcome video','1','228','','','','0','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"1","mediaid":"50","mediatype":"v"}','50','2016-01-08 16:00:17','2016-01-08 16:00:17')
+[sql] DEBUG 2016-01-08 01:59:29 - Connection closed
+[sql] DEBUG 2016-01-08 01:59:30 - Connection opened
+[sql] DEBUG 2016-01-08 01:59:30 - UPDATE playlistelement SET sort_order = '9' WHERE id = '9'
+[sql] DEBUG 2016-01-08 01:59:30 - Connection closed
+[sql] DEBUG 2016-01-09 06:01:53 - Connection opened
+[sql] DEBUG 2016-01-09 06:01:53 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('6','1','0','asdf','2016-01-09 08:02:42','2016-01-09 08:02:42')
+[sql] DEBUG 2016-01-09 06:01:53 - Connection closed
+[sql] DEBUG 2016-01-09 07:03:58 - Connection opened
+[sql] DEBUG 2016-01-09 07:03:58 - DELETE FROM playlistelement WHERE (playlistid = '6')
+[sql] DEBUG 2016-01-09 07:03:58 - Connection closed
+[sql] DEBUG 2016-01-09 07:03:59 - Connection opened
+[sql] DEBUG 2016-01-09 07:03:59 - DELETE FROM playlist WHERE playlistid = '6'
+[sql] DEBUG 2016-01-09 07:03:59 - Connection closed
+[sql] DEBUG 2016-01-09 07:10:40 - Connection opened
+[sql] DEBUG 2016-01-09 07:10:40 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('7','1','0','lkjhlkjh','2016-01-09 09:11:29','2016-01-09 09:11:29')
+[sql] DEBUG 2016-01-09 07:10:40 - Connection closed
+[sql] DEBUG 2016-01-09 07:11:00 - Connection opened
+[sql] DEBUG 2016-01-09 07:11:00 - UPDATE playlist SET isdefault = 0, updated_at = '2016-01-09 09:11:49' WHERE (typeid = '1')
+[sql] DEBUG 2016-01-09 07:11:00 - Connection closed
+[sql] DEBUG 2016-01-09 07:11:00 - Connection opened
+[sql] DEBUG 2016-01-09 07:11:00 - UPDATE playlist SET isdefault = '1', updated_at = '2016-01-09 09:11:49' WHERE playlistid = '7'
+[sql] DEBUG 2016-01-09 07:11:00 - Connection closed
+[sql] DEBUG 2016-01-09 07:11:06 - Connection opened
+[sql] DEBUG 2016-01-09 07:11:06 - UPDATE playlist SET isdefault = '1', updated_at = '2016-01-09 09:11:55' WHERE playlistid = '1'
+[sql] DEBUG 2016-01-09 07:11:06 - Connection closed
+[sql] DEBUG 2016-01-09 07:11:06 - Connection opened
+[sql] DEBUG 2016-01-09 07:11:06 - DELETE FROM playlistelement WHERE (playlistid = '7')
+[sql] DEBUG 2016-01-09 07:11:06 - Connection closed
+[sql] DEBUG 2016-01-09 07:11:06 - Connection opened
+[sql] DEBUG 2016-01-09 07:11:06 - DELETE FROM playlist WHERE playlistid = '7'
+[sql] DEBUG 2016-01-09 07:11:06 - Connection closed
+[sql] DEBUG 2016-01-09 07:13:57 - Connection opened
+[sql] DEBUG 2016-01-09 07:13:57 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('8','1','0','New Playlist','2016-01-09 09:14:47','2016-01-09 09:14:47')
+[sql] DEBUG 2016-01-09 07:13:57 - Connection closed
+[sql] DEBUG 2016-01-09 07:14:09 - Connection opened
+[sql] DEBUG 2016-01-09 07:14:09 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('9','1','0','New Playlist','2016-01-09 09:14:58','2016-01-09 09:14:58')
+[sql] DEBUG 2016-01-09 07:14:09 - Connection closed
+[sql] DEBUG 2016-01-09 07:14:23 - Connection opened
+[sql] DEBUG 2016-01-09 07:14:23 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('10','2','0','New Playlist','2016-01-09 09:15:12','2016-01-09 09:15:12')
+[sql] DEBUG 2016-01-09 07:14:23 - Connection closed
+[sql] DEBUG 2016-01-09 07:30:22 - Connection opened
+[sql] DEBUG 2016-01-09 07:30:22 - INSERT INTO engagement (engagementid,roomid,welcomeplaylistid,riograndeplaylistid,transformationplaylistid,theaterbackgroundid,collabroom1backgroundid,collabroom2backgroundid,brazosbackgroundid,lavacabackgroundid,coloradobackgroundid,heritagetable1backgroundid,heritagetable2backgroundid,theaterbackgroundid_cropdata,theaterbackgroundid_mediaid,collabroom1backgroundid_cropdata,collabroom1backgroundid_mediaid,collabroom2backgroundid_cropdata,collabroom2backgroundid_mediaid,brazosbackgroundid_cropdata,brazosbackgroundid_mediaid,lavacabackgroundid_cropdata,lavacabackgroundid_mediaid,coloradobackgroundid_cropdata,coloradobackgroundid_mediaid,heritagetable1backgroundid_cropdata,heritagetable1backgroundid_mediaid,heritagetable2backgroundid_cropdata,heritagetable2backgroundid_mediaid,name,startdate,enddate,created_at,updated_at) VALUES ('7','4','0','0','0','0','0','0','0','0','0','0','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','Delete me','2016-01-09 06:30:00','2016-01-09 07:00:00','2016-01-09 09:31:11','2016-01-09 09:31:11')
+[sql] DEBUG 2016-01-09 07:30:22 - Connection closed
+[sql] DEBUG 2016-01-09 07:31:06 - Connection opened
+[sql] DEBUG 2016-01-09 07:31:06 - DELETE FROM engagement WHERE engagementid = '7'
+[sql] DEBUG 2016-01-09 07:31:06 - Connection closed
+[sql] DEBUG 2016-01-09 07:31:31 - Connection opened
+[sql] DEBUG 2016-01-09 07:31:31 - INSERT INTO engagement (engagementid,roomid,welcomeplaylistid,riograndeplaylistid,transformationplaylistid,theaterbackgroundid,collabroom1backgroundid,collabroom2backgroundid,brazosbackgroundid,lavacabackgroundid,coloradobackgroundid,heritagetable1backgroundid,heritagetable2backgroundid,theaterbackgroundid_cropdata,theaterbackgroundid_mediaid,collabroom1backgroundid_cropdata,collabroom1backgroundid_mediaid,collabroom2backgroundid_cropdata,collabroom2backgroundid_mediaid,brazosbackgroundid_cropdata,brazosbackgroundid_mediaid,lavacabackgroundid_cropdata,lavacabackgroundid_mediaid,coloradobackgroundid_cropdata,coloradobackgroundid_mediaid,heritagetable1backgroundid_cropdata,heritagetable1backgroundid_mediaid,heritagetable2backgroundid_cropdata,heritagetable2backgroundid_mediaid,name,startdate,enddate,created_at,updated_at) VALUES ('8','4','0','0','0','0','0','0','0','0','0','0','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','Jhfg','2016-01-09 06:30:00','2016-01-09 07:00:00','2016-01-09 09:32:20','2016-01-09 09:32:20')
+[sql] DEBUG 2016-01-09 07:31:31 - Connection closed
+[sql] DEBUG 2016-01-09 07:31:36 - Connection opened
+[sql] DEBUG 2016-01-09 07:31:36 - DELETE FROM engagement WHERE engagementid = '8'
+[sql] DEBUG 2016-01-09 07:31:36 - Connection closed
+[sql] DEBUG 2016-01-09 07:33:42 - Connection opened
+[sql] DEBUG 2016-01-09 07:33:42 - INSERT INTO engagement (engagementid,roomid,welcomeplaylistid,riograndeplaylistid,transformationplaylistid,theaterbackgroundid,collabroom1backgroundid,collabroom2backgroundid,brazosbackgroundid,lavacabackgroundid,coloradobackgroundid,heritagetable1backgroundid,heritagetable2backgroundid,theaterbackgroundid_cropdata,theaterbackgroundid_mediaid,collabroom1backgroundid_cropdata,collabroom1backgroundid_mediaid,collabroom2backgroundid_cropdata,collabroom2backgroundid_mediaid,brazosbackgroundid_cropdata,brazosbackgroundid_mediaid,lavacabackgroundid_cropdata,lavacabackgroundid_mediaid,coloradobackgroundid_cropdata,coloradobackgroundid_mediaid,heritagetable1backgroundid_cropdata,heritagetable1backgroundid_mediaid,heritagetable2backgroundid_cropdata,heritagetable2backgroundid_mediaid,name,startdate,enddate,created_at,updated_at) VALUES ('9','4','0','0','0','0','0','0','0','0','0','0','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0',';lkj','2016-01-09 06:30:00','2016-01-09 07:00:00','2016-01-09 09:34:31','2016-01-09 09:34:31')
+[sql] DEBUG 2016-01-09 07:33:42 - Connection closed
+[sql] DEBUG 2016-01-09 07:33:50 - Connection opened
+[sql] DEBUG 2016-01-09 07:33:50 - INSERT INTO engagement (engagementid,roomid,welcomeplaylistid,riograndeplaylistid,transformationplaylistid,theaterbackgroundid,collabroom1backgroundid,collabroom2backgroundid,brazosbackgroundid,lavacabackgroundid,coloradobackgroundid,heritagetable1backgroundid,heritagetable2backgroundid,theaterbackgroundid_cropdata,theaterbackgroundid_mediaid,collabroom1backgroundid_cropdata,collabroom1backgroundid_mediaid,collabroom2backgroundid_cropdata,collabroom2backgroundid_mediaid,brazosbackgroundid_cropdata,brazosbackgroundid_mediaid,lavacabackgroundid_cropdata,lavacabackgroundid_mediaid,coloradobackgroundid_cropdata,coloradobackgroundid_mediaid,heritagetable1backgroundid_cropdata,heritagetable1backgroundid_mediaid,heritagetable2backgroundid_cropdata,heritagetable2backgroundid_mediaid,name,startdate,enddate,created_at,updated_at) VALUES ('10','4','0','0','0','0','0','0','0','0','0','0','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','L;kjl;kj2','2016-01-09 06:30:00','2016-01-09 07:00:00','2016-01-09 09:34:39','2016-01-09 09:34:39')
+[sql] DEBUG 2016-01-09 07:33:50 - Connection closed
+[sql] DEBUG 2016-01-09 07:33:59 - Connection opened
+[sql] DEBUG 2016-01-09 07:33:59 - DELETE FROM engagement WHERE engagementid = '9'
+[sql] DEBUG 2016-01-09 07:33:59 - Connection closed
+[sql] DEBUG 2016-01-09 07:33:59 - Connection opened
+[sql] DEBUG 2016-01-09 07:33:59 - DELETE FROM engagement WHERE engagementid = '10'
+[sql] DEBUG 2016-01-09 07:34:00 - Connection closed
+[sql] DEBUG 2016-01-09 07:35:57 - Connection opened
+[sql] DEBUG 2016-01-09 07:35:57 - UPDATE engagement SET welcomeplaylistid = 0, updated_at = '2016-01-09 09:36:47' WHERE (welcomeplaylistid = '8')
+[sql] DEBUG 2016-01-09 07:35:57 - Connection closed
+[sql] DEBUG 2016-01-09 07:35:58 - Connection opened
+[sql] DEBUG 2016-01-09 07:35:58 - DELETE FROM playlistelement WHERE (playlistid = '8')
+[sql] DEBUG 2016-01-09 07:35:58 - Connection closed
+[sql] DEBUG 2016-01-09 07:35:58 - Connection opened
+[sql] DEBUG 2016-01-09 07:35:58 - DELETE FROM playlist WHERE playlistid = '8'
+[sql] DEBUG 2016-01-09 07:35:58 - Connection closed
+[sql] DEBUG 2016-01-09 07:36:02 - Connection opened
+[sql] DEBUG 2016-01-09 07:36:02 - UPDATE engagement SET welcomeplaylistid = 0, updated_at = '2016-01-09 09:36:51' WHERE (welcomeplaylistid = '9')
+[sql] DEBUG 2016-01-09 07:36:02 - Connection closed
+[sql] DEBUG 2016-01-09 07:36:02 - Connection opened
+[sql] DEBUG 2016-01-09 07:36:02 - DELETE FROM playlistelement WHERE (playlistid = '9')
+[sql] DEBUG 2016-01-09 07:36:02 - Connection closed
+[sql] DEBUG 2016-01-09 07:36:03 - Connection opened
+[sql] DEBUG 2016-01-09 07:36:03 - DELETE FROM playlist WHERE playlistid = '9'
+[sql] DEBUG 2016-01-09 07:36:03 - Connection closed
+[sql] DEBUG 2016-01-11 07:32:56 - Connection opened
+[sql] DEBUG 2016-01-11 07:32:56 - UPDATE engagement SET startdate = '2016-01-11 08:00:00', enddate = '2016-01-11 15:00:00', updated_at = '2016-01-11 09:33:50' WHERE engagementid = '5'
+[sql] DEBUG 2016-01-11 07:32:56 - Connection closed
+[sql] DEBUG 2016-01-11 07:32:58 - Connection opened
+[sql] DEBUG 2016-01-11 07:32:58 - UPDATE engagement SET startdate = '2016-01-11 08:00:00', enddate = '2016-01-11 14:00:00', updated_at = '2016-01-11 09:33:52' WHERE engagementid = '1'
+[sql] DEBUG 2016-01-11 07:32:58 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:01 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:01 - UPDATE engagement SET startdate = '2016-01-11 12:00:00', enddate = '2016-01-11 14:30:00', updated_at = '2016-01-11 09:33:55' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 07:33:01 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:04 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:04 - UPDATE engagement SET startdate = '2016-01-12 12:00:00', enddate = '2016-01-12 14:30:00', updated_at = '2016-01-11 09:33:58' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 07:33:04 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:06 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:06 - UPDATE engagement SET startdate = '2016-01-12 10:30:00', enddate = '2016-01-12 12:00:00', updated_at = '2016-01-11 09:34:00' WHERE engagementid = '2'
+[sql] DEBUG 2016-01-11 07:33:06 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:08 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:08 - UPDATE engagement SET startdate = '2016-01-13 08:00:00', enddate = '2016-01-13 09:30:00', updated_at = '2016-01-11 09:34:02' WHERE engagementid = '4'
+[sql] DEBUG 2016-01-11 07:33:08 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:10 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:10 - UPDATE engagement SET startdate = '2016-01-13 09:30:00', enddate = '2016-01-13 11:30:00', updated_at = '2016-01-11 09:34:04' WHERE engagementid = '6'
+[sql] DEBUG 2016-01-11 07:33:10 - Connection closed
+[sql] DEBUG 2016-01-11 07:33:17 - Connection opened
+[sql] DEBUG 2016-01-11 07:33:17 - UPDATE engagement SET startdate = '2016-01-11 15:00:00', enddate = '2016-01-11 21:00:00', updated_at = '2016-01-11 09:34:12' WHERE engagementid = '1'
+[sql] DEBUG 2016-01-11 07:33:17 - Connection closed
+[sql] DEBUG 2016-01-11 07:34:57 - Connection opened
+[sql] DEBUG 2016-01-11 07:34:57 - UPDATE engagement SET riograndeplaylistid = 0, updated_at = '2016-01-11 09:35:52' WHERE (riograndeplaylistid = '10')
+[sql] DEBUG 2016-01-11 07:34:57 - Connection closed
+[sql] DEBUG 2016-01-11 07:34:58 - Connection opened
+[sql] DEBUG 2016-01-11 07:34:58 - DELETE FROM playlistelement WHERE (playlistid = '10')
+[sql] DEBUG 2016-01-11 07:34:58 - Connection closed
+[sql] DEBUG 2016-01-11 07:34:58 - Connection opened
+[sql] DEBUG 2016-01-11 07:34:58 - DELETE FROM playlist WHERE playlistid = '10'
+[sql] DEBUG 2016-01-11 07:34:58 - Connection closed
+[sql] DEBUG 2016-01-11 07:35:04 - Connection opened
+[sql] DEBUG 2016-01-11 07:35:04 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('11','3','0','New Playlist','2016-01-11 09:35:58','2016-01-11 09:35:58')
+[sql] DEBUG 2016-01-11 07:35:04 - Connection closed
+[sql] DEBUG 2016-01-11 07:35:11 - Connection opened
+[sql] DEBUG 2016-01-11 07:35:11 - UPDATE engagement SET transformationplaylistid = 0, updated_at = '2016-01-11 09:36:05' WHERE (transformationplaylistid = '11')
+[sql] DEBUG 2016-01-11 07:35:11 - Connection closed
+[sql] DEBUG 2016-01-11 07:35:11 - Connection opened
+[sql] DEBUG 2016-01-11 07:35:11 - DELETE FROM playlistelement WHERE (playlistid = '11')
+[sql] DEBUG 2016-01-11 07:35:11 - Connection closed
+[sql] DEBUG 2016-01-11 07:35:12 - Connection opened
+[sql] DEBUG 2016-01-11 07:35:12 - DELETE FROM playlist WHERE playlistid = '11'
+[sql] DEBUG 2016-01-11 07:35:12 - Connection closed
+[sql] DEBUG 2016-01-11 10:20:14 - Connection opened
+[sql] DEBUG 2016-01-11 10:20:14 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('237','i','0','200','67','thumb_5693f2945112e.png','0','playlist/thumbs/','f958ba2a6e5ade640a6d66924c9e895a','0','0','2016-01-11 12:21:08','2016-01-11 12:21:08')
+[sql] DEBUG 2016-01-11 10:20:14 - Connection closed
+[sql] DEBUG 2016-01-11 10:20:14 - Connection opened
+[sql] DEBUG 2016-01-11 10:20:14 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('238','i','0','304','102','5693f2945112e.png','237','playlist/','1753fbf6eecf2acedc37cc710fd9045e','0','0','2016-01-11 12:21:08','2016-01-11 12:21:08')
+[sql] DEBUG 2016-01-11 10:20:14 - Connection closed
+[sql] DEBUG 2016-01-11 10:20:14 - Connection opened
+[sql] DEBUG 2016-01-11 10:20:14 - UPDATE Resources SET resourcesparentid = '238', resourcesparentindex = '1' WHERE resourcesid = '237'
+[sql] DEBUG 2016-01-11 10:20:15 - Connection closed
+[sql] DEBUG 2016-01-11 10:20:15 - Connection opened
+[sql] DEBUG 2016-01-11 10:20:15 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('10','1','CISCO','1','238','','','','0','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"48","mediatype":"i"}','48','2016-01-11 12:21:08','2016-01-11 12:21:08')
+[sql] DEBUG 2016-01-11 10:20:15 - Connection closed
+[sql] DEBUG 2016-01-11 10:20:15 - Connection opened
+[sql] DEBUG 2016-01-11 10:20:15 - UPDATE playlistelement SET sort_order = '10' WHERE id = '10'
+[sql] DEBUG 2016-01-11 10:20:15 - Connection closed
+[sql] DEBUG 2016-01-11 10:21:40 - Connection opened
+[sql] DEBUG 2016-01-11 10:21:40 - UPDATE playlistelement SET textline1 = 'asdb', textline2 = 'tejm', textline3 = 'twex', updated_at = '2016-01-11 12:22:35' WHERE id = '3'
+[sql] DEBUG 2016-01-11 10:21:40 - Connection closed
+[sql] DEBUG 2016-01-11 10:22:52 - Connection opened
+[sql] DEBUG 2016-01-11 10:22:52 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('239','i','0','200','67','thumb_5693f3328e2b4.png','0','playlist/thumbs/','7c9a40b57c976d793046c4a372b28c19','0','0','2016-01-11 12:23:46','2016-01-11 12:23:46')
+[sql] DEBUG 2016-01-11 10:22:52 - Connection closed
+[sql] DEBUG 2016-01-11 10:22:52 - Connection opened
+[sql] DEBUG 2016-01-11 10:22:52 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('240','i','0','304','102','5693f3328e2b4.png','239','playlist/','cc15948549eb47353d312f610571e5d6','0','0','2016-01-11 12:23:46','2016-01-11 12:23:46')
+[sql] DEBUG 2016-01-11 10:22:52 - Connection closed
+[sql] DEBUG 2016-01-11 10:22:53 - Connection opened
+[sql] DEBUG 2016-01-11 10:22:53 - UPDATE Resources SET resourcesparentid = '240', resourcesparentindex = '1' WHERE resourcesid = '239'
+[sql] DEBUG 2016-01-11 10:22:53 - Connection closed
+[sql] DEBUG 2016-01-11 10:22:53 - Connection opened
+[sql] DEBUG 2016-01-11 10:22:53 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('11','1','whale','1','240','','','','0','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"46","mediatype":"i"}','46','2016-01-11 12:23:46','2016-01-11 12:23:46')
+[sql] DEBUG 2016-01-11 10:22:53 - Connection closed
+[sql] DEBUG 2016-01-11 10:22:54 - Connection opened
+[sql] DEBUG 2016-01-11 10:22:54 - UPDATE playlistelement SET sort_order = '11' WHERE id = '11'
+[sql] DEBUG 2016-01-11 10:22:54 - Connection closed
+[sql] DEBUG 2016-01-11 02:11:39 - Connection opened
+[sql] DEBUG 2016-01-11 02:11:39 - UPDATE playlistelement SET textline1 = 'asdbdfasdfasdfaadsf', updated_at = '2016-01-11 16:12:34' WHERE id = '3'
+[sql] DEBUG 2016-01-11 02:11:39 - Connection closed
+[sql] DEBUG 2016-01-11 02:12:47 - Connection opened
+[sql] DEBUG 2016-01-11 02:12:47 - UPDATE playlistelement SET textline2 = 'tejmasdfsadfsafdasdfsadfsadfsadf', updated_at = '2016-01-11 16:13:42' WHERE id = '3'
+[sql] DEBUG 2016-01-11 02:12:47 - Connection closed
+[sql] DEBUG 2016-01-11 03:09:06 - Connection opened
+[sql] DEBUG 2016-01-11 03:09:06 - UPDATE playlistelement SET textline1 = 'welcom', textline2 = 'CISCO', textline3 = 'LAVACA ROOM', updated_at = '2016-01-11 17:10:00' WHERE id = '3'
+[sql] DEBUG 2016-01-11 03:09:06 - Connection closed
+[sql] DEBUG 2016-01-11 03:47:24 - Connection opened
+[sql] DEBUG 2016-01-11 03:47:24 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('247','i','0','200','67','thumb_56943f434b29f.png','0','playlist/thumbs/','b6992a33498fc515161cd5f11ae862f3','0','0','2016-01-11 17:48:19','2016-01-11 17:48:19')
+[sql] DEBUG 2016-01-11 03:47:24 - Connection closed
+[sql] DEBUG 2016-01-11 03:47:24 - Connection opened
+[sql] DEBUG 2016-01-11 03:47:24 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('248','i','0','304','102','56943f434b29f.png','247','playlist/','77459fd5707c8289ec69f9b21e273153','0','0','2016-01-11 17:48:19','2016-01-11 17:48:19')
+[sql] DEBUG 2016-01-11 03:47:25 - Connection closed
+[sql] DEBUG 2016-01-11 03:47:25 - Connection opened
+[sql] DEBUG 2016-01-11 03:47:25 - UPDATE Resources SET resourcesparentid = '248', resourcesparentindex = '1' WHERE resourcesid = '247'
+[sql] DEBUG 2016-01-11 03:47:25 - Connection closed
+[sql] DEBUG 2016-01-11 03:47:25 - Connection opened
+[sql] DEBUG 2016-01-11 03:47:25 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('12','1','bmc image','1','248','','','','0','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"43","mediatype":"i"}','43','2016-01-11 17:48:19','2016-01-11 17:48:19')
+[sql] DEBUG 2016-01-11 03:47:26 - Connection closed
+[sql] DEBUG 2016-01-11 03:47:26 - Connection opened
+[sql] DEBUG 2016-01-11 03:47:26 - UPDATE playlistelement SET sort_order = '12' WHERE id = '12'
+[sql] DEBUG 2016-01-11 03:47:26 - Connection closed
+[sql] DEBUG 2016-01-11 03:49:08 - Connection opened
+[sql] DEBUG 2016-01-11 03:49:08 - UPDATE engagement SET welcomeplaylistid = '5', enddate = '2016-01-11 07:00:00', updated_at = '2016-01-11 17:50:03' WHERE engagementid = '1'
+[sql] DEBUG 2016-01-11 03:49:08 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:19 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:19 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('249','i','0','200','67','thumb_56943ff1b8ae8.png','0','playlist/thumbs/','3b02bfeb2b8a18d29e10b34800174b69','0','0','2016-01-11 17:51:14','2016-01-11 17:51:14')
+[sql] DEBUG 2016-01-11 03:50:20 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:20 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:20 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('250','i','0','3115','1045','56943ff1b8ae8.png','249','playlist/','7cf05751ad263463da1d68bf2debd3af','0','0','2016-01-11 17:51:14','2016-01-11 17:51:14')
+[sql] DEBUG 2016-01-11 03:50:20 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:20 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:20 - UPDATE Resources SET resourcesparentid = '250', resourcesparentindex = '1' WHERE resourcesid = '249'
+[sql] DEBUG 2016-01-11 03:50:20 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:21 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:21 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('13','5','engadeg image','1','250','','','','0','{"x1":"466","y1":"556","x2":"3580","y2":"1600","width":"3115","height":"1045","dirty":"1","mediaid":"29","mediatype":"i"}','29','2016-01-11 17:51:14','2016-01-11 17:51:14')
+[sql] DEBUG 2016-01-11 03:50:21 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:21 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:21 - UPDATE playlistelement SET sort_order = '13' WHERE id = '13'
+[sql] DEBUG 2016-01-11 03:50:21 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:24 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:24 - UPDATE playlistelement SET sort_order = 0, updated_at = '2016-01-11 17:51:19' WHERE (id = '13')
+[sql] DEBUG 2016-01-11 03:50:24 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:24 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:24 - UPDATE playlistelement SET sort_order = 1, updated_at = '2016-01-11 17:51:19' WHERE (id = '4')
+[sql] DEBUG 2016-01-11 03:50:24 - Connection closed
+[sql] DEBUG 2016-01-11 03:50:25 - Connection opened
+[sql] DEBUG 2016-01-11 03:50:25 - UPDATE playlistelement SET sort_order = 2, updated_at = '2016-01-11 17:51:19' WHERE (id = '5')
+[sql] DEBUG 2016-01-11 03:50:25 - Connection closed
+[sql] DEBUG 2016-01-11 03:51:18 - Connection opened
+[sql] DEBUG 2016-01-11 03:51:18 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('12','1','0','New Playlist','2016-01-11 17:52:13','2016-01-11 17:52:13')
+[sql] DEBUG 2016-01-11 03:51:18 - Connection closed
+[sql] DEBUG 2016-01-11 03:51:39 - Connection opened
+[sql] DEBUG 2016-01-11 03:51:39 - UPDATE playlist SET name = 'logo-cisco', updated_at = '2016-01-11 17:52:34' WHERE playlistid = '12'
+[sql] DEBUG 2016-01-11 03:51:39 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:34 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:34 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('251','i','0','200','67','thumb_569440792bb5b.png','0','playlist/thumbs/','ad4ceb6af9e721a803cf679aa188086d','0','0','2016-01-11 17:53:29','2016-01-11 17:53:29')
+[sql] DEBUG 2016-01-11 03:52:34 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:34 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:34 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('252','i','0','1080','363','569440792bb5b.png','251','playlist/','f8d2098d9010e34430ea4150c3255a6c','0','0','2016-01-11 17:53:29','2016-01-11 17:53:29')
+[sql] DEBUG 2016-01-11 03:52:35 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:35 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:35 - UPDATE Resources SET resourcesparentid = '252', resourcesparentindex = '1' WHERE resourcesid = '251'
+[sql] DEBUG 2016-01-11 03:52:35 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:35 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:35 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('14','12','logo','1','252','','','','0','{"x1":"0","y1":"759","x2":"1080","y2":"1122","width":"1080","height":"363","dirty":"1","mediaid":"33","mediatype":"i"}','33','2016-01-11 17:53:29','2016-01-11 17:53:29')
+[sql] DEBUG 2016-01-11 03:52:35 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:36 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:36 - UPDATE playlistelement SET sort_order = '14' WHERE id = '14'
+[sql] DEBUG 2016-01-11 03:52:36 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:44 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:44 - INSERT INTO playlist (playlistid,typeid,isdefault,name,created_at,updated_at) VALUES ('13','1','0','New Playlist','2016-01-11 17:53:39','2016-01-11 17:53:39')
+[sql] DEBUG 2016-01-11 03:52:45 - Connection closed
+[sql] DEBUG 2016-01-11 03:52:54 - Connection opened
+[sql] DEBUG 2016-01-11 03:52:54 - UPDATE playlist SET name = 'marriat', updated_at = '2016-01-11 17:53:49' WHERE playlistid = '13'
+[sql] DEBUG 2016-01-11 03:52:54 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:16 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:16 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('253','i','0','200','67','thumb_569440a317c8b.png','0','playlist/thumbs/','4bd2afa7adfd4b934cbfdeacdf5f7409','0','0','2016-01-11 17:54:11','2016-01-11 17:54:11')
+[sql] DEBUG 2016-01-11 03:53:16 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:16 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:16 - INSERT INTO Resources (resourcesid,resourcestype,resourcesduration,resourceswidth,resourcesheight,resourcesfilename,resourcesthumbid,resourcespath,resourceshash,resourcesparentid,resourcesparentindex,created_at,updated_at) VALUES ('254','i','0','187','63','569440a317c8b.png','253','playlist/','94e674f9dd81c41d2b306129af81cbbe','0','0','2016-01-11 17:54:11','2016-01-11 17:54:11')
+[sql] DEBUG 2016-01-11 03:53:16 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:17 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:17 - UPDATE Resources SET resourcesparentid = '254', resourcesparentindex = '1' WHERE resourcesid = '253'
+[sql] DEBUG 2016-01-11 03:53:17 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:17 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:17 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('15','13','fdgsd','1','254','','','','0','{"x1":"58","y1":"20","x2":"245","y2":"83","width":"187","height":"63","dirty":"1","mediaid":"52","mediatype":"i"}','52','2016-01-11 17:54:11','2016-01-11 17:54:11')
+[sql] DEBUG 2016-01-11 03:53:17 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:17 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:17 - UPDATE playlistelement SET sort_order = '15' WHERE id = '15'
+[sql] DEBUG 2016-01-11 03:53:17 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:33 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:33 - UPDATE engagement SET startdate = '2016-01-11 15:00:00', enddate = '2016-01-11 17:30:00', updated_at = '2016-01-11 17:54:28' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 03:53:33 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:35 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:35 - UPDATE engagement SET startdate = '2016-01-11 15:30:00', enddate = '2016-01-11 17:00:00', updated_at = '2016-01-11 17:54:30' WHERE engagementid = '2'
+[sql] DEBUG 2016-01-11 03:53:35 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:37 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:37 - UPDATE engagement SET startdate = '2016-01-11 15:00:00', enddate = '2016-01-11 16:30:00', updated_at = '2016-01-11 17:54:32' WHERE engagementid = '2'
+[sql] DEBUG 2016-01-11 03:53:37 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:38 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:38 - UPDATE engagement SET enddate = '2016-01-11 19:30:00', updated_at = '2016-01-11 17:54:33' WHERE engagementid = '2'
+[sql] DEBUG 2016-01-11 03:53:38 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:40 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:40 - UPDATE engagement SET startdate = '2016-01-11 16:30:00', enddate = '2016-01-11 19:00:00', updated_at = '2016-01-11 17:54:35' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 03:53:40 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:41 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:41 - UPDATE engagement SET startdate = '2016-01-11 15:00:00', enddate = '2016-01-11 17:30:00', updated_at = '2016-01-11 17:54:36' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 03:53:41 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:43 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:43 - UPDATE engagement SET enddate = '2016-01-11 19:30:00', updated_at = '2016-01-11 17:54:38' WHERE engagementid = '1'
+[sql] DEBUG 2016-01-11 03:53:43 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:45 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:45 - UPDATE engagement SET enddate = '2016-01-11 20:00:00', updated_at = '2016-01-11 17:54:40' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 03:53:45 - Connection closed
+[sql] DEBUG 2016-01-11 03:53:54 - Connection opened
+[sql] DEBUG 2016-01-11 03:53:54 - UPDATE engagement SET welcomeplaylistid = '13', enddate = '2016-01-11 07:00:00', updated_at = '2016-01-11 17:54:49' WHERE engagementid = '3'
+[sql] DEBUG 2016-01-11 03:53:54 - Connection closed
+[sql] DEBUG 2016-01-11 03:54:08 - Connection opened
+[sql] DEBUG 2016-01-11 03:54:08 - UPDATE engagement SET welcomeplaylistid = '12', enddate = '2016-01-11 07:00:00', updated_at = '2016-01-11 17:55:03' WHERE engagementid = '2'
+[sql] DEBUG 2016-01-11 03:54:08 - Connection closed
+[sql] DEBUG 2016-01-11 03:57:51 - Connection opened
+[sql] DEBUG 2016-01-11 03:57:51 - UPDATE playlistelement SET textline1 = 'WELCOME', updated_at = '2016-01-11 17:58:46' WHERE id = '3'
+[sql] DEBUG 2016-01-11 03:57:52 - Connection closed
+[sql] DEBUG 2016-01-11 03:58:07 - Connection opened
+[sql] DEBUG 2016-01-11 03:58:07 - UPDATE playlist SET isdefault = 0, updated_at = '2016-01-11 17:59:02' WHERE (typeid = '1')
+[sql] DEBUG 2016-01-11 03:58:07 - Connection closed
+[sql] DEBUG 2016-01-11 03:58:15 - Connection opened
+[sql] DEBUG 2016-01-11 03:58:15 - UPDATE playlist SET isdefault = 0, updated_at = '2016-01-11 17:59:10' WHERE (typeid = '1')
+[sql] DEBUG 2016-01-11 03:58:15 - Connection closed
+[sql] DEBUG 2016-01-11 03:58:16 - Connection opened
+[sql] DEBUG 2016-01-11 03:58:16 - UPDATE playlist SET isdefault = '1', updated_at = '2016-01-11 17:59:10' WHERE playlistid = '1'
+[sql] DEBUG 2016-01-11 03:58:16 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:29 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:29 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('16','1','Banque Société Générale Vostok', '2', '0', 'WELCOME', 'Banque Société Générale Vostok','LAVACA ROOM','3','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','2016-01-11 18:38:24','2016-01-11 18:38:24',)
+[sql] FATAL 2016-01-11 04:37:29 - SQLite error
+near ")": syntax error
+[sql] DEBUG 2016-01-11 04:37:29 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:30 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:30 - UPDATE playlistelement SET sort_order = '16' WHERE id = '16'
+[sql] DEBUG 2016-01-11 04:37:31 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:35 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:35 - UPDATE playlistelement SET sort_order = 0, updated_at = '2016-01-11 18:38:29' WHERE (id = '1')
+[sql] DEBUG 2016-01-11 04:37:36 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:37 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:37 - UPDATE playlistelement SET sort_order = 1, updated_at = '2016-01-11 18:38:29' WHERE (id = '16')
+[sql] DEBUG 2016-01-11 04:37:37 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:38 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:38 - UPDATE playlistelement SET sort_order = 2, updated_at = '2016-01-11 18:38:29' WHERE (id = '2')
+[sql] DEBUG 2016-01-11 04:37:38 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:39 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:39 - UPDATE playlistelement SET sort_order = 3, updated_at = '2016-01-11 18:38:29' WHERE (id = '3')
+[sql] DEBUG 2016-01-11 04:37:39 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:40 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:40 - UPDATE playlistelement SET sort_order = 4, updated_at = '2016-01-11 18:38:29' WHERE (id = '9')
+[sql] DEBUG 2016-01-11 04:37:41 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:42 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:42 - UPDATE playlistelement SET sort_order = 5, updated_at = '2016-01-11 18:38:29' WHERE (id = '10')
+[sql] DEBUG 2016-01-11 04:37:42 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:43 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:43 - UPDATE playlistelement SET sort_order = 6, updated_at = '2016-01-11 18:38:29' WHERE (id = '11')
+[sql] DEBUG 2016-01-11 04:37:44 - Connection closed
+[sql] DEBUG 2016-01-11 04:37:44 - Connection opened
+[sql] DEBUG 2016-01-11 04:37:44 - UPDATE playlistelement SET sort_order = 7, updated_at = '2016-01-11 18:38:29' WHERE (id = '12')
+[sql] DEBUG 2016-01-11 04:37:45 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:01 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:01 - INSERT INTO playlistelement (id,playlistid,name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid,resourceid_cropdata,resourceid_mediaid,created_at,updated_at) VALUES ('17','1','Bring IT to Life','2','0','WELCOME','Bring IT to Life','BMC EXECUTIVE BRIEFING CENTER','3','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','2016-01-11 18:39:56','2016-01-11 18:39:56')
+[sql] DEBUG 2016-01-11 04:39:01 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:02 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:02 - UPDATE playlistelement SET sort_order = '17' WHERE id = '17'
+[sql] DEBUG 2016-01-11 04:39:02 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:08 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:08 - UPDATE playlistelement SET sort_order = 0, updated_at = '2016-01-11 18:40:03' WHERE (id = '1')
+[sql] DEBUG 2016-01-11 04:39:08 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:08 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:08 - UPDATE playlistelement SET sort_order = 1, updated_at = '2016-01-11 18:40:03' WHERE (id = '16')
+[sql] DEBUG 2016-01-11 04:39:08 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:08 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:08 - UPDATE playlistelement SET sort_order = 2, updated_at = '2016-01-11 18:40:03' WHERE (id = '17')
+[sql] DEBUG 2016-01-11 04:39:08 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:09 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:09 - UPDATE playlistelement SET sort_order = 3, updated_at = '2016-01-11 18:40:03' WHERE (id = '2')
+[sql] DEBUG 2016-01-11 04:39:09 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:09 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:09 - UPDATE playlistelement SET sort_order = 4, updated_at = '2016-01-11 18:40:03' WHERE (id = '3')
+[sql] DEBUG 2016-01-11 04:39:09 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:10 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:10 - UPDATE playlistelement SET sort_order = 5, updated_at = '2016-01-11 18:40:03' WHERE (id = '9')
+[sql] DEBUG 2016-01-11 04:39:10 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:10 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:10 - UPDATE playlistelement SET sort_order = 6, updated_at = '2016-01-11 18:40:03' WHERE (id = '10')
+[sql] DEBUG 2016-01-11 04:39:10 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:10 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:10 - UPDATE playlistelement SET sort_order = 7, updated_at = '2016-01-11 18:40:03' WHERE (id = '11')
+[sql] DEBUG 2016-01-11 04:39:10 - Connection closed
+[sql] DEBUG 2016-01-11 04:39:11 - Connection opened
+[sql] DEBUG 2016-01-11 04:39:11 - UPDATE playlistelement SET sort_order = 8, updated_at = '2016-01-11 18:40:03' WHERE (id = '12')
+[sql] DEBUG 2016-01-11 04:39:11 - Connection closed
+[sql] DEBUG 2016-01-11 04:40:34 - Connection opened
+[sql] DEBUG 2016-01-11 04:40:34 - UPDATE playlistelement SET name = 'Downstream', updated_at = '2016-01-11 18:41:29' WHERE id = '2'
+[sql] DEBUG 2016-01-11 04:40:34 - Connection closed
+[sql] DEBUG 2016-01-11 04:40:50 - Connection opened
+[sql] DEBUG 2016-01-11 04:40:50 - UPDATE playlistelement SET name = 'CISCO', textline3 = 'LIVING IT THEATER', updated_at = '2016-01-11 18:41:45' WHERE id = '3'
+[sql] DEBUG 2016-01-11 04:40:50 - Connection closed
+[sql] DEBUG 2016-01-12 03:47:58 - Connection opened
+[sql] DEBUG 2016-01-12 03:47:58 - Connection opened for rebuild
+[sql] DEBUG 2016-01-12 03:47:58 - CREATE TABLE mem.Resources (resourcesid INTEGER PRIMARY KEY AUTOINCREMENT,resourcestype TEXT,resourcesduration NUMERIC,resourceswidth INTEGER,resourcesheight INTEGER,resourcesfilename TEXT,resourcesthumbid INTEGER,resourcespath TEXT,resourceshash TEXT,resourcesparentid INTEGER,resourcesparentindex INTEGER,created_at DATETIME,updated_at DATETIME);
+[sql] DEBUG 2016-01-12 03:47:58 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:58 - INSERT INTO mem.ds_sqlite_sequence VALUES('Resources', '256');
+[sql] DEBUG 2016-01-12 03:47:58 - INSERT INTO mem.Resources VALUES('99','i','0.00000','500','500','thumb_34_568d634693bb8.png','0','media/pdf/thumbs/','66dc89f0cbabeac787bb60dc25428a03','66','34','2016-01-06 12:59:23','2016-01-06 12:59:23');
+INSERT INTO mem.Resources VALUES('98','i','0.00000','500','500','thumb_33_568d634693bb8.png','0','media/pdf/thumbs/','59722aeb528126ebeeecb3b0a53510f9','66','33','2016-01-06 12:59:16','2016-01-06 12:59:16');
+INSERT INTO mem.Resources VALUES('95','i','0.00000','500','500','thumb_30_568d634693bb8.png','0','media/pdf/thumbs/','69d4a28df866b314e0890af1b41d7367','66','30','2016-01-06 12:58:57','2016-01-06 12:58:57');
+INSERT INTO mem.Resources VALUES('97','i','0.00000','500','500','thumb_32_568d634693bb8.png','0','media/pdf/thumbs/','9e9ee2a9bae6bd07b9eefc9534c8cf7d','66','32','2016-01-06 12:59:10','2016-01-06 12:59:10');
+INSERT INTO mem.Resources VALUES('96','i','0.00000','500','500','thumb_31_568d634693bb8.png','0','media/pdf/thumbs/','a957d48f70763b1b74147ede315033f3','66','31','2016-01-06 12:59:03','2016-01-06 12:59:03');
+INSERT INTO mem.Resources VALUES('91','i','0.00000','500','500','thumb_26_568d634693bb8.png','0','media/pdf/thumbs/','7c16ba9f3235705d2e8ef3477c9c573b','66','26','2016-01-06 12:58:34','2016-01-06 12:58:34');
+INSERT INTO mem.Resources VALUES('92','i','0.00000','500','500','thumb_27_568d634693bb8.png','0','media/pdf/thumbs/','3799c5db08d1bb54d7c724f7593a18ee','66','27','2016-01-06 12:58:39','2016-01-06 12:58:39');
+INSERT INTO mem.Resources VALUES('93','i','0.00000','500','500','thumb_28_568d634693bb8.png','0','media/pdf/thumbs/','c7eff2b622d29bf3b254363e563cee68','66','28','2016-01-06 12:58:45','2016-01-06 12:58:45');
+INSERT INTO mem.Resources VALUES('94','i','0.00000','500','500','thumb_29_568d634693bb8.png','0','media/pdf/thumbs/','423466e9baf339b62538dc650e33e330','66','29','2016-01-06 12:58:51','2016-01-06 12:58:51');
+INSERT INTO mem.Resources VALUES('86','i','0.00000','500','500','thumb_21_568d634693bb8.png','0','media/pdf/thumbs/','2d66fdca56b98ef0deb9ada1063059e6','66','21','2016-01-06 12:58:03','2016-01-06 12:58:03');
+INSERT INTO mem.Resources VALUES('87','i','0.00000','500','500','thumb_22_568d634693bb8.png','0','media/pdf/thumbs/','b42eca10cb58562f52e36f1a63552c1f','66','22','2016-01-06 12:58:10','2016-01-06 12:58:10');
+INSERT INTO mem.Resources VALUES('88','i','0.00000','500','500','thumb_23_568d634693bb8.png','0','media/pdf/thumbs/','7fd25b42b70d370dfca04b4f9e5e5179','66','23','2016-01-06 12:58:16','2016-01-06 12:58:16');
+INSERT INTO mem.Resources VALUES('89','i','0.00000','500','500','thumb_24_568d634693bb8.png','0','media/pdf/thumbs/','9adb1def533fdf9fb8ed0f45ef2bcd55','66','24','2016-01-06 12:58:22','2016-01-06 12:58:22');
+INSERT INTO mem.Resources VALUES('90','i','0.00000','500','500','thumb_25_568d634693bb8.png','0','media/pdf/thumbs/','ba3a1c3271b6136aa6ebae5650f61f9f','66','25','2016-01-06 12:58:29','2016-01-06 12:58:29');
+INSERT INTO mem.Resources VALUES('83','i','0.00000','500','500','thumb_18_568d634693bb8.png','0','media/pdf/thumbs/','a30a737e9bf6453a5c04bbc954a4ac00','66','18','2016-01-06 12:57:44','2016-01-06 12:57:44');
+INSERT INTO mem.Resources VALUES('84','i','0.00000','500','500','thumb_19_568d634693bb8.png','0','media/pdf/thumbs/','5c3728b53c520b5d8d669abd9b7dddcd','66','19','2016-01-06 12:57:50','2016-01-06 12:57:50');
+INSERT INTO mem.Resources VALUES('85','i','0.00000','500','500','thumb_20_568d634693bb8.png','0','media/pdf/thumbs/','cae13d623995a9896b5bac11ea8dd4f6','66','20','2016-01-06 12:57:57','2016-01-06 12:57:57');
+INSERT INTO mem.Resources VALUES('77','i','0.00000','500','500','thumb_12_568d634693bb8.png','0','media/pdf/thumbs/','aea84eed75511b0fd8756babeb2f0529','66','12','2016-01-06 12:57:09','2016-01-06 12:57:09');
+INSERT INTO mem.Resources VALUES('78','i','0.00000','500','500','thumb_13_568d634693bb8.png','0','media/pdf/thumbs/','8a63f9ce3307e45ccf54743cee531d56','66','13','2016-01-06 12:57:15','2016-01-06 12:57:15');
+INSERT INTO mem.Resources VALUES('79','i','0.00000','500','500','thumb_14_568d634693bb8.png','0','media/pdf/thumbs/','cc49fb4cdfca4763a2bb97b77f8ad1fa','66','14','2016-01-06 12:57:21','2016-01-06 12:57:21');
+INSERT INTO mem.Resources VALUES('80','i','0.00000','500','500','thumb_15_568d634693bb8.png','0','media/pdf/thumbs/','354e2e7eaf696ce1537f23dd6d337fc8','66','15','2016-01-06 12:57:26','2016-01-06 12:57:26');
+INSERT INTO mem.Resources VALUES('81','i','0.00000','500','500','thumb_16_568d634693bb8.png','0','media/pdf/thumbs/','30c903f26e5dac6bcaec2eeac3d15651','66','16','2016-01-06 12:57:32','2016-01-06 12:57:32');
+INSERT INTO mem.Resources VALUES('82','i','0.00000','500','500','thumb_17_568d634693bb8.png','0','media/pdf/thumbs/','c94d3e1cfd3759ca19266f63a819bbb8','66','17','2016-01-06 12:57:39','2016-01-06 12:57:39');
+INSERT INTO mem.Resources VALUES('73','i','0.00000','500','500','thumb_8_568d634693bb8.png','0','media/pdf/thumbs/','8b6b272fe12176c3e97ba4b316afc087','66','8','2016-01-06 12:56:50','2016-01-06 12:56:50');
+INSERT INTO mem.Resources VALUES('74','i','0.00000','500','500','thumb_9_568d634693bb8.png','0','media/pdf/thumbs/','442316162dde41a9d1f06add8a583eb8','66','9','2016-01-06 12:56:55','2016-01-06 12:56:55');
+INSERT INTO mem.Resources VALUES('75','i','0.00000','500','500','thumb_10_568d634693bb8.png','0','media/pdf/thumbs/','235db229b1573519f5d9cb1d0f64857b','66','10','2016-01-06 12:56:58','2016-01-06 12:56:58');
+INSERT INTO mem.Resources VALUES('76','i','0.00000','500','500','thumb_11_568d634693bb8.png','0','media/pdf/thumbs/','b278fc4095ecf3ddffefc534d226fcae','66','11','2016-01-06 12:57:04','2016-01-06 12:57:04');
+INSERT INTO mem.Resources VALUES('71','i','0.00000','500','500','thumb_6_568d634693bb8.png','0','media/pdf/thumbs/','bb9fe5cfdff3c17138df99ebe9dada63','66','6','2016-01-06 12:56:38','2016-01-06 12:56:38');
+INSERT INTO mem.Resources VALUES('72','i','0.00000','500','500','thumb_7_568d634693bb8.png','0','media/pdf/thumbs/','e6d663f38fa24325e4f2fea46744bb35','66','7','2016-01-06 12:56:42','2016-01-06 12:56:42');
+INSERT INTO mem.Resources VALUES('68','i','0.00000','500','500','thumb_3_568d634693bb8.png','0','media/pdf/thumbs/','83475f020533418762c60b156d9e82ef','66','3','2016-01-06 12:56:23','2016-01-06 12:56:23');
+INSERT INTO mem.Resources VALUES('69','i','0.00000','500','500','thumb_4_568d634693bb8.png','0','media/pdf/thumbs/','ecd6862e66f7eabbe7955a85c73fc8c2','66','4','2016-01-06 12:56:28','2016-01-06 12:56:28');
+INSERT INTO mem.Resources VALUES('70','i','0.00000','500','500','thumb_5_568d634693bb8.png','0','media/pdf/thumbs/','80844b22fab973b9e3c648f01553165d','66','5','2016-01-06 12:56:33','2016-01-06 12:56:33');
+INSERT INTO mem.Resources VALUES('62','i','0.00000','500','500','thumb_7_568d623d02d07.png','0','media/pdf/thumbs/','c5aae4c1472fa28103df688c366ddb42','56','7','2016-01-06 12:52:13','2016-01-06 12:52:13');
+INSERT INTO mem.Resources VALUES('63','i','0.00000','500','500','thumb_8_568d623d02d07.png','0','media/pdf/thumbs/','9b907c051fb2417d3bd40c2275ab87a5','56','8','2016-01-06 12:52:16','2016-01-06 12:52:16');
+INSERT INTO mem.Resources VALUES('64','i','0.00000','500','500','thumb_9_568d623d02d07.png','0','media/pdf/thumbs/','d06c47191b967f155f4c66a0bcaf1ab3','56','9','2016-01-06 12:52:19','2016-01-06 12:52:19');
+INSERT INTO mem.Resources VALUES('67','i','0.00000','500','500','thumb_2_568d634693bb8.png','0','media/pdf/thumbs/','7343cfd928f2dea2b15628965979f491','66','2','2016-01-06 12:56:20','2016-01-06 12:56:20');
+INSERT INTO mem.Resources VALUES('61','i','0.00000','500','500','thumb_6_568d623d02d07.png','0','media/pdf/thumbs/','2f00ee29d82051b4e782e74147454532','56','6','2016-01-06 12:52:08','2016-01-06 12:52:08');
+INSERT INTO mem.Resources VALUES('60','i','0.00000','500','500','thumb_5_568d623d02d07.png','0','media/pdf/thumbs/','6b6d50ab1a61dbc15da5d5d80799bfff','56','5','2016-01-06 12:52:02','2016-01-06 12:52:02');
+INSERT INTO mem.Resources VALUES('59','i','0.00000','500','500','thumb_4_568d623d02d07.png','0','media/pdf/thumbs/','d0505b000fead82afcd682852a7e1798','56','4','2016-01-06 12:51:57','2016-01-06 12:51:57');
+INSERT INTO mem.Resources VALUES('66','p','74.00000','1224','792','568d634693bb8.pdf','65','media/pdf/','5dbffdefa0bde2598a404be838124a6f','0','0','2016-01-06 12:56:12','2016-01-06 12:56:12');
+INSERT INTO mem.Resources VALUES('65','i','0.00000','500','500','thumb_1_568d634693bb8.png','0','media/pdf/thumbs/','3d61936263abe72db7cbc437d2ded98d','66','1','2016-01-06 12:56:09','2016-01-06 12:56:12');
+INSERT INTO mem.Resources VALUES('55','i','0.00000','500','500','thumb_568d623d02d07.png','0','media/pdf/thumbs/','9a8687ffae540602ec73c7de4834e474','56','1','2016-01-06 12:51:43','2016-01-06 12:51:46');
+INSERT INTO mem.Resources VALUES('56','p','9.00000','1191','842','568d623d02d07.pdf','55','media/pdf/','e096f86aa1a4f3069cd5a1ad826b9e1d','0','0','2016-01-06 12:51:46','2016-01-06 12:51:46');
+INSERT INTO mem.Resources VALUES('57','i','0.00000','500','500','thumb_2_568d623d02d07.png','0','media/pdf/thumbs/','cb9ceb58f8dc7cf55f80046eafad92ed','56','2','2016-01-06 12:51:49','2016-01-06 12:51:49');
+INSERT INTO mem.Resources VALUES('58','i','0.00000','500','500','thumb_3_568d623d02d07.png','0','media/pdf/thumbs/','50783a8735c1f43307786b36691539c5','56','3','2016-01-06 12:51:54','2016-01-06 12:51:54');
+INSERT INTO mem.Resources VALUES('100','i','0.00000','500','500','thumb_35_568d634693bb8.png','0','media/pdf/thumbs/','f0b50f925792a5e41592baa520b48e60','66','35','2016-01-06 12:59:29','2016-01-06 12:59:29');
+INSERT INTO mem.Resources VALUES('101','i','0.00000','500','500','thumb_36_568d634693bb8.png','0','media/pdf/thumbs/','ee654525ecf3427c06f4383e3e44a9a9','66','36','2016-01-06 12:59:35','2016-01-06 12:59:35');
+INSERT INTO mem.Resources VALUES('102','i','0.00000','500','500','thumb_37_568d634693bb8.png','0','media/pdf/thumbs/','9cccdc5b441d7f6eab9f34827674c761','66','37','2016-01-06 12:59:41','2016-01-06 12:59:41');
+INSERT INTO mem.Resources VALUES('103','i','0.00000','500','500','thumb_38_568d634693bb8.png','0','media/pdf/thumbs/','ca36941a940e4d73f93d83ae580631cd','66','38','2016-01-06 12:59:48','2016-01-06 12:59:48');
+INSERT INTO mem.Resources VALUES('104','i','0.00000','500','500','thumb_39_568d634693bb8.png','0','media/pdf/thumbs/','9a0cfe14ba3118dc90d66ed31ebe54a5','66','39','2016-01-06 12:59:54','2016-01-06 12:59:54');
+INSERT INTO mem.Resources VALUES('105','i','0.00000','500','500','thumb_40_568d634693bb8.png','0','media/pdf/thumbs/','29a30970a4213fba84d84b2fd2d63fb4','66','40','2016-01-06 13:00:00','2016-01-06 13:00:00');
+INSERT INTO mem.Resources VALUES('106','i','0.00000','500','500','thumb_41_568d634693bb8.png','0','media/pdf/thumbs/','af705a80e180b3b883f8f09b0e3024b0','66','41','2016-01-06 13:00:07','2016-01-06 13:00:07');
+INSERT INTO mem.Resources VALUES('107','i','0.00000','500','500','thumb_42_568d634693bb8.png','0','media/pdf/thumbs/','46fa6e29acd0a1aba329daa56dc9d99d','66','42','2016-01-06 13:00:11','2016-01-06 13:00:11');
+INSERT INTO mem.Resources VALUES('108','i','0.00000','500','500','thumb_43_568d634693bb8.png','0','media/pdf/thumbs/','730c54e0940e18f25ba093789e4437eb','66','43','2016-01-06 13:00:16','2016-01-06 13:00:16');
+INSERT INTO mem.Resources VALUES('109','i','0.00000','500','500','thumb_44_568d634693bb8.png','0','media/pdf/thumbs/','070f7657462245de74942422261b38c9','66','44','2016-01-06 13:00:21','2016-01-06 13:00:21');
+INSERT INTO mem.Resources VALUES('110','i','0.00000','500','500','thumb_45_568d634693bb8.png','0','media/pdf/thumbs/','b29a18a32c268e285949018f3c1a94e9','66','45','2016-01-06 13:00:27','2016-01-06 13:00:27');
+INSERT INTO mem.Resources VALUES('111','i','0.00000','500','500','thumb_46_568d634693bb8.png','0','media/pdf/thumbs/','52bbfcd8fbb63a8c2085f7fb354cee26','66','46','2016-01-06 13:00:32','2016-01-06 13:00:32');
+INSERT INTO mem.Resources VALUES('112','i','0.00000','500','500','thumb_47_568d634693bb8.png','0','media/pdf/thumbs/','9e9ee2a9bae6bd07b9eefc9534c8cf7d','66','47','2016-01-06 13:00:38','2016-01-06 13:00:38');
+INSERT INTO mem.Resources VALUES('113','i','0.00000','500','500','thumb_48_568d634693bb8.png','0','media/pdf/thumbs/','29a30970a4213fba84d84b2fd2d63fb4','66','48','2016-01-06 13:00:45','2016-01-06 13:00:45');
+INSERT INTO mem.Resources VALUES('114','i','0.00000','500','500','thumb_49_568d634693bb8.png','0','media/pdf/thumbs/','af705a80e180b3b883f8f09b0e3024b0','66','49','2016-01-06 13:00:51','2016-01-06 13:00:51');
+INSERT INTO mem.Resources VALUES('115','i','0.00000','500','500','thumb_50_568d634693bb8.png','0','media/pdf/thumbs/','07f21b80452756e6e0e879ff8ee92d97','66','50','2016-01-06 13:00:56','2016-01-06 13:00:56');
+INSERT INTO mem.Resources VALUES('116','i','0.00000','500','500','thumb_51_568d634693bb8.png','0','media/pdf/thumbs/','e6a58edb75054f934fa3ffbfb3cac0b7','66','51','2016-01-06 13:01:02','2016-01-06 13:01:02');
+INSERT INTO mem.Resources VALUES('117','i','0.00000','500','500','thumb_52_568d634693bb8.png','0','media/pdf/thumbs/','b42eca10cb58562f52e36f1a63552c1f','66','52','2016-01-06 13:01:08','2016-01-06 13:01:08');
+INSERT INTO mem.Resources VALUES('118','i','0.00000','500','500','thumb_53_568d634693bb8.png','0','media/pdf/thumbs/','912d741b98e48a871824fe3a0a13cbd5','66','53','2016-01-06 13:01:13','2016-01-06 13:01:13');
+INSERT INTO mem.Resources VALUES('119','i','0.00000','500','500','thumb_54_568d634693bb8.png','0','media/pdf/thumbs/','89c7cd28c89ff1ca7c59eb5c1daf7194','66','54','2016-01-06 13:01:20','2016-01-06 13:01:20');
+INSERT INTO mem.Resources VALUES('120','i','0.00000','500','500','thumb_55_568d634693bb8.png','0','media/pdf/thumbs/','66dc89f0cbabeac787bb60dc25428a03','66','55','2016-01-06 13:01:26','2016-01-06 13:01:26');
+INSERT INTO mem.Resources VALUES('121','i','0.00000','500','500','thumb_56_568d634693bb8.png','0','media/pdf/thumbs/','fde31d47ecf5c2e2229dcd45a269d68e','66','56','2016-01-06 13:01:32','2016-01-06 13:01:32');
+INSERT INTO mem.Resources VALUES('122','i','0.00000','500','500','thumb_57_568d634693bb8.png','0','media/pdf/thumbs/','7fd25b42b70d370dfca04b4f9e5e5179','66','57','2016-01-06 13:01:39','2016-01-06 13:01:39');
+INSERT INTO mem.Resources VALUES('123','i','0.00000','500','500','thumb_58_568d634693bb8.png','0','media/pdf/thumbs/','9adb1def533fdf9fb8ed0f45ef2bcd55','66','58','2016-01-06 13:01:46','2016-01-06 13:01:46');
+INSERT INTO mem.Resources VALUES('124','i','0.00000','500','500','thumb_59_568d634693bb8.png','0','media/pdf/thumbs/','ba3a1c3271b6136aa6ebae5650f61f9f','66','59','2016-01-06 13:01:52','2016-01-06 13:01:52');
+INSERT INTO mem.Resources VALUES('125','i','0.00000','500','500','thumb_60_568d634693bb8.png','0','media/pdf/thumbs/','7c16ba9f3235705d2e8ef3477c9c573b','66','60','2016-01-06 13:01:58','2016-01-06 13:01:58');
+INSERT INTO mem.Resources VALUES('126','i','0.00000','500','500','thumb_61_568d634693bb8.png','0','media/pdf/thumbs/','c3caff0d45c343048ce617d648e913e4','66','61','2016-01-06 13:02:03','2016-01-06 13:02:03');
+INSERT INTO mem.Resources VALUES('127','i','0.00000','500','500','thumb_62_568d634693bb8.png','0','media/pdf/thumbs/','f0b50f925792a5e41592baa520b48e60','66','62','2016-01-06 13:02:09','2016-01-06 13:02:09');
+INSERT INTO mem.Resources VALUES('128','i','0.00000','500','500','thumb_63_568d634693bb8.png','0','media/pdf/thumbs/','ee654525ecf3427c06f4383e3e44a9a9','66','63','2016-01-06 13:02:15','2016-01-06 13:02:15');
+INSERT INTO mem.Resources VALUES('129','i','0.00000','500','500','thumb_64_568d634693bb8.png','0','media/pdf/thumbs/','9cccdc5b441d7f6eab9f34827674c761','66','64','2016-01-06 13:02:21','2016-01-06 13:02:21');
+INSERT INTO mem.Resources VALUES('130','i','0.00000','500','500','thumb_65_568d634693bb8.png','0','media/pdf/thumbs/','ca36941a940e4d73f93d83ae580631cd','66','65','2016-01-06 13:02:27','2016-01-06 13:02:27');
+INSERT INTO mem.Resources VALUES('131','i','0.00000','500','500','thumb_66_568d634693bb8.png','0','media/pdf/thumbs/','9a0cfe14ba3118dc90d66ed31ebe54a5','66','66','2016-01-06 13:02:33','2016-01-06 13:02:33');
+INSERT INTO mem.Resources VALUES('132','i','0.00000','500','500','thumb_67_568d634693bb8.png','0','media/pdf/thumbs/','d59980325f82ed2cdfb3d46ea8d09080','66','67','2016-01-06 13:02:36','2016-01-06 13:02:36');
+INSERT INTO mem.Resources VALUES('133','i','0.00000','500','500','thumb_68_568d634693bb8.png','0','media/pdf/thumbs/','8f8f1f8101e753cd975920c58fa9d75e','66','68','2016-01-06 13:02:40','2016-01-06 13:02:40');
+INSERT INTO mem.Resources VALUES('134','i','0.00000','500','500','thumb_69_568d634693bb8.png','0','media/pdf/thumbs/','9eaa678d1b08f27013388e8f13716ab6','66','69','2016-01-06 13:02:43','2016-01-06 13:02:43');
+INSERT INTO mem.Resources VALUES('135','i','0.00000','500','500','thumb_70_568d634693bb8.png','0','media/pdf/thumbs/','ffd66ee86ebc3c36ce1ad6f970ff5141','66','70','2016-01-06 13:02:46','2016-01-06 13:02:46');
+INSERT INTO mem.Resources VALUES('136','i','0.00000','500','500','thumb_71_568d634693bb8.png','0','media/pdf/thumbs/','7a53e9a34b81010f1b50ed7e719d8d58','66','71','2016-01-06 13:02:49','2016-01-06 13:02:49');
+INSERT INTO mem.Resources VALUES('137','i','0.00000','500','500','thumb_72_568d634693bb8.png','0','media/pdf/thumbs/','1da9b421df0c440f97258765fccbe7a6','66','72','2016-01-06 13:02:52','2016-01-06 13:02:52');
+INSERT INTO mem.Resources VALUES('138','i','0.00000','500','500','thumb_73_568d634693bb8.png','0','media/pdf/thumbs/','cd8b4cc73db58cd39e0c05be73d78ce1','66','73','2016-01-06 13:02:55','2016-01-06 13:02:55');
+INSERT INTO mem.Resources VALUES('139','i','0.00000','500','500','thumb_74_568d634693bb8.png','0','media/pdf/thumbs/','c22ff96f0fb62de9ad36c19aff5a393b','66','74','2016-01-06 13:03:03','2016-01-06 13:03:03');
+INSERT INTO mem.Resources VALUES('188','v','18.00000','304','102','568ecdd7182e2.mp4','187','media/video/','ab8a033f7e26083071d61475324ae813','0','0','2016-01-07 14:43:06','2016-01-07 14:43:06');
+INSERT INTO mem.Resources VALUES('177','i','0.00000','400','273','thumb_568da1b20f391.png','0','media/video/thumbs/','34bd9a3432d57e8d468598190cc3c601','178','1','2016-01-06 17:22:29','2016-01-06 17:22:32');
+INSERT INTO mem.Resources VALUES('187','i','0.00000','400','134','thumb_568ecdd7182e2.png','0','media/video/thumbs/','3abbde1e5dcbffb293aba37260ac54fd','188','1','2016-01-07 14:43:04','2016-01-07 14:43:06');
+INSERT INTO mem.Resources VALUES('222','i','0.00000','847','565','569025350d251.png','221','playlist/','81258969bb0d3391916841f1b3bbf51e','0','0','2016-01-08 15:08:05','2016-01-08 15:08:05');
+INSERT INTO mem.Resources VALUES('221','i','0.00000','200','133','thumb_569025350d251.png','0','playlist/thumbs/','e67f0dd03c8b8cd5a84bd15f29699fa1','222','1','2016-01-08 15:08:05','2016-01-08 15:08:05');
+INSERT INTO mem.Resources VALUES('184','v','67.54000','1280','720','568dad355ebb3.mp4','183','media/video/','f63db617222ed1ea2d77110bdb72d0ac','0','0','2016-01-06 18:11:36','2016-01-06 18:11:36');
+INSERT INTO mem.Resources VALUES('183','i','0.00000','400','225','thumb_568dad355ebb3.png','0','media/video/thumbs/','a966b2f7875d6d8805adfaff88a6ae11','184','1','2016-01-06 18:11:35','2016-01-06 18:11:37');
+INSERT INTO mem.Resources VALUES('182','v','24.35000','1920','1080','568dabf870a80.mp4','181','media/video/','73686dcad4db676545b7cc71e59f10a5','0','0','2016-01-06 18:06:31','2016-01-06 18:06:31');
+INSERT INTO mem.Resources VALUES('181','i','0.00000','400','225','thumb_568dabf870a80.png','0','media/video/thumbs/','d7a3a83b2714cffdb673d9d8592cf3e1','182','1','2016-01-06 18:06:24','2016-01-06 18:06:31');
+INSERT INTO mem.Resources VALUES('180','v','4.91000','1280','228','568da5caef1f0.mov','179','media/video/','39224f7e351f2aa273989e176b4513f1','0','0','2016-01-06 17:39:55','2016-01-06 17:39:55');
+INSERT INTO mem.Resources VALUES('179','i','0.00000','400','71','thumb_568da5caef1f0.png','0','media/video/thumbs/','406555d3a9fc25dd47182a7036e3a17f','180','1','2016-01-06 17:39:55','2016-01-06 17:39:55');
+INSERT INTO mem.Resources VALUES('178','v','50.85000','1052','720','568da1b20f391.mov','177','media/video/','77521bee90db40e9fe9354c2a83a3730','0','0','2016-01-06 17:22:32','2016-01-06 17:22:32');
+INSERT INTO mem.Resources VALUES('152','i','0.00000','250','250','thumb_1_568d9097bc37c.png','0','media/pdf/thumbs/','69fbe3a742103860021f76afd302fd6b','153','1','2016-01-06 16:09:33','2016-01-06 16:09:38');
+INSERT INTO mem.Resources VALUES('153','p','24.00000','1191','842','568d9097bc37c.pdf','152','media/pdf/','92cd0e08322205cdb5ff49acb289389a','0','0','2016-01-06 16:09:38','2016-01-06 16:09:38');
+INSERT INTO mem.Resources VALUES('154','i','0.00000','250','250','thumb_2_568d9097bc37c.png','0','media/pdf/thumbs/','0608d2b99633a5d4cab8f729c399f57e','153','2','2016-01-06 16:09:41','2016-01-06 16:09:41');
+INSERT INTO mem.Resources VALUES('155','i','0.00000','250','250','thumb_3_568d9097bc37c.png','0','media/pdf/thumbs/','acb0e368605478d260fdf348d9ad7f83','153','3','2016-01-06 16:09:44','2016-01-06 16:09:44');
+INSERT INTO mem.Resources VALUES('156','i','0.00000','250','250','thumb_4_568d9097bc37c.png','0','media/pdf/thumbs/','bd0b2d0dfc438a3c9e2d84f4c802a7c7','153','4','2016-01-06 16:09:50','2016-01-06 16:09:50');
+INSERT INTO mem.Resources VALUES('157','i','0.00000','250','250','thumb_5_568d9097bc37c.png','0','media/pdf/thumbs/','20a6b8a25a585ccc907b63a834d2adc9','153','5','2016-01-06 16:09:53','2016-01-06 16:09:53');
+INSERT INTO mem.Resources VALUES('158','i','0.00000','250','250','thumb_6_568d9097bc37c.png','0','media/pdf/thumbs/','575bbaff27927645db1e13202992259c','153','6','2016-01-06 16:09:58','2016-01-06 16:09:58');
+INSERT INTO mem.Resources VALUES('159','i','0.00000','250','250','thumb_7_568d9097bc37c.png','0','media/pdf/thumbs/','65f98f5d4758352525bcca20635747ce','153','7','2016-01-06 16:10:01','2016-01-06 16:10:01');
+INSERT INTO mem.Resources VALUES('160','i','0.00000','250','250','thumb_8_568d9097bc37c.png','0','media/pdf/thumbs/','de533c33734b77f985243a66d48ce669','153','8','2016-01-06 16:10:04','2016-01-06 16:10:04');
+INSERT INTO mem.Resources VALUES('161','i','0.00000','250','250','thumb_9_568d9097bc37c.png','0','media/pdf/thumbs/','1b7c679457e346994ca4b7802115b2d6','153','9','2016-01-06 16:10:09','2016-01-06 16:10:09');
+INSERT INTO mem.Resources VALUES('162','i','0.00000','250','250','thumb_10_568d9097bc37c.png','0','media/pdf/thumbs/','2a754ef2fd8c89f9de36d75e05061ff0','153','10','2016-01-06 16:10:14','2016-01-06 16:10:14');
+INSERT INTO mem.Resources VALUES('163','i','0.00000','250','250','thumb_11_568d9097bc37c.png','0','media/pdf/thumbs/','40226c37ae3ee4cee4e8df750b724442','153','11','2016-01-06 16:10:19','2016-01-06 16:10:19');
+INSERT INTO mem.Resources VALUES('164','i','0.00000','250','250','thumb_12_568d9097bc37c.png','0','media/pdf/thumbs/','24a1d878935fcb82830cc7d47d9ab820','153','12','2016-01-06 16:10:24','2016-01-06 16:10:24');
+INSERT INTO mem.Resources VALUES('165','i','0.00000','250','250','thumb_13_568d9097bc37c.png','0','media/pdf/thumbs/','e488f26eb95b307aaf0046e33b353574','153','13','2016-01-06 16:10:29','2016-01-06 16:10:29');
+INSERT INTO mem.Resources VALUES('166','i','0.00000','250','250','thumb_14_568d9097bc37c.png','0','media/pdf/thumbs/','3ea59633954c3159a6c52a05d242642a','153','14','2016-01-06 16:10:35','2016-01-06 16:10:35');
+INSERT INTO mem.Resources VALUES('167','i','0.00000','250','250','thumb_15_568d9097bc37c.png','0','media/pdf/thumbs/','c13839bdbe9f949a68d3efbd4924cf83','153','15','2016-01-06 16:10:40','2016-01-06 16:10:40');
+INSERT INTO mem.Resources VALUES('168','i','0.00000','250','250','thumb_16_568d9097bc37c.png','0','media/pdf/thumbs/','f58f98bd42a1642c1d222fbb0289deb7','153','16','2016-01-06 16:10:45','2016-01-06 16:10:45');
+INSERT INTO mem.Resources VALUES('169','i','0.00000','250','250','thumb_17_568d9097bc37c.png','0','media/pdf/thumbs/','74712014b06b42615fedf17c1d1175fa','153','17','2016-01-06 16:10:51','2016-01-06 16:10:51');
+INSERT INTO mem.Resources VALUES('170','i','0.00000','250','250','thumb_18_568d9097bc37c.png','0','media/pdf/thumbs/','c9ccba93bb56651dfd098b981eb18bab','153','18','2016-01-06 16:10:56','2016-01-06 16:10:56');
+INSERT INTO mem.Resources VALUES('171','i','0.00000','250','250','thumb_19_568d9097bc37c.png','0','media/pdf/thumbs/','f67247ad16abab7270aa0899985fdf79','153','19','2016-01-06 16:11:01','2016-01-06 16:11:01');
+INSERT INTO mem.Resources VALUES('172','i','0.00000','250','250','thumb_20_568d9097bc37c.png','0','media/pdf/thumbs/','b00165fd20f475b22f2896ab435c79e0','153','20','2016-01-06 16:11:04','2016-01-06 16:11:04');
+INSERT INTO mem.Resources VALUES('173','i','0.00000','250','250','thumb_21_568d9097bc37c.png','0','media/pdf/thumbs/','959418ee9509c99523caf3c92f03cbea','153','21','2016-01-06 16:11:07','2016-01-06 16:11:07');
+INSERT INTO mem.Resources VALUES('174','i','0.00000','250','250','thumb_22_568d9097bc37c.png','0','media/pdf/thumbs/','0d4caed5eb8ffd36939ccb6bfcc7637d','153','22','2016-01-06 16:11:12','2016-01-06 16:11:12');
+INSERT INTO mem.Resources VALUES('175','i','0.00000','250','250','thumb_23_568d9097bc37c.png','0','media/pdf/thumbs/','9d2a21575c4364d41c438bc480aec446','153','23','2016-01-06 16:11:18','2016-01-06 16:11:18');
+INSERT INTO mem.Resources VALUES('176','i','0.00000','250','250','thumb_24_568d9097bc37c.png','0','media/pdf/thumbs/','b515708f31084498a81a26da6aa8e055','153','24','2016-01-06 16:11:21','2016-01-06 16:11:21');
+INSERT INTO mem.Resources VALUES('203','i','0.00000','350','263','thumb_568f00ac130be.png','0','media/web/thumbs/','bd56e4628fb48605daff0e8a5896a8e9','204','1','2016-01-07 18:20:07','2016-01-07 18:20:07');
+INSERT INTO mem.Resources VALUES('204','w','0.00000','1024','768','http://www.cnn.com','203','media/web/','','0','0','2016-01-07 18:20:07','2016-01-07 18:20:07');
+INSERT INTO mem.Resources VALUES('217','i','0.00000','200','67','thumb_569005cbcfb2f.png','0','playlist/thumbs/','d29001bcd30a8e2fa662008abff88085','218','1','2016-01-08 12:54:03','2016-01-08 12:54:03');
+INSERT INTO mem.Resources VALUES('218','i','0.00000','304','102','569005cbcfb2f.png','217','playlist/','746004eb1a5a6425fad6c75618dbccff','0','0','2016-01-08 12:54:03','2016-01-08 12:54:03');
+INSERT INTO mem.Resources VALUES('230','i','0.00000','304','102','56902ae8e67cc.png','229','playlist/','647d26f0d28ce1f270a48522fbd67da0','0','0','2016-01-08 15:32:24','2016-01-08 15:32:24');
+INSERT INTO mem.Resources VALUES('229','i','0.00000','200','67','thumb_56902ae8e67cc.png','0','playlist/thumbs/','84bf57bcd80b5727008205e8cb358099','230','1','2016-01-08 15:32:24','2016-01-08 15:32:25');
+INSERT INTO mem.Resources VALUES('223','i','0.00000','200','56','thumb_5690257a994dd.png','0','playlist/thumbs/','65a5c1957e4871c2910c0a7e331443f0','224','1','2016-01-08 15:09:16','2016-01-08 15:09:16');
+INSERT INTO mem.Resources VALUES('224','i','0.00000','8000','2250','5690257a994dd.png','223','playlist/','a0d70941b274a951b25e5166b9e943fa','0','0','2016-01-08 15:09:16','2016-01-08 15:09:16');
+INSERT INTO mem.Resources VALUES('225','i','0.00000','400','134','thumb_56902779d5874.png','0','media/video/thumbs/','6bc87ebc6b88e2c74c8438e1671f6b30','227','1','2016-01-08 15:17:47','2016-01-08 15:17:48');
+INSERT INTO mem.Resources VALUES('226','i','0.00000','400','134','thumb_5690277a03012.png','0','media/video/thumbs/','3abbde1e5dcbffb293aba37260ac54fd','228','1','2016-01-08 15:17:47','2016-01-08 15:17:49');
+INSERT INTO mem.Resources VALUES('227','v','18.00000','304','102','56902779d5874.mp4','225','media/video/','e4d57d215b665a78a70835f21f6d92f1','0','0','2016-01-08 15:17:48','2016-01-08 15:17:48');
+INSERT INTO mem.Resources VALUES('228','v','18.00000','304','102','5690277a03012.mp4','226','media/video/','ab8a033f7e26083071d61475324ae813','0','0','2016-01-08 15:17:49','2016-01-08 15:17:49');
+INSERT INTO mem.Resources VALUES('237','i','0.00000','200','67','thumb_5693f2945112e.png','0','playlist/thumbs/','f958ba2a6e5ade640a6d66924c9e895a','238','1','2016-01-11 12:21:08','2016-01-11 12:21:08');
+INSERT INTO mem.Resources VALUES('238','i','0.00000','304','102','5693f2945112e.png','237','playlist/','1753fbf6eecf2acedc37cc710fd9045e','0','0','2016-01-11 12:21:08','2016-01-11 12:21:08');
+INSERT INTO mem.Resources VALUES('239','i','0.00000','200','67','thumb_5693f3328e2b4.png','0','playlist/thumbs/','7c9a40b57c976d793046c4a372b28c19','240','1','2016-01-11 12:23:46','2016-01-11 12:23:46');
+INSERT INTO mem.Resources VALUES('240','i','0.00000','304','102','5693f3328e2b4.png','239','playlist/','cc15948549eb47353d312f610571e5d6','0','0','2016-01-11 12:23:46','2016-01-11 12:23:46');
+INSERT INTO mem.Resources VALUES('247','i','0.00000','200','67','thumb_56943f434b29f.png','0','playlist/thumbs/','b6992a33498fc515161cd5f11ae862f3','248','1','2016-01-11 17:48:19','2016-01-11 17:48:19');
+INSERT INTO mem.Resources VALUES('248','i','0.00000','304','102','56943f434b29f.png','247','playlist/','77459fd5707c8289ec69f9b21e273153','0','0','2016-01-11 17:48:19','2016-01-11 17:48:19');
+INSERT INTO mem.Resources VALUES('249','i','0.00000','200','67','thumb_56943ff1b8ae8.png','0','playlist/thumbs/','3b02bfeb2b8a18d29e10b34800174b69','250','1','2016-01-11 17:51:14','2016-01-11 17:51:14');
+INSERT INTO mem.Resources VALUES('250','i','0.00000','3115','1045','56943ff1b8ae8.png','249','playlist/','7cf05751ad263463da1d68bf2debd3af','0','0','2016-01-11 17:51:14','2016-01-11 17:51:14');
+INSERT INTO mem.Resources VALUES('251','i','0.00000','200','67','thumb_569440792bb5b.png','0','playlist/thumbs/','ad4ceb6af9e721a803cf679aa188086d','252','1','2016-01-11 17:53:29','2016-01-11 17:53:29');
+INSERT INTO mem.Resources VALUES('252','i','0.00000','1080','363','569440792bb5b.png','251','playlist/','f8d2098d9010e34430ea4150c3255a6c','0','0','2016-01-11 17:53:29','2016-01-11 17:53:29');
+INSERT INTO mem.Resources VALUES('253','i','0.00000','200','67','thumb_569440a317c8b.png','0','playlist/thumbs/','4bd2afa7adfd4b934cbfdeacdf5f7409','254','1','2016-01-11 17:54:11','2016-01-11 17:54:11');
+INSERT INTO mem.Resources VALUES('254','i','0.00000','187','63','569440a317c8b.png','253','playlist/','94e674f9dd81c41d2b306129af81cbbe','0','0','2016-01-11 17:54:11','2016-01-11 17:54:11');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.templatevideo (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,resourceid INTEGER,timecodestartoverlay NUMERIC,timecodeendoverlay NUMERIC,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('templatevideo', '4');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.templatevideo VALUES('4','welcome video','227','3.00000000','14.00000000','2016-01-08 15:38:09','2016-01-08 15:38:09','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','47');
+INSERT INTO mem.templatevideo VALUES('3','Template Video 1','227','3.00000000','13.00000000','2016-01-06 19:41:24','2016-01-08 15:28:09','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','47');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.room (roomid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,ambientpresentationid INTEGER,autoplaytime INTEGER,backgroundimageid INTEGER,color TEXT,created_at DATETIME,updated_at DATETIME,backgroundimageid_cropdata TEXT,backgroundimageid_mediaid INTEGER,bookable INTEGER);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('room', '8');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.room VALUES('1','Living IT Theater','0','0','0','#337ab7','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('2','Colorado Boardroom','0','0','0','#5cb85c','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('3','Lavaca Room','0','0','0','#5bc0de','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('4','Brazos Room','0','0','0','#f0ad4e','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('5','Collaboration Room 1','0','0','0','#d9534f','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('6','Collaboration Room 2','0','0','0','#674D90','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.room VALUES('7','Heritage Table 1','0','0','0','rgb(255,0,0)','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','0');
+INSERT INTO mem.room VALUES('8','Heritage Table 2','0','0','0','rgb(255,0,0)','2016-01-06 09:13:12','2016-01-06 09:13:12','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','0');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.playlisttype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlisttype', '3');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.playlisttype VALUES('1','Welcome');
+INSERT INTO mem.playlisttype VALUES('2','Rio Grande Corridor');
+INSERT INTO mem.playlisttype VALUES('3','Windows to Transformation');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.playlistelement (id INTEGER PRIMARY KEY AUTOINCREMENT,playlistid INTEGER,name TEXT,elementtypeid INTEGER,resourceid INTEGER,textline1 TEXT,textline2 TEXT,textline3 TEXT,templatevideoid INTEGER,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER,sort_order INTEGER);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX mem.playlistelement_resourceid_mediaid_idx ON playlistelement(resourceid_mediaid)
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX mem.playlistelement_playlistid_idx ON playlistelement(playlistid)
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlistelement', '17');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.playlistelement VALUES('1','1','image 1','1','230','','','','0','2016-01-06 21:59:32','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"37","mediatype":"i"}','37','0');
+INSERT INTO mem.playlistelement VALUES('2','1','Downstream','2','0','Hello world','Downstream','Grumpy Cat','4','2016-01-06 22:42:32','2016-01-11 18:41:29','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','3');
+INSERT INTO mem.playlistelement VALUES('3','1','CISCO','2','0','WELCOME','CISCO','LIVING IT THEATER','4','2016-01-06 22:44:35','2016-01-11 18:41:45','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','4');
+INSERT INTO mem.playlistelement VALUES('4','5','New one2','2','0','one','two','three','3','2016-01-07 15:59:11','2016-01-11 17:51:19','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.playlistelement VALUES('6','2','item 1','1','222','','','','0','2016-01-08 15:08:05','2016-01-08 15:08:05','{"x1":"0","y1":"75","x2":"847","y2":"640","width":"847","height":"565","dirty":"1","mediaid":"11","mediatype":"i"}','11','6');
+INSERT INTO mem.playlistelement VALUES('5','5','sdfg','1','218','','','','0','2016-01-08 12:54:03','2016-01-11 17:51:19','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"13","mediatype":"i"}','13','2');
+INSERT INTO mem.playlistelement VALUES('7','4','item 1','1','182','','','','0','2016-01-08 15:08:40','2016-01-08 15:08:40','{"x1":"0","y1":"0","x2":"338","y2":"225","width":"338","height":"225","dirty":"1","mediaid":"9","mediatype":"v"}','9','7');
+INSERT INTO mem.playlistelement VALUES('8','3','item 1','1','224','','','','0','2016-01-08 15:09:16','2016-01-08 15:09:16','{"x1":"0","y1":"0","x2":"7982","y2":"2245","width":"7982","height":"2245","dirty":"0","mediaid":"29","mediatype":"i"}','29','8');
+INSERT INTO mem.playlistelement VALUES('9','1','welcome video','1','228','','','','0','2016-01-08 16:00:17','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"1","mediaid":"50","mediatype":"v"}','50','5');
+INSERT INTO mem.playlistelement VALUES('10','1','CISCO','1','238','','','','0','2016-01-11 12:21:08','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"48","mediatype":"i"}','48','6');
+INSERT INTO mem.playlistelement VALUES('11','1','whale','1','240','','','','0','2016-01-11 12:23:46','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"46","mediatype":"i"}','46','7');
+INSERT INTO mem.playlistelement VALUES('12','1','bmc image','1','248','','','','0','2016-01-11 17:48:19','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"304","y2":"102","width":"304","height":"102","dirty":"0","mediaid":"43","mediatype":"i"}','43','8');
+INSERT INTO mem.playlistelement VALUES('13','5','engadeg image','1','250','','','','0','2016-01-11 17:51:14','2016-01-11 17:51:19','{"x1":"466","y1":"556","x2":"3580","y2":"1600","width":"3115","height":"1045","dirty":"1","mediaid":"29","mediatype":"i"}','29','0');
+INSERT INTO mem.playlistelement VALUES('14','12','logo','1','252','','','','0','2016-01-11 17:53:29','2016-01-11 17:53:29','{"x1":"0","y1":"759","x2":"1080","y2":"1122","width":"1080","height":"363","dirty":"1","mediaid":"33","mediatype":"i"}','33','14');
+INSERT INTO mem.playlistelement VALUES('15','13','fdgsd','1','254','','','','0','2016-01-11 17:54:11','2016-01-11 17:54:11','{"x1":"58","y1":"20","x2":"245","y2":"83","width":"187","height":"63","dirty":"1","mediaid":"52","mediatype":"i"}','52','15');
+INSERT INTO mem.playlistelement VALUES('16','1','Banque Société Générale Vostok','2','0','WELCOME','Banque Société Générale Vostok','LAVACA ROOM','3','2016-01-11 18:38:24','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','1');
+INSERT INTO mem.playlistelement VALUES('17','1','Bring IT to Life','2','0','WELCOME','Bring IT to Life','BMC EXECUTIVE BRIEFING CENTER','3','2016-01-11 18:39:56','2016-01-11 18:40:03','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','2');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.playlist (playlistid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,typeid INTEGER,isdefault INTEGER,created_at DATETIME,updated_at DATETIME);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('playlist', '13');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.playlist VALUES('1','playlist 1','1','1','2016-01-06 21:57:50','2016-01-11 17:59:10');
+INSERT INTO mem.playlist VALUES('2','rio playlist 1','2','1','2016-01-06 22:27:45','2016-01-08 15:08:14');
+INSERT INTO mem.playlist VALUES('3','windows 1','3','1','2016-01-07 14:27:46','2016-01-08 15:09:04');
+INSERT INTO mem.playlist VALUES('4','rio playlist 2','2','0','2016-01-07 15:48:14','2016-01-08 15:08:26');
+INSERT INTO mem.playlist VALUES('5','playlist 2','1','0','2016-01-07 15:58:50','2016-01-11 17:59:10');
+INSERT INTO mem.playlist VALUES('13','marriat','1','0','2016-01-11 17:53:39','2016-01-11 17:59:10');
+INSERT INTO mem.playlist VALUES('12','logo-cisco','1','0','2016-01-11 17:52:13','2016-01-11 17:59:10');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.engagement (engagementid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,roomid INTEGER,startdate DATETIME,enddate DATETIME,welcomeplaylistid INTEGER,riograndeplaylistid INTEGER,transformationplaylistid INTEGER,theaterbackgroundid INTEGER,collabroom1backgroundid INTEGER,collabroom2backgroundid INTEGER,brazosbackgroundid INTEGER,lavacabackgroundid INTEGER,coloradobackgroundid INTEGER,heritagetable1backgroundid INTEGER,heritagetable2backgroundid INTEGER,created_at DATETIME,updated_at DATETIME,theaterbackgroundid_cropdata TEXT,theaterbackgroundid_mediaid INTEGER,collabroom1backgroundid_cropdata TEXT,collabroom1backgroundid_mediaid INTEGER,collabroom2backgroundid_cropdata TEXT,collabroom2backgroundid_mediaid INTEGER,brazosbackgroundid_cropdata TEXT,brazosbackgroundid_mediaid INTEGER,lavacabackgroundid_cropdata TEXT,lavacabackgroundid_mediaid INTEGER,coloradobackgroundid_cropdata TEXT,coloradobackgroundid_mediaid INTEGER,heritagetable1backgroundid_cropdata TEXT,heritagetable1backgroundid_mediaid INTEGER,heritagetable2backgroundid_cropdata TEXT,heritagetable2backgroundid_mediaid INTEGER);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX mem.engagement_roomid_idx ON engagement(roomid)
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('engagement', '10');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.engagement VALUES('1','Test','2','2016-01-11 15:00:00','2016-01-11 19:30:00','5','2','3','0','0','0','0','0','0','0','0','2016-01-07 12:54:48','2016-01-11 17:54:38','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('2','Test engagement 2','5','2016-01-11 15:00:00','2016-01-11 07:00:00','12','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:45:46','2016-01-11 17:55:03','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('3','Test engagement 3','6','2016-01-11 15:00:00','2016-01-11 07:00:00','13','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:00','2016-01-11 17:54:49','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('4','Test engagement 4','2','2016-01-13 08:00:00','2016-01-13 09:30:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:13','2016-01-11 09:34:02','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('5','Test engagement 5','4','2016-01-11 08:00:00','2016-01-11 15:00:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:24','2016-01-11 09:33:50','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+INSERT INTO mem.engagement VALUES('6','Test engagement 6','1','2016-01-13 09:30:00','2016-01-13 11:30:00','0','0','0','0','0','0','0','0','0','0','0','2016-01-07 19:46:38','2016-01-11 09:34:04','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0','{"x1":"0","y1":"0","x2":"0","y2":"0","width":"0","height":"0","dirty":"0","mediaid":"0","mediatype":""}','0');
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE mem.elementtype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT);
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE IF NOT EXISTS mem.ds_sqlite_sequence(name, seq);
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.ds_sqlite_sequence VALUES('elementtype', '2');
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO mem.elementtype VALUES('1','MEDIA');
+INSERT INTO mem.elementtype VALUES('2','INTERSTITIAL');
+[sql] DEBUG 2016-01-12 03:47:59 - Saving to disk...
+[sql] DEBUG 2016-01-12 03:47:59 - BEGIN TRANSACTION;
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE Resources (resourcesid INTEGER PRIMARY KEY AUTOINCREMENT,resourcestype TEXT,resourcesduration NUMERIC,resourceswidth INTEGER,resourcesheight INTEGER,resourcesfilename TEXT,resourcesthumbid INTEGER,resourcespath TEXT,resourceshash TEXT,resourcesparentid INTEGER,resourcesparentindex INTEGER,created_at DATETIME,updated_at DATETIME)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO Resources SELECT * FROM mem.Resources;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='Resources';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'Resources';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE ds_sqlite_sequence(name, seq)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO ds_sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='ds_sqlite_sequence';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'ds_sqlite_sequence';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE templatevideo (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,resourceid INTEGER,timecodestartoverlay NUMERIC,timecodeendoverlay NUMERIC,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO templatevideo SELECT * FROM mem.templatevideo;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='templatevideo';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'templatevideo';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE room (roomid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,ambientpresentationid INTEGER,autoplaytime INTEGER,backgroundimageid INTEGER,color TEXT,created_at DATETIME,updated_at DATETIME,backgroundimageid_cropdata TEXT,backgroundimageid_mediaid INTEGER,bookable INTEGER)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO room SELECT * FROM mem.room;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='room';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'room';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE playlisttype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO playlisttype SELECT * FROM mem.playlisttype;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='playlisttype';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlisttype';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE playlistelement (id INTEGER PRIMARY KEY AUTOINCREMENT,playlistid INTEGER,name TEXT,elementtypeid INTEGER,resourceid INTEGER,textline1 TEXT,textline2 TEXT,textline3 TEXT,templatevideoid INTEGER,created_at DATETIME,updated_at DATETIME,resourceid_cropdata TEXT,resourceid_mediaid INTEGER,sort_order INTEGER)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO playlistelement SELECT * FROM mem.playlistelement;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='playlistelement';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlistelement';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE playlist (playlistid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,typeid INTEGER,isdefault INTEGER,created_at DATETIME,updated_at DATETIME)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO playlist SELECT * FROM mem.playlist;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='playlist';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'playlist';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE engagement (engagementid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,roomid INTEGER,startdate DATETIME,enddate DATETIME,welcomeplaylistid INTEGER,riograndeplaylistid INTEGER,transformationplaylistid INTEGER,theaterbackgroundid INTEGER,collabroom1backgroundid INTEGER,collabroom2backgroundid INTEGER,brazosbackgroundid INTEGER,lavacabackgroundid INTEGER,coloradobackgroundid INTEGER,heritagetable1backgroundid INTEGER,heritagetable2backgroundid INTEGER,created_at DATETIME,updated_at DATETIME,theaterbackgroundid_cropdata TEXT,theaterbackgroundid_mediaid INTEGER,collabroom1backgroundid_cropdata TEXT,collabroom1backgroundid_mediaid INTEGER,collabroom2backgroundid_cropdata TEXT,collabroom2backgroundid_mediaid INTEGER,brazosbackgroundid_cropdata TEXT,brazosbackgroundid_mediaid INTEGER,lavacabackgroundid_cropdata TEXT,lavacabackgroundid_mediaid INTEGER,coloradobackgroundid_cropdata TEXT,coloradobackgroundid_mediaid INTEGER,heritagetable1backgroundid_cropdata TEXT,heritagetable1backgroundid_mediaid INTEGER,heritagetable2backgroundid_cropdata TEXT,heritagetable2backgroundid_mediaid INTEGER)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO engagement SELECT * FROM mem.engagement;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='engagement';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'engagement';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE TABLE elementtype (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO elementtype SELECT * FROM mem.elementtype;
+[sql] DEBUG 2016-01-12 03:47:59 - DELETE FROM sqlite_sequence WHERE name='elementtype';
+[sql] DEBUG 2016-01-12 03:47:59 - INSERT INTO sqlite_sequence SELECT * FROM mem.ds_sqlite_sequence WHERE name = 'elementtype';
+[sql] DEBUG 2016-01-12 03:47:59 - SELECT name, sql FROM mem.sqlite_master WHERE type = 'index';
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX playlistelement_resourceid_mediaid_idx ON playlistelement(resourceid_mediaid)
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX playlistelement_playlistid_idx ON playlistelement(playlistid)
+[sql] DEBUG 2016-01-12 03:47:59 - CREATE INDEX engagement_roomid_idx ON engagement(roomid)
+[sql] DEBUG 2016-01-12 03:47:59 - END TRANSACTION;
+[sql] DEBUG 2016-01-12 03:47:59 - DETACH DATABASE mem;
+[sql] DEBUG 2016-01-12 03:47:59 - VACUUM;
+[sql] DEBUG 2016-01-12 03:47:59 - PRAGMA INTEGRITY_CHECK;
+[sql] DEBUG 2016-01-12 03:47:59 - Rebuild complete.
+[sql] DEBUG 2016-01-12 03:47:59 - Connection closed
+[sql] DEBUG 2016-01-12 03:47:59 - Connection opened
+[sql] DEBUG 2016-01-12 03:47:59 - Connection closed

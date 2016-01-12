@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Downstream :: DSNode Admin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+    body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    .tabpane {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    .tabpane-hidden { visibility: hidden; }
+    .metric {
+        font-size: 40px;
+        line-height: 45px!important;
+    }
+    </style>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/jqueryui.js"></script>
+    <script src="js/relativetime.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/smoothie.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/dsnode.js"></script>
+    </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/dsnode">DSNode Console</a>
+          <div class="nav">
+            <ul class="nav">
+              <li class="tab active">
+              	<a href="#dashboard" onclick="showTab(this,'dashboard'); return false;">
+              	Dashboard
+              	</a>
+              </li>
+              <li class="tab">
+              	<a href="#" onclick="showTab(this,'logger'); return false;">Logs</a>
+              </li>
+              <li class="tab"><a href="#" onclick="showTab(this,'resources'); return false;">Resources</a></li>
+              <li class="dropdown">
+              	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Actions
+              	<b class="caret"></b>
+              	</a>
+              	<ul class="dropdown-menu">
+              		<li><a href="#" onclick="ws.send('{\'method\': \'node.rebuild\', data: []}'); return false;">Rebuild Local Data</a></li>
+              		<li><a href="#" onclick="ws.send('{\'method\': \'node.restart\', data: []}'); return false;">Restart DSNode</a></li>
+              		<li class="divider"></li>
+              		<li><a href="#" onclick="ws.send('{\'method\': \'node.update\', data: []}'); return false;">Check for Update</a></li>
+              		<li class="divider"></li>
+              		<li><a data-toggle="modal" href="#frmBugReport">Submit Bug Report</a></li>
+              	</ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+		  <div class="pull-right" style="padding: 10px 10px 11px 0px;"><span id="connect-status" class="label label-important">OFFLINE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="position: relative;">
+        <span id="profile" class="label label-info" style="position: absolute; right: 0px; top: -5px; z-index: 10;"></span>
+
+<!-- Dashboard -->
+<div id="dashboard" class="tabpane">
+    <h1>Dashboard</h1>
+    <div class="well">
+        Basic pulse of everything going on since the application started.
+    </div>
+    <div class="row">
+        <div class="span12">
+            <h2>Synchronization Status</h2>
+            <table class="table table-striped table-condensed table-bordered">
+        		<tbody class="stripe">
+                    <tr>
+                        <td width="100"><strong>Uptime: </strong></td>
+                        <td><time id="uptime" datetime=""></time></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Last rebuild: </strong></td>
+                        <td id="rebuildholder"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Status: </strong></td>
+                        <td><span id="status" class="label label-info">Idle</span></td>
+                    </tr>
+        		</tbody>
+            </table>       
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <h2>Queue Metrics</h2>
+            <table class="table table-striped table-condensed table-bordered">
+                <thead>
+                	<tr>
+                		<th width="150">Metric</th>
+                		<th>Counter</th>
+                	</tr>
+                </thead>
+        		<tbody class="stripe">
+                    <tr>
+                        <td>Queued Messages</td>
+                        <td id="messages" class="metric">0</td>
+                    </tr>
+                    <tr>
+                        <td>Processed Messages</td>
+                        <td id="messages_ack" class="metric">0</td>
+                    </tr>
+                    <tr>
+                        <td>Rejected Messages</td>
+                        <td id="messages_nack" class="metric">0</td>
+                    </tr>
+        		</tbody>
+            </table>
+        </div>
+        <div class="span6">
+            <h2>Queue Status</h2>
+            <canvas id="elapsedcanvas" width="455" height="125" style="border: 1px solid #ddd;"></canvas>
+            <div class="" style="margin-top: 15px;">
+                <div style="float: left; width: 7px; height: 7px; background-color: rgba(174, 67, 46, 1); margin-right: 10px; margin-left: 5px;"></div> <span style="display: block; float: left; line-height: 10px;">Messages Queued</span>
+				<div style="clear: both; float: left; width: 7px; height: 7px; background-color: rgba(119, 171, 19, 1); margin-right: 10px; margin-top: 5px; margin-left: 5px;"></div> <span style="display: block; float: left; line-height: 20px;">Messages Ready</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <h2>Messaging Details</h2>
+            <table id="assets" class="table table-striped table-condensed table-bordered">
+                <thead>
+                	<tr>
+                		<th width="175">Message Type</th>
+                		<th>Counter</th>
+                	</tr>
+                </thead>
+        		<tbody class="stripe">
+                    <tr>
+                        <td><a href="#" rel="tooltip" title="System messages correspond to the route sy.HOSTNAME.# System messages are reserved for rebuilds, restart, update, and debug commands.">System</a></td>
+                        <td id="sysmessages" class="metric">0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" rel="tooltip" title="Application messages correspond to routes ap.messagename.# Application messages trigger UDP messages to be sent out on the local machine.">Application</a></td>
+                        <td id="appmessages" class="metric">0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" rel="tooltip" title="Database messages correspond to routes db.tablename.# These are data only queries (INSERT, UPDATE, DELETE)">Database</a></td>
+                        <td id="dbmessages" class="metric">0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" rel="tooltip" title="Resource messages correspont to the routes fi.filepath.#  Resources messages are both an asset download from the CMS server and a database query.">Resources</a></td>
+                        <td id="resourcemessages" class="metric">0</td>
+                    </tr>
+        		</tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <h2>Trends</h2>
+            <div class="alert alert-info">
+                The graphs show messages processed over time to indicate trends, whereas the above data only reflects what has been processed since application startup.
+            </div>
+            <div class="btn-group">
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                Reset Counter
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- dropdown menu links -->
+                <li><a href="#" onclick="ws.send('{\'method\': \'stats.resettime\', data: [] }'); return false;">Reset Hourly Counters</a></li>
+                <li><a href="#" onclick="ws.send('{\'method\': \'stats.resetday\', data: [] }'); return false;">Reset Day Counters</a></li>
+              </ul>
+            </div>
+            <div id="chart1" class="highcharts-container" style="height:310px; width: 940px; margin: 40px auto 20px auto; clear:both"></div>
+            <div id="chart2" class="highcharts-container" style="height:310px; width: 940px; margin: 40px auto 20px auto; clear:both"></div>
+        </div>
+    </div>
+</div>
+<!-- /Dashboard -->
+
+<!-- Logger -->
+<div id="logger" class="tabpane tabpane-hidden">
+    <h1>Logs</h1>
+    <div class="row">
+        <div class="span12">
+            <div class="alert" style="margin-top: 15px;">
+                <strong>Newest log entries are at the top.</strong>
+            </div>
+                <table id="logger" style="margin-top: 15px;" cellpadding="0" cellspacing="0" class="table table-striped table-condensed table-bordered">
+                	<thead>
+                		<th style="width: 50px;">Level</th>
+                		<th style="width: 155px;">Timestamp</th>
+                		<th>Message</th>
+                	</thead>
+					<tbody class="stripe">
+					</tbody>
+                </table>
+            
+        </div>
+    </div>
+</div>
+<!-- /Logger -->
+
+<!-- Resources -->
+<div id="resources" class="tabpane tabpane-hidden">
+    <h1>Resources</h1>
+    <div class="row">
+        <div class="span12">
+                <table id="resources" style="margin-top: 15px;" cellpadding="0" cellspacing="0" class="table table-striped table-condensed table-bordered">
+                	<thead>
+                		<th>File</th>
+                		<th>Size</th>
+                		<th>% Download</th>
+                	</thead>
+					<tbody class="stripe">
+					</tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="frmBugReport">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">×</a>
+		<h3>Bug Report</h3>
+	</div>
+	<div class="modal-body">
+	<p>
+		Submit a bug report.
+	</p>
+	</div>
+	<div class="modal-footer">
+		<div class="control-group">
+			<label>Bug Description</label>
+			<input id="frmBugDesc" type="text" style="width: 520px;" />
+			<label>Steps to Reproduce</label>
+			<textarea id="frmBugDetail" style="width: 520px; height: 125px;"></textarea>
+		</div>
+		<a href="#" onclick="bugreport(); $('#frmBugReport').modal('hide'); return false;" class="btn btn-primary">Submit</a>
+		<a href="#" data-dismiss="modal" class="btn">Close</a>
+	</div>
+</div>
+
+<div class="modal hide fade" id="modalConnected">
+	<div class="modal-header">
+		<h3>Console Connection</h3>
+	</div>
+	<div class="modal-body">
+	<p class="alert alert-error">
+		<strong>No connection.</strong><br><br>
+		- Is DSNode running on the local machine?<br>
+	</p>
+	<a class="btn btn-primary" href="index.html">Connect</a>
+	</div>
+</div>
+
+<!-- /Resources -->
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+	<script type="text/javascript">
+	    //no conflict jquery
+	    //jQuery.noConflict();
+	</script>
+    <script>
+
+    </script>
+  </body>
+</html>

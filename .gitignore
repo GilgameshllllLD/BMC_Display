@@ -1,0 +1,43 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Visual studio files
+*.sdf
+*.opensdf
+*.suo
+*.map
+Debug/
+Release/
+/awesomium.log
+/vs2013/*.user
+/settings/configuration.xml
+/deloitte_university_wall.map
+/deloitte_university_wall.map
+/install/dsnode/node
+/logs

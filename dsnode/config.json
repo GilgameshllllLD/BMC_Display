@@ -1,0 +1,20 @@
+{
+"profilename": "Name of Profile",
+"version":"2.0",
+"appname":"jci",
+"client":"jci",
+"cmsserver":"http://jci.downstreamcms.com/",
+"apihash":"a95f142432ff914f5ffae4f7db38471a",
+"datadir":"documents/downstream/jci/",
+"appdir":"jci/",
+"routes":"fi.table|fi.leader|fi.day|fi.life|fi.ui.table|db.Day|db.DayToTier",
+"ignoretypes":"",
+"resourcetable":"Resources",
+"mediaserver":"https://media.downstreamcms.com/media/repository/",
+"queue_server":"web1.downstreamcms.com",
+"queue_port":"5672",
+"queue_username":"jci-client",
+"queue_password":"8675309",
+"queue_vhost":"jci",
+"queue_exchange":"jci.downstreamcms.com"
+}

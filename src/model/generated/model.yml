@@ -1,0 +1,38 @@
+Story:
+    tableName: story
+    columns:
+        id:
+            type: integer(4)
+            unsigned: true
+            primary: true
+            autoincrement: true
+        resourceId:
+            type: integer(4)
+        firstLine:
+            type: string(255)
+        secondLine:
+            type: string(255)
+        thirdLine:
+            type: string(255)
+        templateVideoId:
+            type: integer(4)
+    actAs:
+        Timestampable:
+    options:
+        type: MYISAM
+    relations:
+        TemplateVideo:
+            class: TemplateVideo
+            type: one
+
+TemplateVideo:
+    tableName: TemplateVideo
+    columns:
+        id:
+            type: integer(4)
+        resourceId:
+            type: integer(4)
+        startTime:
+            type: integer(4)
+        endTime:
+            type: integer(4)

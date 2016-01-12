@@ -1,0 +1,37 @@
+<settings>
+
+<!-- Font names are installed in the root app class on startup	-->
+	
+<!-- fonts:
+
+	mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/NotoSans-Bold.ttf"), "noto-bold");
+   	mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/FreigSanProBold.ttf"), "FreigSanPro-bold");
+	mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/FreigSanProBook.ttf"), "FreigSanPro-book");
+	mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/FreigSanProLig.ttf"), "FreigSanPro-lig");
+
+-->
+    
+	<!-- Sample Text -->
+		<text  name="sample:config:name" value="noto-bold" />
+		<float name="sample:config:size" value="16" />
+		<float name="sample:config:leading" value="0.75" />
+		<color name="sample:config:color" r="255" g="255" b="255" />
+        
+    <!-- Real Text -->
+		<text  name="title:first_line:name" value="FreigSanPro-bold" />
+		<float name="title:first_line:size" value="12" />
+		<float name="title:first_line:leading" value="0.75" />
+		<color name="title:first_line:color" r="255" g="255" b="255" />
+        
+        <text  name="title:second_line:name" value="FreigSanPro-lig" />
+		<float name="title:second_line:size" value="37" />
+		<float name="title:second_line:leading" value="0.75" />
+		<color name="title:second_line:color" r="255" g="255" b="255" />
+        
+        <text  name="title:third_line:name" value="FreigSanPro-bold" />
+		<float name="title:third_line:size" value="8" />
+		<float name="title:third_line:leading" value="0.75" />
+		<color name="title:third_line:color" r="255" g="255" b="255" />
+    
+	
+</settings>
