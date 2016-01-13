@@ -137,9 +137,10 @@ namespace bmc {
 					singleStory.setTemplateVideoRef(templateVideo);
 				}
 				storyGroup.push_back(singleStory);
-				listGroup[i].setStoryRef(storyGroup);
 				++itemIt;
 			}
+			listGroup[i].setStoryRef(storyGroup);
+			mOutput.mStorieLists.push_back(listGroup[i]);
 		}
 	}
 

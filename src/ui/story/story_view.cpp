@@ -34,11 +34,17 @@ namespace bmc {
 		// update view to match new content
 		mItemGroup.clear();
 
-		for (auto it = mGlobals.mAllData.mAllStories.mStories.begin(); it < mGlobals.mAllData.mAllStories.mStories.end(); it++)
+		for (auto it = mGlobals.mAllData.mAllStories.mStorieLists.begin(); it < mGlobals.mAllData.mAllStories.mStorieLists.end(); it++)
 		{
-			auto singleItem = new bmc::StoryItem(mGlobals, (*it));
-			if (singleItem)
-				mItemGroup.push_back(singleItem);
+			if ((*it).getListStartTime() == L"0" && (*it).getListEndTime() == L"0")
+			{
+				for (auto i = 0; i < (*it).getStoryRef().size(); i++)
+				{
+					auto singleItem = new bmc::StoryItem(mGlobals, (*it).getStoryRef()[i]);
+					if (singleItem)
+						mItemGroup.push_back(singleItem);
+				}
+			}
 		}
 
 		if (mItemGroup.size() == 0)
@@ -55,8 +61,10 @@ namespace bmc {
 	void StoryView::layout(){
 
 		if (mCurrentItem)
+		{
 			mCurrentItem->run();
-		setIdleTime(mCurrentItem->getType());
+			setIdleTime(mCurrentItem->getType());
+		}
 	}
 
 
