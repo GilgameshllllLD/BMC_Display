@@ -25,21 +25,21 @@ public:
 
 	StoryRef();
 
-	const std::wstring& getFirstLine() const;
-	const int& getResourceId() const;
-	const unsigned int& getId() const;
+	const std::wstring& getThirdLine() const;
 	const std::wstring& getSecondLine() const;
 	const int& getTemplateVideoId() const;
-	const std::wstring& getThirdLine() const;
+	const unsigned int& getId() const;
+	const int& getResourceId() const;
+	const std::wstring& getFirstLine() const;
 	const TemplateVideoRef& getTemplateVideoRef() const;
 
 
-	StoryRef& setFirstLine(const std::wstring& FirstLine);
-	StoryRef& setResourceId(const int& ResourceId);
-	StoryRef& setId(const unsigned int& Id);
+	StoryRef& setThirdLine(const std::wstring& ThirdLine);
 	StoryRef& setSecondLine(const std::wstring& SecondLine);
 	StoryRef& setTemplateVideoId(const int& TemplateVideoId);
-	StoryRef& setThirdLine(const std::wstring& ThirdLine);
+	StoryRef& setId(const unsigned int& Id);
+	StoryRef& setResourceId(const int& ResourceId);
+	StoryRef& setFirstLine(const std::wstring& FirstLine);
 	StoryRef& setTemplateVideoRef(const TemplateVideoRef& TemplateVideoRef);
 
 

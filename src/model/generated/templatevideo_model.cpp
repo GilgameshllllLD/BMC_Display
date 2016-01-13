@@ -25,8 +25,8 @@ public:
 {}
 
 int mId;
-int mResourceId;
 int mStartTime;
+int mResourceId;
 int mEndTime;
 
 
@@ -39,13 +39,13 @@ const int& TemplateVideoRef::getId() const {
 	if(!mData) return EMPTY_INT; 
 	return mData->mId; 
 }
-const int& TemplateVideoRef::getResourceId() const {
-	if(!mData) return EMPTY_INT; 
-	return mData->mResourceId; 
-}
 const int& TemplateVideoRef::getStartTime() const {
 	if(!mData) return EMPTY_INT; 
 	return mData->mStartTime; 
+}
+const int& TemplateVideoRef::getResourceId() const {
+	if(!mData) return EMPTY_INT; 
+	return mData->mResourceId; 
 }
 const int& TemplateVideoRef::getEndTime() const {
 	if(!mData) return EMPTY_INT; 
@@ -58,14 +58,14 @@ TemplateVideoRef& TemplateVideoRef::setId(const int& Id){
 	if(mData) mData->mId = Id; 
 	return *this; 
 }
-TemplateVideoRef& TemplateVideoRef::setResourceId(const int& ResourceId){
-	if(!mData) mData.reset(new Data()); 
-	if(mData) mData->mResourceId = ResourceId; 
-	return *this; 
-}
 TemplateVideoRef& TemplateVideoRef::setStartTime(const int& StartTime){
 	if(!mData) mData.reset(new Data()); 
 	if(mData) mData->mStartTime = StartTime; 
+	return *this; 
+}
+TemplateVideoRef& TemplateVideoRef::setResourceId(const int& ResourceId){
+	if(!mData) mData.reset(new Data()); 
+	if(mData) mData->mResourceId = ResourceId; 
 	return *this; 
 }
 TemplateVideoRef& TemplateVideoRef::setEndTime(const int& EndTime){

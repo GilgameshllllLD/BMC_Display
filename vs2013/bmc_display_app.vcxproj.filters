@@ -28,6 +28,9 @@
     <ClCompile Include="..\src\model\generated\templatevideo_model.cpp">
       <Filter>src\model\generated</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\model\generated\storylist_model.cpp">
+      <Filter>src\model\generated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\app_defs.h">
@@ -64,6 +67,9 @@
       <Filter>src\ui\story</Filter>
     </ClInclude>
     <ClInclude Include="..\src\model\generated\templatevideo_model.h">
+      <Filter>src\model\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\generated\storylist_model.h">
       <Filter>src\model\generated</Filter>
     </ClInclude>
   </ItemGroup>

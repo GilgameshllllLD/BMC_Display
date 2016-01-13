@@ -25,14 +25,14 @@ public:
 	TemplateVideoRef();
 
 	const int& getId() const;
-	const int& getResourceId() const;
 	const int& getStartTime() const;
+	const int& getResourceId() const;
 	const int& getEndTime() const;
 
 
 	TemplateVideoRef& setId(const int& Id);
-	TemplateVideoRef& setResourceId(const int& ResourceId);
 	TemplateVideoRef& setStartTime(const int& StartTime);
+	TemplateVideoRef& setResourceId(const int& ResourceId);
 	TemplateVideoRef& setEndTime(const int& EndTime);
 
 

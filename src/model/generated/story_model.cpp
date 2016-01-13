@@ -29,12 +29,12 @@ public:
 	, mThirdLine(EMPTY_WSTRING)
 {}
 
-std::wstring mFirstLine;
-int mResourceId;
-unsigned int mId;
+std::wstring mThirdLine;
 std::wstring mSecondLine;
 int mTemplateVideoId;
-std::wstring mThirdLine;
+unsigned int mId;
+int mResourceId;
+std::wstring mFirstLine;
 TemplateVideoRef mTemplateVideoRef;
 
 
@@ -43,17 +43,9 @@ TemplateVideoRef mTemplateVideoRef;
 StoryRef::StoryRef(){}
 
 
-const std::wstring& StoryRef::getFirstLine() const {
+const std::wstring& StoryRef::getThirdLine() const {
 	if(!mData) return EMPTY_WSTRING; 
-	return mData->mFirstLine; 
-}
-const int& StoryRef::getResourceId() const {
-	if(!mData) return EMPTY_INT; 
-	return mData->mResourceId; 
-}
-const unsigned int& StoryRef::getId() const {
-	if(!mData) return EMPTY_UINT; 
-	return mData->mId; 
+	return mData->mThirdLine; 
 }
 const std::wstring& StoryRef::getSecondLine() const {
 	if(!mData) return EMPTY_WSTRING; 
@@ -63,9 +55,17 @@ const int& StoryRef::getTemplateVideoId() const {
 	if(!mData) return EMPTY_INT; 
 	return mData->mTemplateVideoId; 
 }
-const std::wstring& StoryRef::getThirdLine() const {
+const unsigned int& StoryRef::getId() const {
+	if(!mData) return EMPTY_UINT; 
+	return mData->mId; 
+}
+const int& StoryRef::getResourceId() const {
+	if(!mData) return EMPTY_INT; 
+	return mData->mResourceId; 
+}
+const std::wstring& StoryRef::getFirstLine() const {
 	if(!mData) return EMPTY_WSTRING; 
-	return mData->mThirdLine; 
+	return mData->mFirstLine; 
 }
 const TemplateVideoRef& StoryRef::getTemplateVideoRef() const {
 	if(!mData) return EMPTY_TEMPLATEVIDEOREF; 
@@ -73,19 +73,9 @@ const TemplateVideoRef& StoryRef::getTemplateVideoRef() const {
 }
 
 
-StoryRef& StoryRef::setFirstLine(const std::wstring& FirstLine){
+StoryRef& StoryRef::setThirdLine(const std::wstring& ThirdLine){
 	if(!mData) mData.reset(new Data()); 
-	if(mData) mData->mFirstLine = FirstLine; 
-	return *this; 
-}
-StoryRef& StoryRef::setResourceId(const int& ResourceId){
-	if(!mData) mData.reset(new Data()); 
-	if(mData) mData->mResourceId = ResourceId; 
-	return *this; 
-}
-StoryRef& StoryRef::setId(const unsigned int& Id){
-	if(!mData) mData.reset(new Data()); 
-	if(mData) mData->mId = Id; 
+	if(mData) mData->mThirdLine = ThirdLine; 
 	return *this; 
 }
 StoryRef& StoryRef::setSecondLine(const std::wstring& SecondLine){
@@ -98,9 +88,19 @@ StoryRef& StoryRef::setTemplateVideoId(const int& TemplateVideoId){
 	if(mData) mData->mTemplateVideoId = TemplateVideoId; 
 	return *this; 
 }
-StoryRef& StoryRef::setThirdLine(const std::wstring& ThirdLine){
+StoryRef& StoryRef::setId(const unsigned int& Id){
 	if(!mData) mData.reset(new Data()); 
-	if(mData) mData->mThirdLine = ThirdLine; 
+	if(mData) mData->mId = Id; 
+	return *this; 
+}
+StoryRef& StoryRef::setResourceId(const int& ResourceId){
+	if(!mData) mData.reset(new Data()); 
+	if(mData) mData->mResourceId = ResourceId; 
+	return *this; 
+}
+StoryRef& StoryRef::setFirstLine(const std::wstring& FirstLine){
+	if(!mData) mData.reset(new Data()); 
+	if(mData) mData->mFirstLine = FirstLine; 
 	return *this; 
 }
 StoryRef& StoryRef::setTemplateVideoRef(const TemplateVideoRef& TemplateVideoRef){

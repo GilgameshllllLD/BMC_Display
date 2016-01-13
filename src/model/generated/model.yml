@@ -1,3 +1,20 @@
+StoryList:
+    tableName: storylist
+    columns:
+        id:
+            type: integer(4)
+            unsigned: true
+            primary: true
+            autoincrement: true
+        listStartTime:
+            type: string(255)
+        listEndTime:
+            type: string(255)
+    relations:
+        Story:
+            class: Story
+            type: many
+
 Story:
     tableName: story
     columns:
@@ -26,7 +43,7 @@ Story:
             type: one
 
 TemplateVideo:
-    tableName: TemplateVideo
+    tableName: templateVideo
     columns:
         id:
             type: integer(4)

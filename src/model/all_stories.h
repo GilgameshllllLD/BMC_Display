@@ -2,6 +2,7 @@
 #define _BMCDISPLAYAPP_APP_MODEL_ALLSTORIES_H_
 
 #include "model/generated/story_model.h"
+#include "model/generated/storylist_model.h"
 
 namespace bmc {
 
@@ -14,7 +15,7 @@ public:
 
 	AllStories(){};
 
-	std::vector<ds::model::StoryRef>	mStories;
+	std::vector<ds::model::StoryListRef>	mStorieLists;
 
 };
 

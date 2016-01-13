@@ -23,6 +23,7 @@ public:
 	AllStories				mOutput;
 private:
 	void					query(AllStories& output);
+	std::wstring			collectNumbers(std::string text);
 	Globals::APPType		mType;
 };
 
