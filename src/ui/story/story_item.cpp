@@ -86,7 +86,9 @@ namespace bmc {
 				mSecondLine->setText(mModel.getSecondLine());
 				auto initFontsize = 5.0f;
 				mSecondLine->setFontSize(initFontsize);
-				while (mSecondLine->getWidth() < 284.0f && mSecondLine->getHeight() < 37.0f)
+				auto maxHeight = mGlobals.getSettingsLayout().getFloat("second_line:max_height", 0, 37.0f);
+				auto maxWidth = mGlobals.getSettingsLayout().getFloat("second_line:max_width", 0, 284.0f);
+				while (mSecondLine->getWidth() < maxWidth && mSecondLine->getHeight() < maxHeight)
 				{
 					initFontsize += 0.1f;
 					mSecondLine->setFontSize(initFontsize);

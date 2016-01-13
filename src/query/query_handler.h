@@ -13,34 +13,34 @@
 
 namespace bmc {
 	class Globals;
-/**
- * \class bmc::QueryHandler
- * \brief Handle app events that deal with querying for data.
- */
-class QueryHandler {
-public:
-	QueryHandler(ds::ui::SpriteEngine&, AllData&, Globals& g);
+	/**
+	 * \class bmc::QueryHandler
+	 * \brief Handle app events that deal with querying for data.
+	 */
+	class QueryHandler {
+	public:
+		QueryHandler(ds::ui::SpriteEngine&, AllData&, Globals& g, Globals::APPType type);
 
-	void								runInitialQueries();
-	void								update();
-private:
+		void								runInitialQueries();
+		void								update();
+	private:
 
-	void								onAppEvent(const ds::Event&);
-	void								onStoryQuery(StoryQuery&);
+		void								onAppEvent(const ds::Event&);
+		void								onStoryQuery(StoryQuery&);
 
-	ds::EventClient						mEventClient;
-	Globals&							mGlobals;
-	AllData&							mAllData;
+		ds::EventClient						mEventClient;
+		Globals&							mGlobals;
+		AllData&							mAllData;
 
-	ds::SerialRunnable<StoryQuery>		mStoryQuery;
+		ds::SerialRunnable<StoryQuery>		mStoryQuery;
 
-	ds::NodeWatcher						mNodeWatcher;
-	Poco::Timestamp::TimeVal			mLastMessageTime;
-	bool								mNeedtoRefresh;
+		ds::NodeWatcher						mNodeWatcher;
+		Poco::Timestamp::TimeVal			mLastMessageTime;
+		bool								mNeedtoRefresh;
 
-	// CACHING
-	ds::ResourceList					mResources;
-};
+		// CACHING
+		ds::ResourceList					mResources;
+	};
 
 } // !namespace bmc
 

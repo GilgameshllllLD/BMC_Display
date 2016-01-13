@@ -23,6 +23,7 @@ namespace bmc {
 class Globals {
 public:
 	Globals(ds::ui::SpriteEngine&, const AllData& d);
+	typedef enum { WELCOME = 1, RIO, TRANSFORMATION} APPType;
 
 	ds::ui::SpriteEngine&			mEngine;
 

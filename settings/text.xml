@@ -19,7 +19,7 @@
         
     <!-- Real Text -->
 		<text  name="title:first_line:name" value="FreigSanPro-bold" />
-		<float name="title:first_line:size" value="12" />
+		<float name="title:first_line:size" value="14" />
 		<float name="title:first_line:leading" value="0.75" />
 		<color name="title:first_line:color" r="255" g="255" b="255" />
         
@@ -29,7 +29,7 @@
 		<color name="title:second_line:color" r="255" g="255" b="255" />
         
         <text  name="title:third_line:name" value="FreigSanPro-bold" />
-		<float name="title:third_line:size" value="8" />
+		<float name="title:third_line:size" value="9" />
 		<float name="title:third_line:leading" value="0.75" />
 		<color name="title:third_line:color" r="255" g="255" b="255" />
     

@@ -18,15 +18,31 @@
 
 namespace bmc {
 
+	ds::RootList getRootList(ds::Engine& engine, const Globals::APPType type)
+	{
+		ds::RootList rooty = ds::RootList();
+
+		ds::cfg::Settings layoutSettings;
+		ds::Environment::loadSettings("layout.xml", layoutSettings);
+
+		return rooty;
+	}
+
 	BMCDisplayApp::BMCDisplayApp()
-		: inherited(ds::RootList().ortho())
+		: inherited(ds::RootList([this]()->ds::RootList
+	{
+		ds::cfg::Settings layoutSettings;
+
+		ds::Environment::loadSettings("layout.xml", layoutSettings);
+		mType = (Globals::APPType)layoutSettings.getInt("APP:TYPE", 0);
+		return getRootList(mEngine, mType);
+
+	}).ortho())
 		, mGlobals(mEngine, mAllData)
-		, mQueryHandler(mEngine, mAllData, mGlobals)
+		, mQueryHandler(mEngine, mAllData, mGlobals, mType)
 		, mIdling(false)
 		, mTouchDebug(mEngine)
 	{
-
-
 		/*fonts in use */
 		mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/NotoSans-Bold.ttf"), "noto-bold");
 		mEngine.editFonts().install(ds::Environment::getAppFile("data/fonts/FreigSanProBold.otf"), "FreigSanPro-bold");

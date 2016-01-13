@@ -35,7 +35,7 @@ private:
 
 	//Idle state of the app to detect state change
 	bool				mIdling;
-
+	Globals::APPType	mType;
 
 	ds::TouchDebug		mTouchDebug;
 

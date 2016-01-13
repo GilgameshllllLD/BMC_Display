@@ -13,7 +13,9 @@ namespace bmc {
 /**
  * \class bmc::StoryQuery
  */
-StoryQuery::StoryQuery() {
+StoryQuery::StoryQuery(Globals::APPType  type)
+	:mType(type)
+{
 }
 
 void StoryQuery::run() {
@@ -29,8 +31,10 @@ void StoryQuery::query(AllStories& output) {
 	const ds::Resource::Id				cms(ds::Resource::Id::CMS_TYPE, 0);
 	std::stringstream					buf;
 	ds::query::Result					r;
+
+	//load for Default play list
 	//-----------------------0------------------------1----------2-----------3----------4----------5----------6-------------7-----
-	buf << "SELECT playlistelement.id, playlistelement.name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement  INNER JOIN playlist ON playlist.playlistid = playlistelement.playlistid and playlist.playlistid = 1";
+	buf << "SELECT playlistelement.id, playlistelement.name,elementtypeid,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement  INNER JOIN playlist ON playlist.playlistid = playlistelement.playlistid and playlist.isdefault = 1 and playlist.typeid = " << (int)mType;
 	if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), r, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
 		DS_LOG_WARNING(" error querying playlist");
 	}
@@ -78,7 +82,8 @@ void StoryQuery::query(AllStories& output) {
 		++it;
 		mOutput.mStories.push_back(singleStory);
 	}
-	auto i = 0;
+
+
 }
 
 } // !namespace bmc
