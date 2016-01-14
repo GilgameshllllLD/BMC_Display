@@ -10,7 +10,7 @@
             />
                 
         <multiline_text name="second_line"
-            position="152, 45"
+            position="152, 47"
             font="title:second_line"
             text_align="center"
             resize_limit="304"

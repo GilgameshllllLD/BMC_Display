@@ -31,7 +31,7 @@ namespace bmc {
 		void								layout();
 		void								run();
 		storyType							getType(){ return mType; };
-		float								getVideoTime(){ return (float)mBackgroundVideo->getDuration(); };
+		float								getVideoTime();
 
 	private:
 		virtual void						updateServer(const ds::UpdateParams& p);

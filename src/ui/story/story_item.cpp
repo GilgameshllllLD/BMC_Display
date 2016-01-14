@@ -74,7 +74,8 @@ namespace bmc {
 			mBackgroundVideo->setResourceId(mModel.getResourceId());
 		else if (mType == CUSTOM)
 		{
-			mBackgroundVideo->setResourceId(mModel.getTemplateVideoRef().getResourceId());
+			if (mModel.getTemplateVideoRef().getResourceId() > 0)
+				mBackgroundVideo->setResourceId(mModel.getTemplateVideoRef().getResourceId());
 			mStartTime = (float)mModel.getTemplateVideoRef().getStartTime();
 			mEndTime = (float)mModel.getTemplateVideoRef().getEndTime();
 
@@ -88,11 +89,19 @@ namespace bmc {
 				mSecondLine->setFontSize(initFontsize);
 				auto maxHeight = mGlobals.getSettingsLayout().getFloat("second_line:max_height", 0, 37.0f);
 				auto maxWidth = mGlobals.getSettingsLayout().getFloat("second_line:max_width", 0, 284.0f);
+				if (mSecondLine->getText().length() > mGlobals.getSettingsLayout().getFloat("word:length", 0, 30))
+				{
+					mSecondLine->setFont("FreigSanPro-book", initFontsize);
+					auto currentPos = mSecondLine->getPosition();
+					auto yLayoff = mGlobals.getSettingsLayout().getFloat("second_line:layoff_y", 0, 5);
+					mSecondLine->setPosition(currentPos.x, currentPos.y + yLayoff, currentPos.z);
+				}
 				while (mSecondLine->getWidth() < maxWidth && mSecondLine->getHeight() < maxHeight)
 				{
 					initFontsize += 0.1f;
 					mSecondLine->setFontSize(initFontsize);
 				}
+
 			}
 
 			if (mThirdLine && mModel.getThirdLine() != L"")
@@ -127,14 +136,20 @@ namespace bmc {
 			mBackgroundImage->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
 		else if (mType == VIDEO && mBackgroundVideo)
 		{
-			mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
-			mBackgroundVideo->play();
+			if (mBackgroundVideo->isLoaded())
+			{
+				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+				mBackgroundVideo->play();
+			}
 		}
 		else if (mType == CUSTOM && mFirstLine && mSecondLine && mThirdLine)
 		{
-			mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
-			mBackgroundVideo->play();
-			mBackgroundVideo->sendToBack();
+			if (mBackgroundVideo->isLoaded())
+			{
+				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+				mBackgroundVideo->play();
+				mBackgroundVideo->sendToBack();
+			}
 			mFirstLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
 			mSecondLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
 			mThirdLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
@@ -147,6 +162,17 @@ namespace bmc {
 					mThirdLine->tweenOpacity(0.0f, mGlobals.getAnimDur());
 				}, mEndTime);
 			}
+		}
+	}
+
+	float StoryItem::getVideoTime()
+	{
+		if (mModel.getTemplateVideoRef().getResourceId() > 0)
+			return (float)mBackgroundVideo->getDuration();
+		else
+		{
+			auto defaultTime = mGlobals.getSettingsLayout().getFloat("default:idle:time", 0, 10.0f);
+			return defaultTime;
 		}
 	}
 

@@ -102,7 +102,7 @@ namespace bmc {
 		for (auto i = 0; i < listGroup.size(); i++)
 		{
 			buf.str("");
-			buf << "SELECT id,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement where playlistid = " << listGroup[i].getId();
+			buf << "SELECT id,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement where playlistid = " << listGroup[i].getId() << " ORDER by sort_order";
 			ds::query::Result					itemR;
 			if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), itemR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
 				DS_LOG_WARNING(" error querying playlist item");

@@ -8,5 +8,8 @@
 	<float name="back_image:duration" value="7.0" />
 	<float name="second_line:max_height" value="52.0" />
 	<float name="second_line:max_width" value="284.0" />
+	<float name="second_line:layoff_y" value="4.0" />
+	<float name="default:idle:time" value="20.0" />
+	<float name="word:length" value="30.0" />
 	
 </settings>
