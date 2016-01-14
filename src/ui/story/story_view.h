@@ -33,7 +33,8 @@ private:
 	void								layout();
 	void								nextItems();
 	void								setIdleTime(StoryItem::storyType);
-
+	bool								engageCheck(std::wstring startTime, std::wstring endTime);
+	std::wstring						fillZero(int tempValue);
 	typedef ds::ui::Sprite				inherited;
 	Globals&							mGlobals;
 

@@ -36,7 +36,7 @@ namespace bmc {
 
 		for (auto it = mGlobals.mAllData.mAllStories.mStorieLists.begin(); it < mGlobals.mAllData.mAllStories.mStorieLists.end(); it++)
 		{
-			if ((*it).getListStartTime() == L"0" && (*it).getListEndTime() == L"0")
+			if (engageCheck((*it).getListStartTime(), (*it).getListEndTime()))
 			{
 				for (auto i = 0; i < (*it).getStoryRef().size(); i++)
 				{
@@ -122,6 +122,48 @@ namespace bmc {
 			if (mCurrentItem->getVideoTime() > mGlobals.getAnimDur())
 				callAfterDelay([this]{nextItems(); }, mCurrentItem->getVideoTime() - mGlobals.getAnimDur());
 		}
+	}
+
+	bool StoryView::engageCheck(std::wstring startTime, std::wstring endTime)
+	{
+		if (startTime == L"0" && endTime == L"0")
+			return true;
+		double sTime, eTime;
+		std::wstringstream sStr(startTime);
+		std::wstringstream eStr(endTime);
+		sStr >> sTime;
+		eStr >> eTime;
+		if (eStr.fail() || sStr.fail())
+			return false;
+		else
+		{
+			auto localTime = Poco::LocalDateTime();
+			double localTimeValue;
+			std::wstringstream lStr(L"");
+			lStr << localTime.year();
+			lStr << fillZero(localTime.month());
+			lStr << fillZero(localTime.day());
+			lStr << fillZero(localTime.hour());
+			lStr << fillZero(localTime.minute());
+			lStr << fillZero(localTime.second());
+			lStr >> localTimeValue;
+			if (localTimeValue > sTime && localTimeValue < eTime)
+				return true;
+			return false;
+		}
+	}
+
+	std::wstring StoryView::fillZero(int tempValue)
+	{
+		std::wstring temsStr(L"");
+		temsStr += std::to_wstring(tempValue);
+		if (temsStr.size() == 1)
+		{
+			temsStr.clear();
+			temsStr += L"0";
+			temsStr += std::to_wstring(tempValue);
+		}
+		return temsStr;
 	}
 
 } // namespace bmc

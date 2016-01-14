@@ -75,8 +75,8 @@ namespace bmc {
 		else if (mType == CUSTOM)
 		{
 			mBackgroundVideo->setResourceId(mModel.getTemplateVideoRef().getResourceId());
-			mStartTime = mModel.getTemplateVideoRef().getStartTime();
-			mEndTime = mModel.getTemplateVideoRef().getEndTime();
+			mStartTime = (float)mModel.getTemplateVideoRef().getStartTime();
+			mEndTime = (float)mModel.getTemplateVideoRef().getEndTime();
 
 			if (mFirstLine && mModel.getFirstLine() != L"")
 				mFirstLine->setText(mModel.getFirstLine());
