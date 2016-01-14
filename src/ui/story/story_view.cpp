@@ -1,6 +1,9 @@
 #include "story_view.h"
 
 #include <Poco/LocalDateTime.h>
+#include <Poco/DateTimeFormat.h>
+#include <Poco/DateTimeFormatter.h>
+#include <Poco/DateTimeParser.h>
 
 #include <ds/app/environment.h>
 #include <ds/ui/sprite/sprite_engine.h>
@@ -21,7 +24,7 @@ namespace bmc {
 		hide();
 		setOpacity(0.0f);
 		setCenter(0.5f, 0.5f);
-		setSize(304.0f, 102.0f);
+		setSize(mEngine.getWorldWidth(), mEngine.getWorldHeight());
 		setPosition(mEngine.getWorldWidth() / 2, mEngine.getWorldHeight() / 2);
 
 		setData();

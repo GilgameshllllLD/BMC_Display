@@ -1,6 +1,9 @@
 #include "story_query.h"
 #include "model/generated/templatevideo_model.h"
-
+#include <Poco/LocalDateTime.h>
+#include <Poco/DateTimeFormat.h>
+#include <Poco/DateTimeFormatter.h>
+#include <Poco/DateTimeParser.h>
 #include <map>
 #include <sstream>
 #include <ds/debug/logger.h>
@@ -67,7 +70,9 @@ namespace bmc {
 
 		buf.str("");
 		ds::query::Result				listR;
-		buf << "SELECT engagementid, startdate,enddate," << tempStirng.str() << " From engagement where " << tempStirng.str() << " >0";
+		auto localTime = Poco::LocalDateTime();
+		auto msg = Poco::DateTimeFormatter::format(localTime, "%Y-%m-%d %H:%M:%S");
+		buf << "SELECT engagementid, startdate,enddate," << tempStirng.str() << " From engagement where " << tempStirng.str() << " >0"<<" and '"<<msg<<"' < enddate";
 		if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), listR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
 			DS_LOG_WARNING(" error querying engagement list");
 		}
@@ -77,6 +82,12 @@ namespace bmc {
 		ds::query::Result::RowIterator listIt(listR);
 		while (listIt.hasValue())
 		{
+			if (listIt.getInt(3) == listGroup[0].getId())
+			{
+				++listIt;
+				continue;
+			}
+
 			ds::model::StoryListRef singleList;
 			singleList.setListStartTime(collectNumbers(listIt.getString(1)));
 			singleList.setListEndTime(collectNumbers(listIt.getString(2)));
