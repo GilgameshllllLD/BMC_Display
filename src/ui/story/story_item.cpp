@@ -37,14 +37,17 @@ namespace bmc {
 		mBackgroundImage->setOpacity(0.0f);
 		addChildPtr(mBackgroundImage);
 
-		mBackgroundVideo = new ds::ui::Video(mEngine);
-		mBackgroundVideo->setAutoStart(false);
-		mBackgroundVideo->setOpacity(0.0f);
-		mBackgroundVideo->setVideoCompleteCallback([this]()
+		if (mModel.getTemplateVideoRef().getResourceId() > 0)
 		{
-			mBackgroundVideo->seekTime(0.0f);
-		});
-		addChildPtr(mBackgroundVideo);
+			mBackgroundVideo = new ds::ui::Video(mEngine);
+			mBackgroundVideo->setAutoStart(false);
+			mBackgroundVideo->setOpacity(0.0f);
+			mBackgroundVideo->setVideoCompleteCallback([this]()
+			{
+				mBackgroundVideo->seekTime(0.0f);
+			});
+			addChildPtr(mBackgroundVideo);
+		}
 
 		if (mModel.getResourceId() > 0)
 		{
@@ -70,11 +73,11 @@ namespace bmc {
 	{
 		if (mType == IMAGE)
 			mBackgroundImage->setImageResource(mModel.getResourceId(), ds::ui::Image::IMG_CACHE_F);
-		else if (mType == VIDEO)
+		else if (mType == VIDEO && mBackgroundVideo)
 			mBackgroundVideo->setResourceId(mModel.getResourceId());
 		else if (mType == CUSTOM)
 		{
-			if (mModel.getTemplateVideoRef().getResourceId() > 0)
+			if (mBackgroundVideo)
 				mBackgroundVideo->setResourceId(mModel.getTemplateVideoRef().getResourceId());
 			mStartTime = (float)mModel.getTemplateVideoRef().getStartTime();
 			mEndTime = (float)mModel.getTemplateVideoRef().getEndTime();
@@ -136,15 +139,12 @@ namespace bmc {
 			mBackgroundImage->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
 		else if (mType == VIDEO && mBackgroundVideo)
 		{
-			if (mBackgroundVideo->isLoaded())
-			{
-				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
-				mBackgroundVideo->play();
-			}
+			mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+			mBackgroundVideo->play();
 		}
 		else if (mType == CUSTOM && mFirstLine && mSecondLine && mThirdLine)
 		{
-			if (mBackgroundVideo->isLoaded())
+			if (mBackgroundVideo)
 			{
 				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
 				mBackgroundVideo->play();
@@ -167,7 +167,7 @@ namespace bmc {
 
 	float StoryItem::getVideoTime()
 	{
-		if (mModel.getTemplateVideoRef().getResourceId() > 0)
+		if (mBackgroundVideo)
 			return (float)mBackgroundVideo->getDuration();
 		else
 		{
