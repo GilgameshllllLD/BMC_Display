@@ -7,41 +7,53 @@
 #include <ds/ui/sprite/sprite_engine.h>
 
 #include "model/all_data.h"
+#include "query/mqtt_watcher.h"
 
 namespace ds {
-namespace ui {
-class SpriteEngine;
-} // namespace ui
+	namespace ui {
+		class SpriteEngine;
+	} // namespace ui
 } // namespace ds
 
 namespace bmc {
 
-/**
- * \class bmc::Globals
- * \brief Global data for the app.
- */
-class Globals {
-public:
-	Globals(ds::ui::SpriteEngine&, const AllData& d);
-	typedef enum { WELCOME = 1, RIO, TRANSFORMATION} APPType;
+	/**
+	 * \class bmc::Globals
+	 * \brief Global data for the app.
+	 */
+	class Globals {
+		class MqttWatcher;
+	public:
+		Globals(ds::ui::SpriteEngine&, const AllData& d);
+		typedef enum { WELCOME = 1, RIO, TRANSFORMATION } APPType;
 
-	ds::ui::SpriteEngine&			mEngine;
+		ds::ui::SpriteEngine&			mEngine;
 
-	const AllData&					mAllData;
+		const AllData&					mAllData;
 
-	const float						getAnimDur();
+		const float						getAnimDur();
 
-	void							initialize();
+		void							initialize();
 
-	//Shortcuts
-	const ds::cfg::Text&			getText(const std::string& name) const;
-	const ds::cfg::Settings&		getSettingsLayout() const;
-	const ds::cfg::Settings&		getSettings(const std::string& name) const;
+		//Shortcuts
+		const ds::cfg::Text&			getText(const std::string& name) const;
+		const ds::cfg::Settings&		getSettingsLayout() const;
+		const ds::cfg::Settings&		getSettings(const std::string& name) const;
 
-private:
+		/*!
+		* \section MQTT methods and handlers
+		*/
+		void							setupMqttWatcher();
+		void							getMqttWatcher();
+		void							consumeMqttMessage(const std::string&);
+		void							processMqttAmbientRequest();
+		void							processMqttEngageRequest(int visiting_group_id);
 
-	float							mAnimationDuration;
-};
+	private:
+
+		float							mAnimationDuration;
+		std::shared_ptr<MqttWatcher>	mMqttWatcher;
+	};
 
 } // !namespace bmc
 

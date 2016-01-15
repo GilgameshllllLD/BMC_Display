@@ -79,7 +79,7 @@
       <AdditionalIncludeDirectories>$(CINDER_086)\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>$(platform_lib_d);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(platform_lib_d);$(ProjectDir)..\data\bin\mosquitto.lib;$(ProjectDir)..\data\bin\mosquittopp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(platform_lib_include_d);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -128,7 +128,7 @@
       <AdditionalIncludeDirectories>$(CINDER_086)\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>$(platform_lib);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(platform_lib);$(ProjectDir)..\data\bin\mosquitto.lib;$(ProjectDir)..\data\bin\mosquittopp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(platform_lib_include);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
@@ -156,6 +156,7 @@
     <ClCompile Include="..\src\model\generated\storylist_model.cpp" />
     <ClCompile Include="..\src\model\generated\story_model.cpp" />
     <ClCompile Include="..\src\model\generated\templatevideo_model.cpp" />
+    <ClCompile Include="..\src\query\mqtt_watcher.cpp" />
     <ClCompile Include="..\src\query\query_handler.cpp" />
     <ClCompile Include="..\src\query\story_query.cpp" />
     <ClCompile Include="..\src\ui\story\story_item.cpp" />
@@ -171,6 +172,9 @@
     <ClInclude Include="..\src\model\generated\storylist_model.h" />
     <ClInclude Include="..\src\model\generated\story_model.h" />
     <ClInclude Include="..\src\model\generated\templatevideo_model.h" />
+    <ClInclude Include="..\src\query\mosquitto.h" />
+    <ClInclude Include="..\src\query\mosquittopp.h" />
+    <ClInclude Include="..\src\query\mqtt_watcher.h" />
     <ClInclude Include="..\src\query\query_handler.h" />
     <ClInclude Include="..\src\query\story_query.h" />
     <ClInclude Include="..\src\ui\story\story_item.h" />

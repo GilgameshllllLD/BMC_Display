@@ -31,6 +31,9 @@
     <ClCompile Include="..\src\model\generated\storylist_model.cpp">
       <Filter>src\model\generated</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\query\mqtt_watcher.cpp">
+      <Filter>src\query</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\app_defs.h">
@@ -71,6 +74,15 @@
     </ClInclude>
     <ClInclude Include="..\src\model\generated\storylist_model.h">
       <Filter>src\model\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\mosquitto.h">
+      <Filter>src\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\mosquittopp.h">
+      <Filter>src\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\mqtt_watcher.h">
+      <Filter>src\query</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
