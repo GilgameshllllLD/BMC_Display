@@ -42,33 +42,4 @@ namespace bmc {
 
 	}
 
-	void Globals::setupMqttWatcher()
-	{
-		if (mMqttWatcher) return;
-
-	}
-
-	void Globals::getMqttWatcher()
-	{
-		/*if (mMqttWatcher)
-			return mMqttWatcher.get()
-		else*/
-			//return nullptr;
-	}
-
-	void Globals::consumeMqttMessage(const std::string& msg)
-	{
-
-	}
-
-	void Globals::processMqttAmbientRequest()
-	{
-
-	}
-
-	void Globals::processMqttEngageRequest(int visiting_group_id)
-	{
-
-	}
-
 } // !namespace bmc

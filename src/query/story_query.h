@@ -23,6 +23,7 @@ public:
 	AllStories				mOutput;
 private:
 	void					query(AllStories& output);
+	void					prelistQuery(int playlistId);
 	std::wstring			collectNumbers(std::string text);
 	Globals::APPType		mType;
 };

@@ -21,6 +21,9 @@ namespace bmc {
 		, mNeedtoRefresh(false)
 		, mGlobals(g)
 		, mStoryQuery(se, [type](){return new StoryQuery(type); })
+		, mQttwatcherWelcome(se, "bmc.downstreamsandbox.com", "playlist/welcome/preview","toolbox/playlist/welcome/preview/complete")
+		, mQttwatcherRio(se, "bmc.downstreamsandbox.com", "playlist/riogrande/preview","toolbox/playlist/riogrande/preview/complete")
+		, mQttwatcherTrans(se, "bmc.downstreamsandbox.com", "playlist/transformation/preview","toolbox/playlist/transformation/preview/complete")
 	{
 		// Initialize data
 		mStoryQuery.setReplyHandler([this](StoryQuery& q){this->onStoryQuery(q); });
@@ -29,6 +32,12 @@ namespace bmc {
 			mNeedtoRefresh = true;
 			mLastMessageTime = Poco::Timestamp().epochMicroseconds();
 		});
+		mQttwatcherWelcome.addListener([this](const MqttWatcher::MessageQueue& m)
+		{
+			auto i = m.back();
+			//mQttwatcherWelcome.push("hello");
+		});
+
 	}
 
 	void QueryHandler::runInitialQueries(){

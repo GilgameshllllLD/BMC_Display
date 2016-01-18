@@ -11,8 +11,10 @@
 #include "query/story_query.h"
 #include "model/all_data.h"
 
+
 namespace bmc {
 	class Globals;
+
 	/**
 	 * \class bmc::QueryHandler
 	 * \brief Handle app events that deal with querying for data.
@@ -37,6 +39,9 @@ namespace bmc {
 		ds::NodeWatcher						mNodeWatcher;
 		Poco::Timestamp::TimeVal			mLastMessageTime;
 		bool								mNeedtoRefresh;
+		MqttWatcher							mQttwatcherWelcome;
+		MqttWatcher							mQttwatcherRio;
+		MqttWatcher							mQttwatcherTrans;
 
 		// CACHING
 		ds::ResourceList					mResources;

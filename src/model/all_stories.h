@@ -16,6 +16,7 @@ public:
 	AllStories(){};
 
 	std::vector<ds::model::StoryListRef>	mStorieLists;
+	ds::model::StoryListRef					mPreviewLists;
 
 };
 

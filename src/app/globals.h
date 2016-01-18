@@ -40,15 +40,6 @@ namespace bmc {
 		const ds::cfg::Settings&		getSettingsLayout() const;
 		const ds::cfg::Settings&		getSettings(const std::string& name) const;
 
-		/*!
-		* \section MQTT methods and handlers
-		*/
-		void							setupMqttWatcher();
-		void							getMqttWatcher();
-		void							consumeMqttMessage(const std::string&);
-		void							processMqttAmbientRequest();
-		void							processMqttEngageRequest(int visiting_group_id);
-
 	private:
 
 		float							mAnimationDuration;

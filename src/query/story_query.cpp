@@ -107,7 +107,7 @@ namespace bmc {
 			if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), itemR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
 				DS_LOG_WARNING(" error querying playlist item");
 			}
-			if (r.rowsAreEmpty()){
+			if (itemR.rowsAreEmpty()){
 				DS_LOG_WARNING("No rows returned querying playlist item.");
 				return;
 			}
@@ -171,6 +171,67 @@ namespace bmc {
 		}
 
 		return finalStr.str();
+	}
+
+	void StoryQuery::prelistQuery(int playlistId)
+	{
+		ds::model::StoryListRef singlePlayList;
+		singlePlayList.setId(playlistId);
+
+		const ds::Resource::Id				cms(ds::Resource::Id::CMS_TYPE, 0);
+		std::stringstream					buf;
+		buf.str("");
+		buf << "SELECT id,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement where playlistid = " << singlePlayList.getId() << " ORDER by sort_order";
+		ds::query::Result					itemR;
+		if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), itemR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
+			DS_LOG_WARNING(" error querying playlist item");
+		}
+		if (itemR.rowsAreEmpty()){
+			DS_LOG_WARNING("No rows returned querying playlist item.");
+			return;
+		}
+
+		std::vector<ds::model::StoryRef> storyGroup;
+		ds::query::Result::RowIterator itemIt(itemR);
+		while (itemIt.hasValue())
+		{
+			ds::model::StoryRef singleStory;
+			singleStory.setId(itemIt.getInt(0));
+			singleStory.setResourceId(itemIt.getInt(1));
+			singleStory.setFirstLine(itemIt.getWString(2));
+			singleStory.setSecondLine(itemIt.getWString(3));
+			singleStory.setThirdLine(itemIt.getWString(4));
+			singleStory.setTemplateVideoId(itemIt.getInt(5));
+
+			if (singleStory.getTemplateVideoId() > 0)
+			{
+				buf.str("");
+				ds::query::Result			videoR;
+				buf << "select  id,resourceid, timecodestartoverlay,timecodeendoverlay from templatevideo where id =" << singleStory.getTemplateVideoId();
+				if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), videoR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
+					DS_LOG_WARNING(" error querying Template Video");
+				}
+				if (videoR.rowsAreEmpty()){
+					DS_LOG_WARNING("No rows returned querying Template Video.");
+				}
+				ds::query::Result::RowIterator videoIt(videoR);
+				ds::model::TemplateVideoRef templateVideo;
+				while (videoIt.hasValue())
+				{
+					templateVideo.setId(videoIt.getInt(0));
+					templateVideo.setResourceId(videoIt.getInt(1));
+					templateVideo.setStartTime(videoIt.getInt(2));
+					templateVideo.setEndTime(videoIt.getInt(3));
+					++videoIt;
+				}
+				singleStory.setTemplateVideoRef(templateVideo);
+			}
+			storyGroup.push_back(singleStory);
+			++itemIt;
+		}
+		singlePlayList.setStoryRef(storyGroup);
+		mOutput.mPreviewLists = singlePlayList;
+		
 	}
 
 } // !namespace bmc
