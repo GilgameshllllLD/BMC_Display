@@ -34,6 +34,19 @@ namespace bmc {
 		});
 		mQttwatcherWelcome.addListener([this](const MqttWatcher::MessageQueue& m)
 		{
+			//auto i = m.back();
+			//mQttwatcherWelcome.push("hello");
+			std::stringstream tempStr(m.back());
+			tempStr >> mGlobals.mPreviewListId ;
+			mGlobals.mActivePreview = true;
+		});
+		mQttwatcherRio.addListener([this](const MqttWatcher::MessageQueue& m)
+		{
+			auto i = m.back();
+			//mQttwatcherWelcome.push("hello");
+		});
+		mQttwatcherTrans.addListener([this](const MqttWatcher::MessageQueue& m)
+		{
 			auto i = m.back();
 			//mQttwatcherWelcome.push("hello");
 		});

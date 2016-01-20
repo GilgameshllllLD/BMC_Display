@@ -11,22 +11,25 @@
 namespace bmc {
 	class Globals;
 
-/**
- * \class bmc::StoryQuery
- */
-class StoryQuery : public Poco::Runnable {
-public:
-	StoryQuery(Globals::APPType type);
+	/**
+	 * \class bmc::StoryQuery
+	 */
+	class StoryQuery : public Poco::Runnable {
+	public:
+		typedef enum { REGULAR = 1, PREVIEW } QUERYTYPE;
+		StoryQuery(Globals::APPType type);
 
-	virtual void			run();
+		virtual void			run();
 
-	AllStories				mOutput;
-private:
-	void					query(AllStories& output);
-	void					prelistQuery(int playlistId);
-	std::wstring			collectNumbers(std::string text);
-	Globals::APPType		mType;
-};
+		AllStories				mOutput;
+		QUERYTYPE				mQueryType;
+		int						mPreviewId;
+	private:
+		void					query(AllStories& output);
+		void					prelistQuery(int playlistId);
+		std::wstring			collectNumbers(std::string text);
+		Globals::APPType		mType;
+	};
 
 } // !namespace bmc
 

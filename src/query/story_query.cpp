@@ -18,13 +18,18 @@ namespace bmc {
 	 */
 	StoryQuery::StoryQuery(Globals::APPType  type)
 		:mType(type)
+		, mQueryType(REGULAR)
+		, mPreviewId(-1)
 	{
 	}
 
 	void StoryQuery::run() {
 		mOutput.mStorieLists.clear();
 		try {
-			query(mOutput);
+			if (mQueryType == REGULAR)
+				query(mOutput);
+			else
+				prelistQuery(mPreviewId);
 		}
 		catch (std::exception const&) {
 		}
@@ -72,7 +77,7 @@ namespace bmc {
 		ds::query::Result				listR;
 		auto localTime = Poco::LocalDateTime();
 		auto msg = Poco::DateTimeFormatter::format(localTime, "%Y-%m-%d %H:%M:%S");
-		buf << "SELECT engagementid, startdate,enddate," << tempStirng.str() << " From engagement where " << tempStirng.str() << " >0"<<" and '"<<msg<<"' < enddate";
+		buf << "SELECT engagementid, startdate,enddate," << tempStirng.str() << " From engagement where " << tempStirng.str() << " >0" << " and '" << msg << "' < enddate";
 		if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), listR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
 			DS_LOG_WARNING(" error querying engagement list");
 		}
@@ -175,6 +180,18 @@ namespace bmc {
 
 	void StoryQuery::prelistQuery(int playlistId)
 	{
+		if (playlistId == -1)
+			return;
+
+		std::stringstream tempStirng;
+		//load engagement play items
+		if (mType == Globals::APPType::WELCOME)
+			tempStirng.str("welcomeplaylistid");
+		else if (mType == Globals::APPType::RIO)
+			tempStirng.str("riograndeplaylistid");
+		else if (mType == Globals::APPType::TRANSFORMATION)
+			tempStirng.str("transformationplaylistid");
+
 		ds::model::StoryListRef singlePlayList;
 		singlePlayList.setId(playlistId);
 
@@ -184,10 +201,10 @@ namespace bmc {
 		buf << "SELECT id,resourceid,textline1,textline2,textline3,templatevideoid FROM playlistelement where playlistid = " << singlePlayList.getId() << " ORDER by sort_order";
 		ds::query::Result					itemR;
 		if (!ds::query::Client::query(cms.getDatabasePath(), buf.str(), itemR, ds::query::Client::INCLUDE_COLUMN_NAMES_F)){
-			DS_LOG_WARNING(" error querying playlist item");
+			DS_LOG_WARNING(" error querying preview playlist item");
 		}
 		if (itemR.rowsAreEmpty()){
-			DS_LOG_WARNING("No rows returned querying playlist item.");
+			DS_LOG_WARNING("No rows returned querying preview playlist item.");
 			return;
 		}
 
@@ -231,7 +248,7 @@ namespace bmc {
 		}
 		singlePlayList.setStoryRef(storyGroup);
 		mOutput.mPreviewLists = singlePlayList;
-		
+
 	}
 
 } // !namespace bmc

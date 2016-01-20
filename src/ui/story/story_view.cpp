@@ -15,17 +15,21 @@
 
 namespace bmc {
 
-	StoryView::StoryView(Globals& g)
+	StoryView::StoryView(Globals& g, Globals::APPType type)
 		: inherited(g.mEngine)
 		, mGlobals(g)
 		, mCurrentItem(nullptr)
 		, mCurrentItemIndex(0)
+		, mCurrentPrelistIndex(-1)
+		, mPrelistQuery(g.mEngine, [type](){return new StoryQuery(type); })
 	{
 		hide();
 		setOpacity(0.0f);
 		setCenter(0.5f, 0.5f);
 		setSize(mEngine.getWorldWidth(), mEngine.getWorldHeight());
 		setPosition(mEngine.getWorldWidth() / 2, mEngine.getWorldHeight() / 2);
+
+		mPrelistQuery.setReplyHandler([this](StoryQuery& q){this->onPrelistResult(q); });
 
 		setData();
 		layout();
@@ -82,27 +86,56 @@ namespace bmc {
 
 	void StoryView::updateServer(const ds::UpdateParams& p){
 		inherited::updateServer(p);
+		if (mGlobals.mActivePreview)
+		{
+			if (mGlobals.mPreviewListId > 0)
+				runQuery(mGlobals.mPreviewListId);
+			mGlobals.mActivePreview = false;
+		}
 	}
 
 	void StoryView::nextItems()
 	{
 		mCurrentItem->tweenOpacity(0.0f, mGlobals.getAnimDur(), 0.0f, ci::EaseInOutQuad(), [this](){
-			mCurrentItem->release();
 
-			if (mCurrentItemIndex != mItemGroup.size() - 1)
-				mCurrentItemIndex++;
+			if (mPrelistItemsGroup.size() == 0)
+			{
+				if (mCurrentItemIndex != mItemGroup.size() - 1)
+					mCurrentItemIndex++;
+				else
+				{
+					mCurrentItemIndex = 0;
+					setData();
+				}
+
+				mCurrentItem->release();
+				mCurrentItem = mItemGroup[mCurrentItemIndex];
+				if (mCurrentItem)
+				{
+					addChildPtr(mCurrentItem);
+					mCurrentItem->run();
+					setIdleTime(mCurrentItem->getType());
+				}
+			}
 			else
 			{
-				mCurrentItemIndex = 0;
-				setData();
-			}
-
-			mCurrentItem = mItemGroup[mCurrentItemIndex];
-			if (mCurrentItem)
-			{
-				addChildPtr(mCurrentItem);
-				mCurrentItem->run();
-				setIdleTime(mCurrentItem->getType());
+				if (mCurrentPrelistIndex != mPrelistItemsGroup.size() - 1)
+					mCurrentPrelistIndex++;
+				else
+				{
+					mCurrentPrelistIndex = -1;
+					mPrelistItemsGroup.clear();
+					nextItems();
+					return;
+				}
+				mCurrentItem->release();
+				mCurrentItem = mPrelistItemsGroup[mCurrentPrelistIndex];
+				if (mCurrentItem)
+				{
+					addChildPtr(mCurrentItem);
+					mCurrentItem->run();
+					setIdleTime(mCurrentItem->getType());
+				}
 			}
 
 		});
@@ -167,6 +200,31 @@ namespace bmc {
 			temsStr += std::to_wstring(tempValue);
 		}
 		return temsStr;
+	}
+
+	void StoryView::onPrelistResult(StoryQuery& q)
+	{
+		if (q.mOutput.mPreviewLists.getStoryRef().size() == 0)
+			return;
+
+		mPrelist = q.mOutput.mPreviewLists;
+		mPrelistItemsGroup.clear();
+		for (auto i = 0; i < mPrelist.getStoryRef().size(); i++)
+		{
+			auto singleItem = new bmc::StoryItem(mGlobals, mPrelist.getStoryRef()[i]);
+			if (singleItem)
+				mPrelistItemsGroup.push_back(singleItem);
+		}
+
+	}
+
+	void StoryView::runQuery(int index)
+	{
+		mPrelistQuery.start([this, index](StoryQuery& q)
+		{
+			q.mQueryType = StoryQuery::PREVIEW;
+			q.mPreviewId = index;
+		});
 	}
 
 } // namespace bmc

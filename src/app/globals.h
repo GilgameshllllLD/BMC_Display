@@ -39,6 +39,8 @@ namespace bmc {
 		const ds::cfg::Text&			getText(const std::string& name) const;
 		const ds::cfg::Settings&		getSettingsLayout() const;
 		const ds::cfg::Settings&		getSettings(const std::string& name) const;
+		bool							mActivePreview;
+		int								mPreviewListId;
 
 	private:
 

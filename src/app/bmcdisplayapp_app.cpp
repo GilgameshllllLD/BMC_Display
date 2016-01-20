@@ -91,7 +91,7 @@ namespace bmc {
 		rootSprite.setColor(ci::Color::black());
 
 		// add sprites
-		rootSprite.addChildPtr(new StoryView(mGlobals));
+		rootSprite.addChildPtr(new StoryView(mGlobals, mType));
 	}
 
 	void BMCDisplayApp::update() {
