@@ -20,10 +20,11 @@ namespace bmc {
 		, mNodeWatcher(se)
 		, mNeedtoRefresh(false)
 		, mGlobals(g)
+		, mType(type)
 		, mStoryQuery(se, [type](){return new StoryQuery(type); })
-		, mQttwatcherWelcome(se, "bmc.downstreamsandbox.com", "playlist/welcome/preview","toolbox/playlist/welcome/preview/complete")
-		, mQttwatcherRio(se, "bmc.downstreamsandbox.com", "playlist/riogrande/preview","toolbox/playlist/riogrande/preview/complete")
-		, mQttwatcherTrans(se, "bmc.downstreamsandbox.com", "playlist/transformation/preview","toolbox/playlist/transformation/preview/complete")
+		, mQttwatcherWelcome(se, "bmc.downstreamsandbox.com", "playlist/welcome/preview", "toolbox/playlist/welcome/preview/complete")
+		, mQttwatcherRio(se, "bmc.downstreamsandbox.com", "playlist/riogrande/preview", "toolbox/playlist/riogrande/preview/complete")
+		, mQttwatcherTrans(se, "bmc.downstreamsandbox.com", "playlist/transformation/preview", "toolbox/playlist/transformation/preview/complete")
 	{
 		// Initialize data
 		mStoryQuery.setReplyHandler([this](StoryQuery& q){this->onStoryQuery(q); });
@@ -34,21 +35,30 @@ namespace bmc {
 		});
 		mQttwatcherWelcome.addListener([this](const MqttWatcher::MessageQueue& m)
 		{
-			//auto i = m.back();
-			//mQttwatcherWelcome.push("hello");
-			std::stringstream tempStr(m.back());
-			tempStr >> mGlobals.mPreviewListId ;
-			mGlobals.mActivePreview = true;
+			if (mType == Globals::APPType::WELCOME)
+			{
+				std::stringstream tempStr(m.back());
+				tempStr >> mGlobals.mPreviewListId;
+				mGlobals.mActivePreview = true;
+			}
 		});
 		mQttwatcherRio.addListener([this](const MqttWatcher::MessageQueue& m)
 		{
-			auto i = m.back();
-			//mQttwatcherWelcome.push("hello");
+			if (mType == Globals::APPType::RIO)
+			{
+				std::stringstream tempStr(m.back());
+				tempStr >> mGlobals.mPreviewListId;
+				mGlobals.mActivePreview = true;
+			}
 		});
 		mQttwatcherTrans.addListener([this](const MqttWatcher::MessageQueue& m)
 		{
-			auto i = m.back();
-			//mQttwatcherWelcome.push("hello");
+			if (mType == Globals::APPType::TRANSFORMATION)
+			{
+				std::stringstream tempStr(m.back());
+				tempStr >> mGlobals.mPreviewListId;
+				mGlobals.mActivePreview = true;
+			}
 		});
 
 	}
@@ -77,6 +87,17 @@ namespace bmc {
 				mNeedtoRefresh = false;
 				mStoryQuery.start();
 			}
+		}
+		if (mGlobals.mCompletePreview)
+		{
+			auto finishStr = mGlobals.getSettingsLayout().getText("mqtt:finish:string", 0, "");
+			if (mType == Globals::APPType::WELCOME)
+				mQttwatcherWelcome.push(finishStr);
+			else if (mType == Globals::APPType::RIO)
+				mQttwatcherRio.push(finishStr);
+			else if (mType == Globals::APPType::TRANSFORMATION)
+				mQttwatcherTrans.push(finishStr);
+			mGlobals.mCompletePreview = false;
 		}
 	}
 

@@ -135,24 +135,26 @@ namespace bmc {
 
 	void StoryItem::run()
 	{
+		auto gapTime = mGlobals.getSettingsLayout().getFloat("gap:duration", 0, 2.0f);
+
 		if (mType == IMAGE && mBackgroundImage)
-			mBackgroundImage->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+			mBackgroundImage->tweenOpacity(1.0f, mGlobals.getAnimDur(), gapTime);
 		else if (mType == VIDEO && mBackgroundVideo)
 		{
-			mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+			mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), gapTime);
 			mBackgroundVideo->play();
 		}
 		else if (mType == CUSTOM && mFirstLine && mSecondLine && mThirdLine)
 		{
 			if (mBackgroundVideo)
 			{
-				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
+				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), gapTime);
 				mBackgroundVideo->play();
 				mBackgroundVideo->sendToBack();
 			}
-			mFirstLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
-			mSecondLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
-			mThirdLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime);
+			mFirstLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime + gapTime);
+			mSecondLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime + gapTime);
+			mThirdLine->tweenOpacity(1.0f, mGlobals.getAnimDur(), mStartTime + gapTime);
 			if (mEndTime > 0.0f)
 			{
 				callAfterDelay([this]()
@@ -160,7 +162,7 @@ namespace bmc {
 					mFirstLine->tweenOpacity(0.0f, mGlobals.getAnimDur());
 					mSecondLine->tweenOpacity(0.0f, mGlobals.getAnimDur());
 					mThirdLine->tweenOpacity(0.0f, mGlobals.getAnimDur());
-				}, mEndTime);
+				}, mEndTime + gapTime);
 			}
 		}
 	}

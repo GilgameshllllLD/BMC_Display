@@ -11,5 +11,6 @@
 	<float name="second_line:layoff_y" value="4.0" />
 	<float name="default:idle:time" value="20.0" />
 	<float name="word:length" value="30.0" />
+	<float name="gap:duration" value="2.0" />
 	
 </settings>

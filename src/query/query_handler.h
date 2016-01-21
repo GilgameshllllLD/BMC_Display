@@ -42,6 +42,7 @@ namespace bmc {
 		MqttWatcher							mQttwatcherWelcome;
 		MqttWatcher							mQttwatcherRio;
 		MqttWatcher							mQttwatcherTrans;
+		Globals::APPType					mType;
 
 		// CACHING
 		ds::ResourceList					mResources;

@@ -100,6 +100,7 @@ namespace bmc {
 
 			if (mPrelistItemsGroup.size() == 0)
 			{
+				mCurrentItem->release();
 				if (mCurrentItemIndex != mItemGroup.size() - 1)
 					mCurrentItemIndex++;
 				else
@@ -108,7 +109,6 @@ namespace bmc {
 					setData();
 				}
 
-				mCurrentItem->release();
 				mCurrentItem = mItemGroup[mCurrentItemIndex];
 				if (mCurrentItem)
 				{
@@ -126,6 +126,7 @@ namespace bmc {
 					mCurrentPrelistIndex = -1;
 					mPrelistItemsGroup.clear();
 					nextItems();
+					mGlobals.mCompletePreview = true;
 					return;
 				}
 				mCurrentItem->release();
@@ -144,7 +145,7 @@ namespace bmc {
 	void StoryView::setIdleTime(StoryItem::storyType type)
 	{
 		auto imageDuringTime = mGlobals.getSettingsLayout().getFloat("back_image:duration", 0, 7.0f);
-
+		
 		if (type == StoryItem::IMAGE)
 			callAfterDelay([this]{nextItems(); }, imageDuringTime);
 		else if (type == StoryItem::VIDEO)
