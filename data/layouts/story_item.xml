@@ -1,3 +1,4 @@
+<!-- Original Layout with smaller third line -->
 <interface>
             
         <multiline_text name="first_line"
@@ -10,7 +11,7 @@
             />
                 
         <multiline_text name="second_line"
-            position="152, 47"
+            position="152, 45"
             font="title:second_line"
             text_align="center"
             resize_limit="304"
@@ -28,4 +29,36 @@
             />			
 	
 </interface>
-
+<!-- Alternate Layout with first and third line same size -->
+<!--
+<interface>
+            
+        <multiline_text name="first_line"
+            position="152, 5"
+            font="title:first_line"
+            resize_limit="304"
+            text_align="center"
+            center="0.5, 0.0"
+            opacity="0.0"
+            />
+                
+        <multiline_text name="second_line"
+            position="152, 43"
+            font="title:second_line"
+            text_align="center"
+            resize_limit="304"
+            center="0.5, 0.5"
+            opacity="0.0"
+            />	
+                
+        <multiline_text name="third_line"
+            position="152, 78"
+            font="title:third_line"
+            text_align="center"
+            resize_limit="304"
+            center="0.5, 0.0"
+            opacity="0.0"
+            />			
+	
+</interface>
+-->

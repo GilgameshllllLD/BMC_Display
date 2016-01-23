@@ -24,10 +24,8 @@ namespace bmc {
 		, mPrelistQuery(g.mEngine, [type](){return new StoryQuery(type); })
 	{
 		hide();
-		setOpacity(0.0f);
-		setCenter(0.5f, 0.5f);
-		setSize(mEngine.getWorldWidth(), mEngine.getWorldHeight());
-		setPosition(mEngine.getWorldWidth() / 2, mEngine.getWorldHeight() / 2);
+		setOpacity(1.0f);
+		//setSize(mEngine.getWorldWidth(), mEngine.getWorldHeight());
 
 		mPrelistQuery.setReplyHandler([this](StoryQuery& q){this->onPrelistResult(q); });
 
@@ -66,12 +64,11 @@ namespace bmc {
 	}
 
 	void StoryView::layout(){
-
-		if (mCurrentItem)
-		{
-			mCurrentItem->run();
-			setIdleTime(mCurrentItem->getType());
-		}
+			if (mCurrentItem)
+			{
+				mCurrentItem->run();
+				setIdleTime(mCurrentItem->getType());
+			}
 	}
 
 
@@ -145,7 +142,7 @@ namespace bmc {
 	void StoryView::setIdleTime(StoryItem::storyType type)
 	{
 		auto imageDuringTime = mGlobals.getSettingsLayout().getFloat("back_image:duration", 0, 7.0f);
-		
+
 		if (type == StoryItem::IMAGE)
 			callAfterDelay([this]{nextItems(); }, imageDuringTime);
 		else if (type == StoryItem::VIDEO)

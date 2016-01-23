@@ -61,30 +61,7 @@ namespace bmc {
 
 		mGlobals.initialize();
 		mQueryHandler.runInitialQueries();
-
-		const int numRoots = mEngine.getRootCount();
-		int numPlacemats = 0;
-		for (int i = 0; i < numRoots - 1; i++){
-			// don't clear the last root, which is the debug draw
-			if (mEngine.getRootBuilder(i).mDebugDraw) continue;
-
-			ds::ui::Sprite& rooty = mEngine.getRootSprite(i);
-			if (rooty.getPerspective()){
-				const float clippFar = 10000.0f;
-				const float fov = 60.0f;
-				ds::PerspCameraParams p = mEngine.getPerspectiveCamera(i);
-				p.mTarget = ci::Vec3f(mEngine.getWorldWidth() / 2.0f, mEngine.getWorldHeight() / 2.0f, 0.0f);
-				p.mFarPlane = clippFar;
-				p.mFov = fov;
-				p.mPosition = ci::Vec3f(mEngine.getWorldWidth() / 2.0f, mEngine.getWorldHeight() / 2.0f, mEngine.getWorldWidth() / 2.0f);
-				mEngine.setPerspectiveCamera(i, p);
-			}
-			else {
-				mEngine.setOrthoViewPlanes(i, -10000.0f, 10000.0f);
-			}
-
-			rooty.clearChildren();
-		}
+		mEngine.getRootSprite(0).clearChildren();
 
 		ds::ui::Sprite &rootSprite = mEngine.getRootSprite();
 		rootSprite.setTransparent(false);

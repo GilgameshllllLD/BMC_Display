@@ -17,7 +17,7 @@
 		<float name="sample:config:leading" value="0.75" />
 		<color name="sample:config:color" r="255" g="255" b="255" />
         
-    <!-- Real Text -->
+	<!-- Original Layout with smaller third line -->
 		<text  name="title:first_line:name" value="FreigSanPro-bold" />
 		<float name="title:first_line:size" value="14" />
 		<float name="title:first_line:leading" value="0.75" />
@@ -32,6 +32,23 @@
 		<float name="title:third_line:size" value="9" />
 		<float name="title:third_line:leading" value="0.75" />
 		<color name="title:third_line:color" r="255" g="255" b="255" />
-    
+		
+	<!-- Alternate Layout with first and third line same size -->
+		<!--
+		<text  name="title:first_line:name" value="FreigSanPro-bold" />
+		<float name="title:first_line:size" value="12" />
+		<float name="title:first_line:leading" value="0.75" />
+		<color name="title:first_line:color" r="255" g="255" b="255" />
+        
+        <text  name="title:second_line:name" value="FreigSanPro-lig" />
+		<float name="title:second_line:size" value="37" />
+		<float name="title:second_line:leading" value="0.75" />
+		<color name="title:second_line:color" r="255" g="255" b="255" />
+        
+        <text  name="title:third_line:name" value="FreigSanPro-bold" />
+		<float name="title:third_line:size" value="12" />
+		<float name="title:third_line:leading" value="0.75" />
+		<color name="title:third_line:color" r="255" g="255" b="255" />
+		-->
 	
 </settings>

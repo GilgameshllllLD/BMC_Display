@@ -51,9 +51,6 @@ private:
 	int									mCurrentItemIndex;
 
 	ds::SerialRunnable<StoryQuery>		mPrelistQuery;
-
-
-
 };
 } // namespace bmc
 

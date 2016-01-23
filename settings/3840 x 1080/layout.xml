@@ -1,9 +1,14 @@
 <settings>
 
-	<!-- Standard animation duration, in seconds. -->
     <!--WELCOME = 1, RIO, TRANSFORMATION -->
     <int name="APP:TYPE" value="3" />  
+
 	<float name="animation:duration" value="0.4" />
-	<float name="back_image:duration" value="9.0" />
-	
+	<float name="back_image:duration" value="7.0" />
+	<float name="second_line:max_height" value="52.0" />
+	<float name="second_line:max_width" value="284.0" />
+	<float name="second_line:layoff_y" value="4.0" />
+	<float name="default:idle:time" value="20.0" />
+	<float name="word:length" value="30.0" />
+	<float name="gap:duration" value="2.0" />
 </settings>

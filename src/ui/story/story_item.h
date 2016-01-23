@@ -28,7 +28,6 @@ namespace bmc {
 		typedef enum { IMAGE = 0, VIDEO, CUSTOM} storyType;
 
 		void								setdata();
-		void								layout();
 		void								run();
 		storyType							getType(){ return mType; };
 		float								getVideoTime();

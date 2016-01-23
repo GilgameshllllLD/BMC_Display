@@ -37,17 +37,6 @@ namespace bmc {
 		mBackgroundImage->setOpacity(0.0f);
 		addChildPtr(mBackgroundImage);
 
-		if (mModel.getTemplateVideoRef().getResourceId() > 0)
-		{
-			mBackgroundVideo = new ds::ui::Video(mEngine);
-			mBackgroundVideo->setAutoStart(false);
-			mBackgroundVideo->setOpacity(0.0f);
-			mBackgroundVideo->setVideoCompleteCallback([this]()
-			{
-				mBackgroundVideo->seekTime(0.0f);
-			});
-			addChildPtr(mBackgroundVideo);
-		}
 
 		if (mModel.getResourceId() > 0)
 		{
@@ -66,6 +55,18 @@ namespace bmc {
 				mType = CUSTOM;
 		}
 
+		if (mType == CUSTOM || mType == VIDEO)
+		{
+			mBackgroundVideo = new ds::ui::Video(mEngine);
+			mBackgroundVideo->setAutoStart(false);
+			mBackgroundVideo->setOpacity(0.0f);
+			mBackgroundVideo->setVideoCompleteCallback([this]()
+			{
+				mBackgroundVideo->seekTime(0.0f);
+			});
+			addChildPtr(mBackgroundVideo);
+		}
+
 		setdata();
 	}
 
@@ -77,10 +78,12 @@ namespace bmc {
 			mBackgroundVideo->setResourceId(mModel.getResourceId());
 		else if (mType == CUSTOM)
 		{
-			if (mBackgroundVideo)
+			if (mBackgroundVideo && mModel.getTemplateVideoRef().getResourceId() > 0)
+			{
 				mBackgroundVideo->setResourceId(mModel.getTemplateVideoRef().getResourceId());
-			mStartTime = (float)mModel.getTemplateVideoRef().getStartTime();
-			mEndTime = (float)mModel.getTemplateVideoRef().getEndTime();
+				mStartTime = (float)mModel.getTemplateVideoRef().getStartTime();
+				mEndTime = (float)mModel.getTemplateVideoRef().getEndTime();
+			}
 
 			if (mFirstLine && mModel.getFirstLine() != L"")
 				mFirstLine->setText(mModel.getFirstLine());
@@ -115,22 +118,6 @@ namespace bmc {
 	void StoryItem::updateServer(const ds::UpdateParams& p)
 	{
 		inherited::updateServer(p);
-	}
-
-	void StoryItem::layout()
-	{
-		auto showTime = mGlobals.getSettingsLayout().getFloat("back_image:duration", 0);
-		mBackgroundImage->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f);
-		callAfterDelay([this]
-		{
-			mBackgroundImage->tweenOpacity(0.0f, mGlobals.getAnimDur(), 0.0f, ci::EaseInOutQuad(), [this]()
-			{
-				mBackgroundVideo->tweenOpacity(1.0f, mGlobals.getAnimDur(), 0.0f, ci::EaseInOutQuad(), [this]()
-				{
-					mBackgroundVideo->play();
-				});
-			});
-		}, mGlobals.getAnimDur() + showTime);
 	}
 
 	void StoryItem::run()
