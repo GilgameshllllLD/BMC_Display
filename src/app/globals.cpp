@@ -18,6 +18,7 @@ namespace bmc {
 		, mAllData(d)
 		, mAnimationDuration(0.35f)
 		, mActivePreview(false)
+		, mStartPreview(false)
 		, mCompletePreview(false)
 		, mPreviewListId(-1)
 	{

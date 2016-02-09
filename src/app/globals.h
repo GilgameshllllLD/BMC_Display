@@ -41,6 +41,7 @@ namespace bmc {
 		const ds::cfg::Settings&		getSettings(const std::string& name) const;
 		bool							mActivePreview;
 		bool							mCompletePreview;
+		bool							mStartPreview;
 		int								mPreviewListId;
 
 	private:

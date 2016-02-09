@@ -43,6 +43,7 @@ namespace bmc
 		int port /*= 1883*/)
 		: ds::AutoUpdate(e)
 		, mLoop(e, host, topic_inbound, topic_outband, refresh_rate, port)
+		, mLastMessageTime(0.0f)
 	{
 		MqttSingleton::initilize_once();
 	}
@@ -63,18 +64,19 @@ namespace bmc
 	{
 		if (!mLoop.mConnected)
 		{
-			static int retry_count = 0;
-			if (retry_count < 10)
+			Poco::Timestamp::TimeVal nowwy = Poco::Timestamp().epochMicroseconds();
+			auto delty = (float)(nowwy - mLastMessageTime) / 1000000.0f;
+			if (delty > 30.0f)
 			{
 				runLoop();
-				++retry_count;
+				mLastMessageTime = Poco::Timestamp().epochMicroseconds();
 			}
 			else
 			{
-				static std::once_flag _warn_once;
+				/*static std::once_flag _warn_once;
 				std::call_once(_warn_once, []{
-					DS_LOG_ERROR_M("MQTT watcher permanently died after attempting to connect to server " << retry_count << " time(s).", MQTT_LOG);
-				});
+				DS_LOG_ERROR_M("MQTT watcher permanently died after attempting to connect to server " << retry_count << " time(s).", MQTT_LOG);
+				});*/
 			}
 		}
 
@@ -139,6 +141,7 @@ namespace bmc
 		, mPort(port)
 		, mTopicInbound(topic_inbound)
 		, mTopicOutbound(topic_outband)
+		, mFirstTimeMessage(true)
 		, mRefreshRateMs(static_cast<int>(refresh_rate * 1000))
 	{}
 
@@ -176,14 +179,14 @@ namespace bmc
 		});
 
 		auto err_no = mqtt_isnt.connect(mHost.c_str(), mPort);
-		if (err_no != MOSQ_ERR_SUCCESS)
+		if (err_no != MOSQ_ERR_SUCCESS && mFirstTimeMessage)
 		{
 			DS_LOG_ERROR_M("Unable to connect to the MQTT server. Error number is: " << err_no << ". Error string is: " << mosqpp::strerror(err_no), MQTT_LOG);
 			mAbort = true;
 		}
 
 		err_no = mqtt_isnt.subscribe(nullptr, mTopicInbound.c_str());
-		if (err_no != MOSQ_ERR_SUCCESS)
+		if (err_no != MOSQ_ERR_SUCCESS && mFirstTimeMessage)
 		{
 			DS_LOG_ERROR_M("Unable to subscribe to the MQTT topic (" << mTopicInbound << "). Error number is: " << err_no << ". Error string is: " << mosqpp::strerror(err_no), MQTT_LOG);
 			mAbort = true;
@@ -205,7 +208,10 @@ namespace bmc
 		}
 
 		mConnected = false;
-		std::cout << "MQTT watcher returned.";
+		if (mFirstTimeMessage)
+			std::cout << "MQTT watcher returned.";
+
+		mFirstTimeMessage = false;
 	}
 
 } //!telstra

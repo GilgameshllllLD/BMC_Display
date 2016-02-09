@@ -99,6 +99,17 @@ namespace bmc {
 				mQttwatcherTrans.push(finishStr);
 			mGlobals.mCompletePreview = false;
 		}
+		if (mGlobals.mStartPreview)
+		{
+			auto startStr = mGlobals.getSettingsLayout().getText("mqtt:start:string", 0, "");
+			if (mType == Globals::APPType::WELCOME)
+				mQttwatcherWelcome.push(startStr);
+			else if (mType == Globals::APPType::RIO)
+				mQttwatcherRio.push(startStr);
+			else if (mType == Globals::APPType::TRANSFORMATION)
+				mQttwatcherTrans.push(startStr);
+			mGlobals.mCompletePreview = false;
+		}
 	}
 
 } // !namespace bmc

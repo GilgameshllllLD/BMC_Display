@@ -62,6 +62,7 @@ private:
 		const std::string			mTopicOutbound;
 		const int					mPort;
 		const int					mRefreshRateMs;	// in milliseconds
+		bool						mFirstTimeMessage;
 	};
 
 	MessageQueue					mMsgInbound;
@@ -69,6 +70,8 @@ private:
 	std::vector < std::function<void(const MessageQueue&)> >
 									mListeners;
 	Loop							mLoop;
+
+	Poco::Timestamp::TimeVal		mLastMessageTime;
 
 private:
 	void							runLoop();

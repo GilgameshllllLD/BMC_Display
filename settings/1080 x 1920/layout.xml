@@ -1,0 +1,12 @@
+<settings>
+
+    <!--WELCOME = 1, RIO, TRANSFORMATION -->
+    <int name="APP:TYPE" value="2" /> 
+
+	<float name="animation:duration" value="0.4" />
+	<float name="back_image:duration" value="7.0" />
+	<float name="default:idle:time" value="20.0" />
+	<float name="word:length" value="30.0" />
+	<float name="gap:duration" value="2.0" />
+	
+</settings>
